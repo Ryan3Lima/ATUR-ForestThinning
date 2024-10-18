@@ -9,7 +9,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <journal-id></journal-id>
 
 <journal-title-group>
-<journal-title>Earth and Space Science</journal-title>
+<journal-title>Water Resources Research</journal-title>
 </journal-title-group>
 <issn></issn>
 
@@ -23,19 +23,20 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 
 <title-group>
-<article-title>La Palma Earthquakes</article-title>
+<article-title>Mapping suitability for thinning to reduce atmospheric
+losses and enhance groundwater recharge in Arizona</article-title>
 </title-group>
 
 <contrib-group>
 <contrib contrib-type="author" corresp="yes">
-<contrib-id contrib-id-type="orcid">0000-0002-0760-5497</contrib-id>
+<contrib-id contrib-id-type="orcid">0000-0002-5352-7215</contrib-id>
 <name>
-<surname>Purves</surname>
-<given-names>Steve</given-names>
+<surname>Lima</surname>
+<given-names>Ryan E</given-names>
 </name>
-<string-name>Steve Purves</string-name>
+<string-name>Ryan E Lima</string-name>
 
-<email>steve@curvenote.com</email>
+<email>ryan.lima@nau.edu</email>
 <role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
 <role vocab="https://credit.niso.org" vocab-term="project
 administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">Project
@@ -48,17 +49,35 @@ administration</role>
 <contrib contrib-type="author">
 <contrib-id contrib-id-type="orcid">0000-0002-7859-8394</contrib-id>
 <name>
-<surname>Cockett</surname>
-<given-names>Rowan</given-names>
+<surname>Sankey</surname>
+<given-names>Temuulen Tsagaan</given-names>
 </name>
-<string-name>Rowan Cockett</string-name>
+<string-name>Temuulen Tsagaan Sankey</string-name>
 
+<role vocab="https://credit.niso.org" vocab-term="project
+administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">Project
+administration</role>
+<role>conceptualizationte</role>
+<xref ref-type="aff" rid="aff-1">a</xref>
+</contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">????</contrib-id>
+<name>
+<surname>Springer</surname>
+<given-names>Abraham E</given-names>
+</name>
+<string-name>Abraham E Springer</string-name>
+
+<role vocab="https://credit.niso.org" vocab-term="project
+administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">Project
+administration</role>
+<role vocab="https://credit.niso.org" vocab-term="conceptualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/conceptualization/">conceptualization</role>
 <xref ref-type="aff" rid="aff-1">a</xref>
 </contrib>
 </contrib-group>
 <aff id="aff-1">
 <institution-wrap>
-<institution>Curvenote</institution>
+<institution>Northern Arizona University</institution>
 </institution-wrap>
 
 
@@ -69,7 +88,7 @@ administration</role>
 
 </aff>
 <author-notes>
-<corresp id="cor-1">steve@curvenote.com</corresp>
+<corresp id="cor-1">ryan.lima@nau.edu</corresp>
 </author-notes>
 
 <pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-18">
@@ -88,15 +107,33 @@ administration</role>
 
 
 <abstract>
-<p>In September 2021, a significant jump in seismic activity on the
-island of La Palma (Canary Islands, Spain) signaled the start of a
-volcanic crisis that still continues at the time of writing. Earthquake
-data is continually collected and published by the Instituto Geográphico
-Nacional (IGN). …</p>
+<p>In semi-arid forests such as Arizona, over 90% of annual
+precipitation may be lost to evapotranspiration. Forest structure has
+changed significantly post-Euro-American settlement due to various
+factors, including grazing, logging, and wildfire exclusion. As a
+result, many forests in Arizona are overstocked relative to
+pre-settlement conditions, increasing the risk of catastrophic wildfire.
+In recent years, the growing frequency and severity of drought and
+wildfires have resulted from warming associated with anthropogenic
+climate change. Landscape-scale efforts to restore forests to near
+historic densities are underway throughout Arizona. Mechanical thinning
+has increased water yield for several years following treatment in some
+forests. However, the response of forests to treatments is complex,
+site-specific, and varies with elevation, aspect, treatment level, and
+climatic conditions. As Arizona grapples with increasing water
+insecurity due to historic drought, demographic changes, and increased
+hydroclimatic variability, policymakers are searching for ways to
+bolster water supplies statewide, particularly groundwater, which has
+been declining across much of the state. Here, we review the literature
+on the effects of forest thinning on water yield throughout Arizona and
+map areas where mechanical treatment has the highest potential for
+increasing groundwater recharge.</p>
 </abstract>
 <kwd-group kwd-group-type="author">
-<kwd>La Palma</kwd>
-<kwd>Earthquakes</kwd>
+<kwd>suitability mapping</kwd>
+<kwd>forest thinning</kwd>
+<kwd>water yield</kwd>
+<kwd>groundwater recharge</kwd>
 </kwd-group>
 
 
@@ -109,113 +146,510 @@ Nacional (IGN). …</p>
 <body>
 <sec id="introduction">
   <title>1 Introduction</title>
-  <fig id="fig-timeline">
-    <caption><p>Figure 1: Timeline of recent earthquakes on La
-    Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-timeline-output-1.png" />
-  </fig>
-  <p>Based on data up to and including 1971, eruptions on La Palma
-  happen every 79.8 years on average.</p>
-  <p>Studies of the magma systems feeding the volcano, such as Marrero
-  et al.
-  (<xref alt="2019" rid="ref-marrero2019" ref-type="bibr">2019</xref>),
-  have proposed that there are two main magma reservoirs feeding the
-  Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges
-  and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
-  <p>Eight eruptions have been recorded since the late 1400s
-  (<xref alt="Figure 1" rid="fig-timeline">Figure 1</xref>).</p>
-  <p>Data and methods are discussed in
-  <xref alt="Section 2" rid="sec-data-methods">Section 2</xref>.</p>
-  <p>Let <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  denote the number of eruptions in a year. Then,
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  can be modeled by a Poisson distribution</p>
-  <p><styled-content id="eq-poisson"><disp-formula><alternatives>
-  <tex-math><![CDATA[
-  p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-   \qquad(1)]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mi>λ</mml:mi></mml:mrow></mml:msup><mml:msup><mml:mi>λ</mml:mi><mml:mi>x</mml:mi></mml:msup></mml:mrow><mml:mrow><mml:mi>x</mml:mi><mml:mi>!</mml:mi></mml:mrow></mml:mfrac><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>where <inline-formula><alternatives>
-  <tex-math><![CDATA[\lambda]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
-  is the rate of eruptions per year. Using
-  <xref alt="Equation 1" rid="eq-poisson">Equation 1</xref>, the
-  probability of an eruption in the next <inline-formula><alternatives>
-  <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  years can be calculated.</p>
-  <fig id="tbl-history">
-    <caption><p>Table 1: Recent historic eruptions on La
-    Palma</p></caption>
-    <table-wrap>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Current</td>
-            <td>2021</td>
-          </tr>
-          <tr>
-            <td>Teneguía</td>
-            <td>1971</td>
-          </tr>
-          <tr>
-            <td>Nambroque</td>
-            <td>1949</td>
-          </tr>
-          <tr>
-            <td>El Charco</td>
-            <td>1712</td>
-          </tr>
-          <tr>
-            <td>Volcán San Antonio</td>
-            <td>1677</td>
-          </tr>
-          <tr>
-            <td>Volcán San Martin</td>
-            <td>1646</td>
-          </tr>
-          <tr>
-            <td>Tajuya near El Paso</td>
-            <td>1585</td>
-          </tr>
-          <tr>
-            <td>Montaña Quemada</td>
-            <td>1492</td>
-          </tr>
-        </tbody>
-      </table>
-    </table-wrap>
-  </fig>
-  <p><xref alt="Table 1" rid="tbl-history">Table 1</xref> summarises the
-  eruptions recorded since the colonization of the islands by Europeans
-  in the late 1400s.</p>
-  <fig id="fig-map">
-    <caption><p>Figure 2: Map of La Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="images/la-palma-map.png" />
-  </fig>
-  <p>La Palma is one of the west most islands in the Volcanic
-  Archipelago of the Canary Islands
-  (<xref alt="Figure 2" rid="fig-map">Figure 2</xref>).</p>
-  <fig id="fig-spatial-plot">
-    <caption><p>Figure 3: Locations of earthquakes on La Palma since
-    2017.</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-data-screening-fig-spatial-plot-output-1.png" />
-  </fig>
-  <p><xref alt="Figure 3" rid="fig-spatial-plot">Figure 3</xref> shows
-  the location of recent Earthquakes on La Palma.</p>
+  <p>This research synthesizes the myriad studies examining the effects
+  of forest treatment on water yield in semi-arid forests and compiles a
+  list of relevant variables. Our approach combines thematic maps of
+  average precipitation, elevation, slope, aspect, forest type, forest
+  density, depth to bedrock, and soil type into a GIS suitability model
+  to highlight areas where forest treatment will most likely enhance
+  recharge statewide.</p>
+  <p>Since 2000, the Colorado River Basin has been in the midst of a
+  historic drought
+  (<xref alt="Meko, Woodhouse, and Winitsky 2022" rid="ref-meko_treering_2022" ref-type="bibr">Meko,
+  Woodhouse, and Winitsky 2022</xref>;
+  <xref alt="Williams, Cook, and Smerdon 2022" rid="ref-williams_rapid_2022" ref-type="bibr">Williams,
+  Cook, and Smerdon 2022</xref>). Average temperatures increased by
+  0.9ºC from 2000 - 2014, and streamflow in the Colorado River has
+  declined by 19% below the 1906-1999 average
+  (<xref alt="Hogan and Lundquist 2024" rid="ref-hogan_recent_2024" ref-type="bibr">Hogan
+  and Lundquist 2024</xref>;
+  <xref alt="Udall and Overpeck 2017" rid="ref-udall_twentyfirst_2017" ref-type="bibr">Udall
+  and Overpeck 2017</xref>). Extreme hydroclimate events such as
+  droughts, heatwaves, and floods have more than doubled in frequency
+  since 2010
+  (<xref alt="Bennett, Talsma, and Boero 2021" rid="ref-bennett_concurrent_2021" ref-type="bibr">Bennett,
+  Talsma, and Boero 2021</xref>). Simultaneously, Arizona has
+  experienced rapid population growth, increasing the demands on already
+  strained water supplies. Reductions in streamflow have increased
+  reliance on groundwater, while groundwater levels have declined for
+  decades (<bold>CITATION</bold>). The <italic>Arizona Tri-Univeristy
+  Recharge and Water Reliability Project</italic> (ATUR-WRP) has been
+  tasked with identifying ways to protect water supplies and enhance
+  recharge by identifying where landscape management practices can
+  reduce atmospheric losses. Average annual precipitation in the lower
+  Colorado River Basin is about 330mm, and only about 10mm of that
+  precipitation becomes streamflow while much of the rest is lost to
+  Evapotranspiration
+  (<xref alt="Zou, Ffolliott, and Wine 2010" rid="ref-zou_streamflow_2010" ref-type="bibr">Zou,
+  Ffolliott, and Wine 2010</xref>). Sublimation has been shown to remove
+  10 - 90% of snowfall in the basin; the remaining snowmelt provides
+  over 80% of streamflow to the Colorado River
+  (<xref alt="Lundquist et al. 2024" rid="ref-lundquist_sublimation_2024" ref-type="bibr">Lundquist
+  et al. 2024</xref>). Therefore, small reductions in evaporative losses
+  could have outsized impacts on available water supplies.</p>
+  <p>Around 65% of surface water in the western states originates from
+  forested lands, which cover just 29% of the land area
+  (<xref alt="Brown, Hobbins, and Ramirez 2005" rid="ref-brown_source_2005" ref-type="bibr">Brown,
+  Hobbins, and Ramirez 2005</xref>). However, western forests are
+  increasingly at risk from catastrophic wildfires, an emerging driver
+  of runoff change that will increase the impact on the water supply
+  (<xref alt="Williams, Cook, and Smerdon 2022" rid="ref-williams_rapid_2022" ref-type="bibr">Williams,
+  Cook, and Smerdon 2022</xref>). Increasing temperatures and related
+  droughts have contributed to extensive tree mortality from wildfire,
+  disease, and insect infestation
+  (<xref alt="Berner et al. 2017" rid="ref-berner_tree_2017" ref-type="bibr">Berner
+  et al. 2017</xref>). Warming temperatures have tripled the frequency
+  and quadrupled the size of wildfires in recent decades
+  (<xref alt="Williams, Cook, and Smerdon 2022" rid="ref-williams_rapid_2022" ref-type="bibr">Williams,
+  Cook, and Smerdon 2022</xref>). Increasing heat has pushed many
+  low-elevation conifer forests past climate thresholds, creating
+  conditions less suitable for tree regeneration
+  (<xref alt="Davis et al. 2019" rid="ref-davis_wildfires_2019" ref-type="bibr">Davis
+  et al. 2019</xref>). This increased risk of wildfire and forest loss
+  is driven by climate and overstocked conditions resulting from over a
+  century of forest management practices since euro-american settlement
+  (<bold>Citation</bold>).</p>
+  <p>Landscape-scale forest restoration efforts have been planned or
+  implemented across much of Arizona (<bold>Citation</bold>). For
+  example, the Four Forest Restoration Initiative (4FRI) includes plans
+  for restoration across over 2.5 million acres of Arizona’s forests.
+  The primary goal of restoration efforts is to reduce wildfire risk.
+  However, numerous studies have linked forest treatments to increased
+  water yields and have emphasized the role of forest restoration in
+  improving hydrologic services and increasing water supplies
+  (<bold>Citations</bold>). Forest treatments such as thinning and
+  burning can significantly impact the hydrologic cycle of forests
+  (<xref alt="Del Campo et al. 2022" rid="ref-del_campo_global_2022" ref-type="bibr">Del
+  Campo et al. 2022</xref>). However, the response of forests to
+  treatments is complex and non-linear and differs across forest types,
+  with treatment level, and along aspect and elevational gradients
+  (<xref alt="Del Campo et al. 2022" rid="ref-del_campo_global_2022" ref-type="bibr">Del
+  Campo et al. 2022</xref>;
+  <xref alt="Biederman et al. 2022" rid="ref-biederman_streamflow_2022" ref-type="bibr">Biederman
+  et al. 2022</xref>;
+  <xref alt="Zou, Ffolliott, and Wine 2010" rid="ref-zou_streamflow_2010" ref-type="bibr">Zou,
+  Ffolliott, and Wine 2010</xref>;
+  <xref alt="Moore and Wondzell 2005" rid="ref-moore_physical_2005" ref-type="bibr">Moore
+  and Wondzell 2005</xref>).</p>
+  <sec id="justification">
+    <title>1.1 Justification</title>
+    <list list-type="bullet">
+      <list-item>
+        <p>regional studies are the best predictor of hydrologic
+        response to thinning in Arizona forests
+        (<xref alt="Wyatt 2013" rid="ref-wyatt_estimating_2013" ref-type="bibr">Wyatt
+        2013</xref>)</p>
+      </list-item>
+      <list-item>
+        <p>A snythesis of all 4FRI treatments found that thinned and
+        burned forests have signifiantly greater total ecosystem
+        moisture and are thus more resilient to drought and wildfire
+        (<xref alt="Sankey et al. 2021" rid="ref-sankey_regionalscale_2021" ref-type="bibr">Sankey
+        et al. 2021</xref>)</p>
+      </list-item>
+      <list-item>
+        <p>Thinned forests are better buffered against drought impacts
+        in terms of both soil moisture and tree health
+        (<xref alt="Sankey and Tatum 2022" rid="ref-sankey_thinning_2022" ref-type="bibr">Sankey
+        and Tatum 2022</xref>).</p>
+      </list-item>
+      <list-item>
+        <p>Soil moisture and ET may be effected by thining for 3.6 - 8.6
+        years
+        (<xref alt="Del Campo et al. 2022" rid="ref-del_campo_global_2022" ref-type="bibr">Del
+        Campo et al. 2022</xref>).</p>
+      </list-item>
+      <list-item>
+        <p>Prescribed burning or thinning can increase tree growth
+        improving resilience to drought in poderosa pine forests (Rodman
+        et al., 2024)</p>
+      </list-item>
+      <list-item>
+        <p>Thinned forests (around Flagstaff) have higher soil moisture
+        at 25 and 50cm in the first two years post-thinning
+        (<xref alt="Belmonte et al. 2022" rid="ref-belmonte_soil_2022" ref-type="bibr">Belmonte
+        et al. 2022</xref>).</p>
+      </list-item>
+      <list-item>
+        <p>Thinning in smei-arid forests around the mediterraniean
+        increased antecedant soil moisture and belowground hydrologic
+        processes and increased deep soil moisture by 50mm/year over the
+        control
+        (<xref alt="Del Campo et al. 2019" rid="ref-del_campo_effectiveness_2019" ref-type="bibr">Del
+        Campo et al. 2019</xref>).</p>
+      </list-item>
+      <list-item>
+        <p>a review of 35 studies published from 1971 to 2018 found that
+        thinning was more effective than clear-cutting in terms of
+        increasing groundwater recharge due to reduced sublimation and
+        evaporation. Springs can be effective at monitoring groundwater
+        recharge affects in aridlands
+        (<xref alt="Schenk et al. 2020" rid="ref-schenk_impacts_2020" ref-type="bibr">Schenk
+        et al. 2020</xref>).</p>
+      </list-item>
+      <list-item>
+        <p>A review of studies on forest mgmt effects on groundwater
+        resources found that a rise in water table can generally be
+        expeted following forest thinning in all forested landscapes
+        (<xref alt="Smerdon, Redding, and Beckers 2009" rid="ref-smerdon_overview_2009" ref-type="bibr">Smerdon,
+        Redding, and Beckers 2009</xref>).</p>
+      </list-item>
+    </list>
+    <sec id="snow-retention">
+      <title>1.1.1 Snow retention</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>The effects of forest thinning and subsequent snowmelt are
+          highly variable, with responses depending on forest structure
+          and local climate, where thinning in dense and taller
+          vegetation generally increases snow retention, thinning in
+          shorter, less dense forests may decrease retention
+          (<xref alt="Lewis et al. 2023" rid="ref-lewis_prediction_2023" ref-type="bibr">Lewis
+          et al. 2023</xref>).</p>
+        </list-item>
+        <list-item>
+          <p>In semi-arid forested watersheds, thinning can influence
+          streamflow variability by modifying snowpack accumulation and
+          melt, particularly in wetter years where thinning can either
+          reduce or increase snow retention based on site-specific
+          conditions.(<xref alt="Broxton et al. 2023" rid="ref-broxton_subseasonal_2023" ref-type="bibr">Broxton
+          et al. 2023</xref>).</p>
+        </list-item>
+        <list-item>
+          <p>Thinning in semi-arid forested watershed can significantly
+          impact streamflow by altering snowmelt timing, with reduce
+          forest cover tending to delay snowmelt at warmer sites while
+          advancing melt at cooler, snowpack-persistent sites
+          (<xref alt="Dwivedi et al. 2024" rid="ref-dwivedi_how_2024" ref-type="bibr">Dwivedi
+          et al. 2024</xref>).</p>
+        </list-item>
+        <list-item>
+          <p>Thinned forests around Flagstaff have greater snow
+          persistance at 25%-35% canopy cover
+          (<xref alt="Belmonte et al. 2021" rid="ref-belmonte_uav-based_2021" ref-type="bibr">Belmonte
+          et al. 2021</xref>)</p>
+        </list-item>
+        <list-item>
+          <p>Thinned forests in Northern Arizona have more snow and soil
+          moisture
+          (<xref alt="O’Donnell et al. 2021" rid="ref-odonnell_vegetation_2021" ref-type="bibr">O’Donnell
+          et al. 2021</xref>)</p>
+        </list-item>
+        <list-item>
+          <p>Found that thinned and burned vs control forests had
+          varying rates of snowmelt and snow persistence. Canopy cover
+          is most predictive of snow persistance
+          (<xref alt="Donager et al. 2021" rid="ref-donager_integrating_2021" ref-type="bibr">Donager
+          et al. 2021</xref>).</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="thresholds-in-literature">
+      <title>1.1.2 Thresholds in literature</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>A review of 94 catchment studies showed that significant
+          changes in water yield are correlated to forest growth in
+          forests that recive 600-1200 mm of mean annual precipitation
+          Bosch and Hewlett, 1982 The caveat being there were not many
+          confierous forests studies in that precipitation range
+          (<xref alt="Bosch and Hewlett 1982" rid="ref-bosch_review_1982" ref-type="bibr">Bosch
+          and Hewlett 1982</xref>).</p>
+        </list-item>
+        <list-item>
+          <p>(<xref alt="Adams et al. 2012" rid="ref-adams_ecohydrological_2012" ref-type="bibr">Adams
+          et al. 2012</xref>) hypotheized that where annual
+          precipitaiton exceeds ~500 mm or water yield is dominated by
+          snowmelt, watershed will experience significantly decreased
+          evapotranspiration and increased flows if canopy cover is
+          reduced by over 20%, however their recent observations suggest
+          that in dry forests water ield may decrease. More research is
+          needed. This paper was focused on tree-die off not
+          thinning.</p>
+        </list-item>
+        <list-item>
+          <p>(<xref alt="Carroll et al. 2016" rid="ref-carroll_evaluating_2016" ref-type="bibr">Carroll
+          et al. 2016</xref>) found a threshold hydrologic response when
+          evaluating thinning of a snow-dominated semi-arid
+          Pinyon-Juniper community in the Great Basin. They found that a
+          positive water yield in thinned plots was only observed when
+          precipitation exceeded 400mm annually (wet years)</p>
+        </list-item>
+        <list-item>
+          <p>(<xref alt="Biederman et al. 2022" rid="ref-biederman_streamflow_2022" ref-type="bibr">Biederman
+          et al. 2022</xref>) suggests that distrubance will have
+          positive inpacts on streamflow for a minimum of several years
+          following disturbance in areas where mean annual precipitation
+          exceeds ~500mm. “Presumably because below 500 mm, most
+          precipitation is evaporated regardless of forest condition
+          (Hibbert, 1979)[@]</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="thinning-decreases-et-in-some-circumstances">
+    <title>1.2 thinning decreases ET in some circumstances</title>
+    <list list-type="bullet">
+      <list-item>
+        <p>Reductions of canopy cover can increase ET of existing trees,
+        and solar radiation increasing ET
+        <ext-link ext-link-type="uri" xlink:href="Chen%20et%20al.,%202005;%20Bennett%20et%20al.,%202018">Biederman
+        et al.
+        (<xref alt="2015" rid="ref-biederman_recent_2015" ref-type="bibr">2015</xref>)</ext-link></p>
+      </list-item>
+      <list-item>
+        <p>Decreases in post-disturbance ET may be offsett by increased
+        soil evaporation increasing net ET (Reed et al., 2016)</p>
+      </list-item>
+      <list-item>
+        <p>(<xref alt="Goeking and Tarboton 2020" rid="ref-goeking_forests_2020" ref-type="bibr">Goeking
+        and Tarboton 2020</xref>) reviewed the hydrologic response of
+        stand-replacing and non-stand replacing disturbances and found
+        that post-distrubance streamflow may increase, not change, or
+        even decrease. Nonstand replacing fires—because of increased
+        evaporation from higher subcanopy radiation and increased
+        transpiration from rapid post-disturbance growth can decrease
+        water availability in some cases.</p>
+      </list-item>
+    </list>
+  </sec>
 </sec>
 <sec id="sec-data-methods">
   <title>2 Data &amp; Methods</title>
+  <sec id="weighted-suitability-workflow">
+    <title>2.1 2.2 Weighted Suitability Workflow</title>
+    <sec id="define">
+      <title>2.1.1 2.2.1 Define</title>
+      <disp-quote>
+        <p>“define the goal, supporting criteria, and evaluation metrics
+        for the weighted suitability model”</p>
+      </disp-quote>
+      <sec id="criteria">
+        <title>2.1.1.1 <bold>Criteria</bold></title>
+        <p><bold>Aspect</bold></p>
+        <disp-quote>
+          <p>Closer to 0 or 360 is desired</p>
+        </disp-quote>
+        <p><bold>Elevation</bold></p>
+        <disp-quote>
+          <p>higher elevation is better; higher percentage of
+          precipitation is snow, higher precipitation</p>
+        </disp-quote>
+        <p><bold>Precipitation</bold></p>
+        <disp-quote>
+          <p>Max precipitation must be higher than 450, mean
+          precipitation should be higher than 400</p>
+        </disp-quote>
+        <p><bold>Vegetation Characteristics</bold></p>
+        <disp-quote>
+          <p>higher vegetation density, when thinned will yield more
+          water, focus on areas of high vegetation density or high
+          departure from historic conditions.</p>
+        </disp-quote>
+      </sec>
+    </sec>
+    <sec id="derive">
+      <title>2.1.2 2.2.2 Derive</title>
+      <disp-quote>
+        <p>“Derive data that represents the model variables that are
+        defined by the criteria. In this example, the criterion Far
+        distances from streets defines distance from streets as a model
+        variable. A raster that represents distance from streets is
+        derived from street centerlines by using a geoprocessing
+        tool.”</p>
+      </disp-quote>
+    </sec>
+    <sec id="transform">
+      <title>2.1.3 2.2.3 Transform</title>
+      <disp-quote>
+        <p>“Transform the values in each derived dataset into a common
+        suitability scale by assigning each cell in the surface a
+        suitability score (value on the suitability scale). For each
+        dataset, assign the highest suitability scores to the variable
+        values that are most preferred according to the associated
+        criterion. In this example, the distance-from-streets raster is
+        transformed into a 1-to-5 suitability scale. To represent the
+        criterion Far distances from streets, the locations closest to
+        streets are assigned a value of 1 (lowest preference) and the
+        locations farthest from streets are assigned a value of 5
+        (highest preference).”</p>
+      </disp-quote>
+    </sec>
+    <sec id="weight-and-combine">
+      <title>2.1.4 2.2.4 Weight and combine</title>
+      <disp-quote>
+        <p>“Weight and combine the transformed data, which represents
+        the model criteria, into a single suitability surface that meets
+        the model goal. In this example, three transformed rasters are
+        combined to create the suitability surface.”</p>
+      </disp-quote>
+    </sec>
+    <sec id="locate">
+      <title>2.1.5 2.2.5 Locate</title>
+      <disp-quote>
+        <p>“Locate the phenomenon by using the suitability surface. In
+        this example, a region that has the highest average suitability
+        is identified.”</p>
+      </disp-quote>
+    </sec>
+    <sec id="analyze">
+      <title>2.1.6 2.2.6 Analyze</title>
+      <disp-quote>
+        <p>“Analyze the result by visually evaluating the suitability
+        surface and regions to ensure that the model goal has been met.
+        Optionally, perform sensitivity and error analysis.”</p>
+      </disp-quote>
+    </sec>
+  </sec>
+  <sec id="environments">
+    <title>2.2 Environments:</title>
+    <list list-type="bullet">
+      <list-item>
+        <p>ArcGIS Pro 3.3</p>
+      </list-item>
+    </list>
+    <sec id="unsuitable">
+      <title>2.2.1 <bold>Unsuitable</bold></title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Max Precipitation &lt; 450mm</p>
+        </list-item>
+        <list-item>
+          <p>Mean Precipitation &lt; 450mm with low IAV interannual
+          variability in precipitation</p>
+        </list-item>
+        <list-item>
+          <p>Forest Cover Trees per Acre &lt; 30</p>
+        </list-item>
+        <list-item>
+          <p>Elevation &lt; 900m</p>
+        </list-item>
+        <list-item>
+          <p>EVC - Excisting vegetation cover Landfire 2023: exclude
+          values:</p>
+        </list-item>
+      </list>
+      <disp-quote>
+        <p>-9999: No data</p>
+      </disp-quote>
+      <disp-quote>
+        <p>11-100: Open Water, Snow/Ice, Developed all, Barren,
+        Cultivated, Sparse vegetation</p>
+      </disp-quote>
+      <disp-quote>
+        <p>310 + (herb cover)</p>
+      </disp-quote>
+      <disp-quote>
+        <p>Existing vegetation cover Tree Cover &lt; 30% 110 - 129</p>
+      </disp-quote>
+      <disp-quote>
+        <p>Existing Vegetation Cover Shrub Cover &lt; 30% 210 - 230</p>
+      </disp-quote>
+      <list list-type="bullet">
+        <list-item>
+          <p>VCC - Vegetation Condition Class from Land Fire 2022</p>
+        </list-item>
+      </list>
+      <p>Vegetation Condition Class (VCC) represents a simple
+      categorization of the associated Vegetation Departure (VDep) and
+      is a derivative of the VDep layer. It indicates the general level
+      to which current vegetation is different from the estimated
+      modeled vegetation based on past reference conditions. VDep and
+      VCC are based upon methods originally described in the Interagency
+      Fire Regime Condition Class Guidebook, but are not identical to
+      those methods and should not be considered as a replacement data
+      set. Full descriptions of the methods used can be found in the
+      VDep product description. Note that the LANDFIRE (LF) team feels
+      it is very important for users to review the VDep methods before
+      comparing VDep or VCC values across LF versions.
+      <ext-link ext-link-type="uri" xlink:href="https://www.landfire.gov/vegetation/vcc">info</ext-link>
+      <ext-link ext-link-type="uri" xlink:href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.landfire.gov/sites/default/files/DataDictionary/LF2022/LF22_VCCADD_230.pdf">PDF</ext-link></p>
+      <p><bold>Reclass_LF23_VCC_1_6</bold></p>
+      <table-wrap>
+        <table>
+          <thead>
+            <tr>
+              <th>VCC Value 2022</th>
+              <th>New Class</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fill-NoData</td>
+              <td>NODATA</td>
+            </tr>
+            <tr>
+              <td>Fill-Not Mapped</td>
+              <td>NODATA</td>
+            </tr>
+            <tr>
+              <td>Veg Condition Class I, A</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Vegetation Condition Class I, B</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Vegetation Condition Class II, A</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Vegetation Condition Class II, B</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Vegetation Condition Class III, A</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Vegetation Condition Class III, B</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Water</td>
+              <td>NODATA</td>
+            </tr>
+            <tr>
+              <td>Developed</td>
+              <td>NODATA</td>
+            </tr>
+            <tr>
+              <td>Barren or Sparse</td>
+              <td>NODATA</td>
+            </tr>
+            <tr>
+              <td>Agriculture</td>
+              <td>NODATA</td>
+            </tr>
+            <tr>
+              <td>NODATA</td>
+              <td>NODATA</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <p>Higher numbers indicate departure from historical conditions,
+      and indicate a need for forest restoration (CITATION NEEDED)</p>
+    </sec>
+    <sec id="suitability-criteria">
+      <title>2.2.2 <bold>Suitability Criteria</bold></title>
+      <p><bold>Aspect</bold></p>
+      <disp-quote>
+        <p>Closer to 0 or 360 is desired</p>
+      </disp-quote>
+      <p><bold>Elevation</bold></p>
+      <disp-quote>
+        <p>higher elevation is better</p>
+      </disp-quote>
+      <p><bold>Vegetation Characteristics</bold></p>
+      <p>Landfire 2022 VCC Higher is better 67-100 preferred Class II
+      &amp; III; A &amp; B</p>
+      <p>Landfire EVC tree cover higher is better</p>
+      <p>Precipitation Higher is better</p>
+      <p>Wildfire Hazard POtential V2023 Higher is better</p>
+    </sec>
+  </sec>
 </sec>
 <sec id="conclusion">
   <title>3 Conclusion</title>
@@ -225,293 +659,663 @@ Nacional (IGN). …</p>
 <back>
 <ref-list>
   <title>References</title>
-  <ref id="ref-marrero2019">
+  <ref id="ref-bosch_review_1982">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
-        <name><surname>Marrero</surname><given-names>José</given-names></name>
-        <name><surname>García</surname><given-names>Alicia</given-names></name>
-        <name><surname>Berrocoso</surname><given-names>Manuel</given-names></name>
-        <name><surname>Llinares</surname><given-names>Ángeles</given-names></name>
-        <name><surname>Rodríguez-Losada</surname><given-names>Antonio</given-names></name>
-        <name><surname>Ortiz</surname><given-names>R.</given-names></name>
+        <name><surname>Bosch</surname><given-names>J. M.</given-names></name>
+        <name><surname>Hewlett</surname><given-names>J. D.</given-names></name>
       </person-group>
-      <article-title>Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: The example of La Palma (Canary Islands)</article-title>
-      <source>Journal of Applied Volcanology</source>
-      <year iso-8601-date="2019-07">2019</year><month>07</month>
-      <volume>8</volume>
-      <pub-id pub-id-type="doi">10.1186/s13617-019-0085-5</pub-id>
-      <fpage></fpage>
+      <article-title>A review of catchment experiments to determine the effect of vegetation changes on water yield and evapotranspiration</article-title>
+      <source>Journal of Hydrology</source>
+      <year iso-8601-date="1982-02">1982</year><month>02</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-28">2024</year><month>02</month><day>28</day></date-in-citation>
+      <volume>55</volume>
+      <issue>1-4</issue>
+      <issn>00221694</issn>
+      <uri>https://linkinghub.elsevier.com/retrieve/pii/0022169482901172</uri>
+      <pub-id pub-id-type="doi">10.1016/0022-1694(82)90117-2</pub-id>
+      <fpage>3</fpage>
+      <lpage>23</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-adams_ecohydrological_2012">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Adams</surname><given-names>Henry D.</given-names></name>
+        <name><surname>Luce</surname><given-names>Charles H.</given-names></name>
+        <name><surname>Breshears</surname><given-names>David D.</given-names></name>
+        <name><surname>Allen</surname><given-names>Craig D.</given-names></name>
+        <name><surname>Weiler</surname><given-names>Markus</given-names></name>
+        <name><surname>Hale</surname><given-names>V. Cody</given-names></name>
+        <name><surname>Smith</surname><given-names>Alistair M. S.</given-names></name>
+        <name><surname>Huxman</surname><given-names>Travis E.</given-names></name>
+      </person-group>
+      <article-title>Ecohydrological consequences of drought‐ and infestation‐ triggered tree die‐off: Insights and hypotheses</article-title>
+      <source>Ecohydrology</source>
+      <year iso-8601-date="2012-03">2012</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-28">2024</year><month>02</month><day>28</day></date-in-citation>
+      <volume>5</volume>
+      <issue>2</issue>
+      <issn>1936-0584, 1936-0592</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/10.1002/eco.233</uri>
+      <pub-id pub-id-type="doi">10.1002/eco.233</pub-id>
+      <fpage>145</fpage>
+      <lpage>159</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-schenk_impacts_2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Schenk</surname><given-names>Edward R.</given-names></name>
+        <name><surname>O’Donnell</surname><given-names>Frances</given-names></name>
+        <name><surname>Springer</surname><given-names>Abraham E.</given-names></name>
+        <name><surname>Stevens</surname><given-names>Lawrence E.</given-names></name>
+      </person-group>
+      <article-title>The impacts of tree stand thinning on groundwater recharge in aridland forests</article-title>
+      <source>Ecological Engineering</source>
+      <year iso-8601-date="2020-02">2020</year><month>02</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-28">2024</year><month>02</month><day>28</day></date-in-citation>
+      <volume>145</volume>
+      <issn>09258574</issn>
+      <uri>https://linkinghub.elsevier.com/retrieve/pii/S0925857419304252</uri>
+      <pub-id pub-id-type="doi">10.1016/j.ecoleng.2019.105701</pub-id>
+      <fpage>105701</fpage>
       <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-del_campo_effectiveness_2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Del Campo</surname><given-names>Antonio D.</given-names></name>
+        <name><surname>González-Sanchis</surname><given-names>María</given-names></name>
+        <name><surname>Molina</surname><given-names>Antonio J.</given-names></name>
+        <name><surname>García-Prats</surname><given-names>Alberto</given-names></name>
+        <name><surname>Ceacero</surname><given-names>Carlos J.</given-names></name>
+        <name><surname>Bautista</surname><given-names>Inmaculada</given-names></name>
+      </person-group>
+      <article-title>Effectiveness of water-oriented thinning in two semiarid forests: The redistribution of increased net rainfall into soil water, drainage and runoff</article-title>
+      <source>Forest Ecology and Management</source>
+      <year iso-8601-date="2019-04">2019</year><month>04</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-28">2024</year><month>02</month><day>28</day></date-in-citation>
+      <volume>438</volume>
+      <issn>03781127</issn>
+      <uri>https://linkinghub.elsevier.com/retrieve/pii/S0378112718323533</uri>
+      <pub-id pub-id-type="doi">10.1016/j.foreco.2019.02.020</pub-id>
+      <fpage>163</fpage>
+      <lpage>175</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-del_campo_global_2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Del Campo</surname><given-names>Antonio D.</given-names></name>
+        <name><surname>Otsuki</surname><given-names>Kyoichi</given-names></name>
+        <name><surname>Serengil</surname><given-names>Yusuf</given-names></name>
+        <name><surname>Blanco</surname><given-names>Juan A.</given-names></name>
+        <name><surname>Yousefpour</surname><given-names>Rasoul</given-names></name>
+        <name><surname>Wei</surname><given-names>Xiaohua</given-names></name>
+      </person-group>
+      <article-title>A global synthesis on the effects of thinning on hydrological processes: Implications for forest management</article-title>
+      <source>Forest Ecology and Management</source>
+      <year iso-8601-date="2022-09">2022</year><month>09</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-28">2024</year><month>02</month><day>28</day></date-in-citation>
+      <volume>519</volume>
+      <issn>03781127</issn>
+      <uri>https://linkinghub.elsevier.com/retrieve/pii/S0378112722003188</uri>
+      <pub-id pub-id-type="doi">10.1016/j.foreco.2022.120324</pub-id>
+      <fpage>120324</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-biederman_streamflow_2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Biederman</surname><given-names>Joel A.</given-names></name>
+        <name><surname>Robles</surname><given-names>Marcos D.</given-names></name>
+        <name><surname>Scott</surname><given-names>Russell L.</given-names></name>
+        <name><surname>Knowles</surname><given-names>John F.</given-names></name>
+      </person-group>
+      <article-title>Streamflow Response to Wildfire Differs With Season and Elevation in Adjacent Headwaters of the Lower Colorado River Basin</article-title>
+      <source>Water Resources Research</source>
+      <year iso-8601-date="2022-03">2022</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-28">2024</year><month>02</month><day>28</day></date-in-citation>
+      <volume>58</volume>
+      <issue>3</issue>
+      <issn>0043-1397, 1944-7973</issn>
+      <uri>https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021WR030687</uri>
+      <pub-id pub-id-type="doi">10.1029/2021WR030687</pub-id>
+      <fpage>e2021WR030687</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-bennett_concurrent_2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Bennett</surname><given-names>Katrina E.</given-names></name>
+        <name><surname>Talsma</surname><given-names>Carl</given-names></name>
+        <name><surname>Boero</surname><given-names>Riccardo</given-names></name>
+      </person-group>
+      <article-title>Concurrent Changes in Extreme Hydroclimate Events in the Colorado River Basin</article-title>
+      <source>Water</source>
+      <year iso-8601-date="2021-04">2021</year><month>04</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-05">2024</year><month>08</month><day>05</day></date-in-citation>
+      <volume>13</volume>
+      <issue>7</issue>
+      <issn>2073-4441</issn>
+      <uri>https://www.mdpi.com/2073-4441/13/7/978</uri>
+      <pub-id pub-id-type="doi">10.3390/w13070978</pub-id>
+      <fpage>978</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-udall_twentyfirst_2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Udall</surname><given-names>Bradley</given-names></name>
+        <name><surname>Overpeck</surname><given-names>Jonathan</given-names></name>
+      </person-group>
+      <article-title>The twenty‐first century Colorado River hot drought and implications for the future</article-title>
+      <source>Water Resources Research</source>
+      <year iso-8601-date="2017-03">2017</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-05">2024</year><month>08</month><day>05</day></date-in-citation>
+      <volume>53</volume>
+      <issue>3</issue>
+      <issn>0043-1397, 1944-7973</issn>
+      <uri>https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2016WR019638</uri>
+      <pub-id pub-id-type="doi">10.1002/2016WR019638</pub-id>
+      <fpage>2404</fpage>
+      <lpage>2418</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-sankey_thinning_2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sankey</surname><given-names>Temuulen</given-names></name>
+        <name><surname>Tatum</surname><given-names>Julia</given-names></name>
+      </person-group>
+      <article-title>Thinning increases forest resiliency during unprecedented drought</article-title>
+      <source>Scientific Reports</source>
+      <year iso-8601-date="2022-05">2022</year><month>05</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-15">2024</year><month>08</month><day>15</day></date-in-citation>
+      <volume>12</volume>
+      <issue>1</issue>
+      <issn>2045-2322</issn>
+      <uri>https://www.nature.com/articles/s41598-022-12982-z</uri>
+      <pub-id pub-id-type="doi">10.1038/s41598-022-12982-z</pub-id>
+      <fpage>9041</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-belmonte_soil_2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Belmonte</surname><given-names>Adam</given-names></name>
+        <name><surname>Ts. Sankey</surname><given-names>Temuulen</given-names></name>
+        <name><surname>Biederman</surname><given-names>Joel</given-names></name>
+        <name><surname>Bradford</surname><given-names>John B.</given-names></name>
+        <name><surname>Kolb</surname><given-names>Thomas</given-names></name>
+      </person-group>
+      <article-title>Soil moisture response to seasonal drought conditions and post‐thinning forest structure</article-title>
+      <source>Ecohydrology</source>
+      <year iso-8601-date="2022-07">2022</year><month>07</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-15">2024</year><month>08</month><day>15</day></date-in-citation>
+      <volume>15</volume>
+      <issue>5</issue>
+      <issn>1936-0584, 1936-0592</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/10.1002/eco.2406</uri>
+      <pub-id pub-id-type="doi">10.1002/eco.2406</pub-id>
+      <fpage>e2406</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-donager_integrating_2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Donager</surname><given-names>Jonathon</given-names></name>
+        <name><surname>Sankey</surname><given-names>Temuulen Ts.</given-names></name>
+        <name><surname>Sánchez Meador</surname><given-names>Andrew J.</given-names></name>
+        <name><surname>Sankey</surname><given-names>Joel B.</given-names></name>
+        <name><surname>Springer</surname><given-names>Abraham</given-names></name>
+      </person-group>
+      <article-title>Integrating airborne and mobile lidar data with UAV photogrammetry for rapid assessment of changing forest snow depth and cover</article-title>
+      <source>Science of Remote Sensing</source>
+      <year iso-8601-date="2021-12">2021</year><month>12</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-15">2024</year><month>08</month><day>15</day></date-in-citation>
+      <volume>4</volume>
+      <issn>26660172</issn>
+      <uri>https://linkinghub.elsevier.com/retrieve/pii/S266601722100016X</uri>
+      <pub-id pub-id-type="doi">10.1016/j.srs.2021.100029</pub-id>
+      <fpage>100029</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-odonnell_vegetation_2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>O’Donnell</surname><given-names>Frances C.</given-names></name>
+        <name><surname>Donager</surname><given-names>Jonathon</given-names></name>
+        <name><surname>Sankey</surname><given-names>Temuulen</given-names></name>
+        <name><surname>Masek Lopez</surname><given-names>Sharon</given-names></name>
+        <name><surname>Springer</surname><given-names>Abraham E.</given-names></name>
+      </person-group>
+      <article-title>Vegetation structure controls on snow and soil moisture in restored ponderosa pine forests</article-title>
+      <source>Hydrological Processes</source>
+      <year iso-8601-date="2021-11">2021</year><month>11</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-15">2024</year><month>08</month><day>15</day></date-in-citation>
+      <volume>35</volume>
+      <issue>11</issue>
+      <issn>0885-6087, 1099-1085</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/10.1002/hyp.14432</uri>
+      <pub-id pub-id-type="doi">10.1002/hyp.14432</pub-id>
+      <fpage>e14432</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-sankey_regionalscale_2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sankey</surname><given-names>Temuulen</given-names></name>
+        <name><surname>Belmonte</surname><given-names>Adam</given-names></name>
+        <name><surname>Massey</surname><given-names>Richard</given-names></name>
+        <name><surname>Leonard</surname><given-names>Jackson</given-names></name>
+      </person-group>
+      <article-title>Regional‐scale forest restoration effects on ecosystem resiliency to drought: A synthesis of vegetation and moisture trends on Google Earth Engine</article-title>
+      <source>Remote Sensing in Ecology and Conservation</source>
+      <person-group person-group-type="editor">
+        <name><surname>Disney</surname><given-names>Mat</given-names></name>
+        <name><surname>Armenteras</surname><given-names>Dolors</given-names></name>
+      </person-group>
+      <year iso-8601-date="2021-06">2021</year><month>06</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-15">2024</year><month>08</month><day>15</day></date-in-citation>
+      <volume>7</volume>
+      <issue>2</issue>
+      <issn>2056-3485, 2056-3485</issn>
+      <uri>https://zslpublications.onlinelibrary.wiley.com/doi/10.1002/rse2.186</uri>
+      <pub-id pub-id-type="doi">10.1002/rse2.186</pub-id>
+      <fpage>259</fpage>
+      <lpage>274</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-belmonte_uav-based_2021">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Belmonte</surname><given-names>Adam</given-names></name>
+        <name><surname>Sankey</surname><given-names>Temuulen</given-names></name>
+        <name><surname>Biederman</surname><given-names>Joel</given-names></name>
+        <name><surname>Bradford</surname><given-names>John</given-names></name>
+        <name><surname>Goetz</surname><given-names>Scott</given-names></name>
+        <name><surname>Kolb</surname><given-names>Thomas</given-names></name>
+      </person-group>
+      <article-title>UAV-Based Estimate of Snow Cover Dynamics: Optimizing Semi-Arid Forest Structure for Snow Persistence</article-title>
+      <source>Remote Sensing</source>
+      <year iso-8601-date="2021-03">2021</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-15">2024</year><month>08</month><day>15</day></date-in-citation>
+      <volume>13</volume>
+      <issue>5</issue>
+      <issn>2072-4292</issn>
+      <uri>https://www.mdpi.com/2072-4292/13/5/1036</uri>
+      <pub-id pub-id-type="doi">10.3390/rs13051036</pub-id>
+      <fpage>1036</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-dwivedi_how_2024">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Dwivedi</surname><given-names>Ravindra</given-names></name>
+        <name><surname>Biederman</surname><given-names>Joel A.</given-names></name>
+        <name><surname>Broxton</surname><given-names>Patrick D.</given-names></name>
+        <name><surname>Pearl</surname><given-names>Jessie K.</given-names></name>
+        <name><surname>Lee</surname><given-names>Kangsan</given-names></name>
+        <name><surname>Svoma</surname><given-names>Bohumil M.</given-names></name>
+        <name><surname>Van Leeuwen</surname><given-names>Willem J. D.</given-names></name>
+        <name><surname>Robles</surname><given-names>Marcos D.</given-names></name>
+      </person-group>
+      <article-title>How three-dimensional forest structure regulates the amount and timing of snowmelt across a climatic gradient of snow persistence</article-title>
+      <source>Frontiers in Water</source>
+      <year iso-8601-date="2024-05">2024</year><month>05</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-15">2024</year><month>08</month><day>15</day></date-in-citation>
+      <volume>6</volume>
+      <issn>2624-9375</issn>
+      <uri>https://www.frontiersin.org/articles/10.3389/frwa.2024.1374961/full</uri>
+      <pub-id pub-id-type="doi">10.3389/frwa.2024.1374961</pub-id>
+      <fpage>1374961</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-broxton_subseasonal_2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Broxton</surname><given-names>Patrick D.</given-names></name>
+        <name><surname>Van Leeuwen</surname><given-names>Willem J. D.</given-names></name>
+        <name><surname>Svoma</surname><given-names>Bohumil M.</given-names></name>
+        <name><surname>Walter</surname><given-names>James</given-names></name>
+        <name><surname>Biederman</surname><given-names>Joel A.</given-names></name>
+      </person-group>
+      <article-title>Subseasonal to seasonal streamflow forecasting in a semiarid watershed</article-title>
+      <source>JAWRA Journal of the American Water Resources Association</source>
+      <year iso-8601-date="2023-12">2023</year><month>12</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-15">2024</year><month>08</month><day>15</day></date-in-citation>
+      <volume>59</volume>
+      <issue>6</issue>
+      <issn>1093-474X, 1752-1688</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/10.1111/1752-1688.13147</uri>
+      <pub-id pub-id-type="doi">10.1111/1752-1688.13147</pub-id>
+      <fpage>1493</fpage>
+      <lpage>1510</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lewis_prediction_2023">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lewis</surname><given-names>Gabriel</given-names></name>
+        <name><surname>Harpold</surname><given-names>Adrian</given-names></name>
+        <name><surname>Krogh</surname><given-names>Sebastian A.</given-names></name>
+        <name><surname>Broxton</surname><given-names>Patrick</given-names></name>
+        <name><surname>Manley</surname><given-names>Patricia N.</given-names></name>
+      </person-group>
+      <article-title>The prediction of uneven snowpack response to forest thinning informs forest restoration in the central Sierra Nevada</article-title>
+      <source>Ecohydrology</source>
+      <year iso-8601-date="2023-10">2023</year><month>10</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-15">2024</year><month>08</month><day>15</day></date-in-citation>
+      <volume>16</volume>
+      <issue>7</issue>
+      <issn>1936-0584, 1936-0592</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/10.1002/eco.2580</uri>
+      <pub-id pub-id-type="doi">10.1002/eco.2580</pub-id>
+      <fpage>e2580</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-hogan_recent_2024">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Hogan</surname><given-names>Daniel</given-names></name>
+        <name><surname>Lundquist</surname><given-names>Jessica D.</given-names></name>
+      </person-group>
+      <article-title>Recent Upper Colorado River Streamflow Declines Driven by Loss of Spring Precipitation</article-title>
+      <source>Geophysical Research Letters</source>
+      <year iso-8601-date="2024-08">2024</year><month>08</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-09-17">2024</year><month>09</month><day>17</day></date-in-citation>
+      <volume>51</volume>
+      <issue>16</issue>
+      <issn>0094-8276, 1944-8007</issn>
+      <uri>https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024GL109826</uri>
+      <pub-id pub-id-type="doi">10.1029/2024GL109826</pub-id>
+      <fpage>e2024GL109826</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-meko_treering_2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Meko</surname><given-names>David M.</given-names></name>
+        <name><surname>Woodhouse</surname><given-names>Connie A.</given-names></name>
+        <name><surname>Winitsky</surname><given-names>Anabel G.</given-names></name>
+      </person-group>
+      <article-title>Tree‐Ring Perspectives on the Colorado River: Looking Back and Moving Forward</article-title>
+      <source>JAWRA Journal of the American Water Resources Association</source>
+      <year iso-8601-date="2022-10">2022</year><month>10</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-09-18">2024</year><month>09</month><day>18</day></date-in-citation>
+      <volume>58</volume>
+      <issue>5</issue>
+      <issn>1093-474X, 1752-1688</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/10.1111/1752-1688.12989</uri>
+      <pub-id pub-id-type="doi">10.1111/1752-1688.12989</pub-id>
+      <fpage>604</fpage>
+      <lpage>621</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-lundquist_sublimation_2024">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Lundquist</surname><given-names>Jessica D.</given-names></name>
+        <name><surname>Vano</surname><given-names>Julie</given-names></name>
+        <name><surname>Gutmann</surname><given-names>Ethan</given-names></name>
+        <name><surname>Hogan</surname><given-names>Daniel</given-names></name>
+        <name><surname>Schwat</surname><given-names>Eli</given-names></name>
+        <name><surname>Haugeneder</surname><given-names>Michael</given-names></name>
+        <name><surname>Mateo</surname><given-names>Emilio</given-names></name>
+        <name><surname>Oncley</surname><given-names>Steve</given-names></name>
+        <name><surname>Roden</surname><given-names>Chris</given-names></name>
+        <name><surname>Osenga</surname><given-names>Elise</given-names></name>
+        <name><surname>Carver</surname><given-names>Liz</given-names></name>
+      </person-group>
+      <article-title>Sublimation of Snow</article-title>
+      <source>Bulletin of the American Meteorological Society</source>
+      <year iso-8601-date="2024-06">2024</year><month>06</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-09-18">2024</year><month>09</month><day>18</day></date-in-citation>
+      <volume>105</volume>
+      <issue>6</issue>
+      <issn>0003-0007, 1520-0477</issn>
+      <uri>https://journals.ametsoc.org/view/journals/bams/105/6/BAMS-D-23-0191.1.xml</uri>
+      <pub-id pub-id-type="doi">10.1175/BAMS-D-23-0191.1</pub-id>
+      <fpage>E975</fpage>
+      <lpage>E990</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-williams_rapid_2022">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Williams</surname><given-names>A. Park</given-names></name>
+        <name><surname>Cook</surname><given-names>Benjamin I.</given-names></name>
+        <name><surname>Smerdon</surname><given-names>Jason E.</given-names></name>
+      </person-group>
+      <article-title>Rapid intensification of the emerging southwestern North American megadrought in 2020–2021</article-title>
+      <source>Nature Climate Change</source>
+      <year iso-8601-date="2022-03">2022</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-09-18">2024</year><month>09</month><day>18</day></date-in-citation>
+      <volume>12</volume>
+      <issue>3</issue>
+      <issn>1758-678X, 1758-6798</issn>
+      <uri>https://www.nature.com/articles/s41558-022-01290-z</uri>
+      <pub-id pub-id-type="doi">10.1038/s41558-022-01290-z</pub-id>
+      <fpage>232</fpage>
+      <lpage>234</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-carroll_evaluating_2016">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Carroll</surname><given-names>Rosemary W. H.</given-names></name>
+        <name><surname>Huntington</surname><given-names>Justin L.</given-names></name>
+        <name><surname>Snyder</surname><given-names>Keirith A.</given-names></name>
+        <name><surname>Niswonger</surname><given-names>Richard G.</given-names></name>
+        <name><surname>Morton</surname><given-names>Charles</given-names></name>
+        <name><surname>Stringham</surname><given-names>Tamzen K.</given-names></name>
+      </person-group>
+      <article-title>Evaluating mountain meadow groundwater response to Pinyon‐Juniper and temperature in a great basin watershed</article-title>
+      <source>Ecohydrology</source>
+      <year iso-8601-date="2016">2016</year>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-01">2024</year><month>10</month><day>01</day></date-in-citation>
+      <volume>10</volume>
+      <issue>1</issue>
+      <issn>1936-0584, 1936-0592</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/10.1002/eco.1792</uri>
+      <pub-id pub-id-type="doi">10.1002/eco.1792</pub-id>
+      <fpage>e1792</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-smerdon_overview_2009">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Smerdon</surname><given-names>Brian D.</given-names></name>
+        <name><surname>Redding</surname><given-names>Todd</given-names></name>
+        <name><surname>Beckers</surname><given-names>Jos</given-names></name>
+      </person-group>
+      <article-title>An overview of the effects of forest management on groundwater hydrology</article-title>
+      <source>Journal of Ecosystems and Management</source>
+      <year iso-8601-date="2009-03">2009</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-01">2024</year><month>10</month><day>01</day></date-in-citation>
+      <issn>1488-4674, 1488-4666</issn>
+      <uri>https://jem-online.org/index.php/jem/article/view/409</uri>
+      <pub-id pub-id-type="doi">10.22230/jem.2009v10n1a409</pub-id>
+    </element-citation>
+  </ref>
+  <ref id="ref-wyatt_estimating_2013">
+    <element-citation publication-type="thesis">
+      <person-group person-group-type="author">
+        <name><surname>Wyatt</surname><given-names>Clinton J W</given-names></name>
+      </person-group>
+      <article-title>Estimating groundwater yield following forest restoration along the Mogollon Rim</article-title>
+      <publisher-name>Northern Arizona University</publisher-name>
+      <publisher-loc>Flagstaff, AZ</publisher-loc>
+      <year iso-8601-date="2013">2013</year>
+      <uri>https://cdm17192.contentdm.oclc.org/digital/collection/p17192coll1/id/476/rec/3</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-goeking_forests_2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Goeking</surname><given-names>Sara A</given-names></name>
+        <name><surname>Tarboton</surname><given-names>David G</given-names></name>
+      </person-group>
+      <article-title>Forests and Water Yield: A Synthesis of Disturbance Effects on Streamflow and Snowpack in Western Coniferous Forests</article-title>
+      <source>Journal of Forestry</source>
+      <year iso-8601-date="2020-03">2020</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-02">2024</year><month>10</month><day>02</day></date-in-citation>
+      <volume>118</volume>
+      <issue>2</issue>
+      <issn>0022-1201, 1938-3746</issn>
+      <uri>https://academic.oup.com/jof/article/118/2/172/5734757</uri>
+      <pub-id pub-id-type="doi">10.1093/jofore/fvz069</pub-id>
+      <fpage>172</fpage>
+      <lpage>192</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-biederman_recent_2015">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Biederman</surname><given-names>Joel A.</given-names></name>
+        <name><surname>Somor</surname><given-names>Andrew J.</given-names></name>
+        <name><surname>Harpold</surname><given-names>Adrian A.</given-names></name>
+        <name><surname>Gutmann</surname><given-names>Ethan D.</given-names></name>
+        <name><surname>Breshears</surname><given-names>David D.</given-names></name>
+        <name><surname>Troch</surname><given-names>Peter A.</given-names></name>
+        <name><surname>Gochis</surname><given-names>David J.</given-names></name>
+        <name><surname>Scott</surname><given-names>Russell L.</given-names></name>
+        <name><surname>Meddens</surname><given-names>Arjan J. H.</given-names></name>
+        <name><surname>Brooks</surname><given-names>Paul D.</given-names></name>
+      </person-group>
+      <article-title>Recent tree die‐off has little effect on streamflow in contrast to expected increases from historical studies</article-title>
+      <source>Water Resources Research</source>
+      <year iso-8601-date="2015-12">2015</year><month>12</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-08">2024</year><month>10</month><day>08</day></date-in-citation>
+      <volume>51</volume>
+      <issue>12</issue>
+      <issn>0043-1397, 1944-7973</issn>
+      <uri>https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2015WR017401</uri>
+      <pub-id pub-id-type="doi">10.1002/2015WR017401</pub-id>
+      <fpage>9775</fpage>
+      <lpage>9789</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-zou_streamflow_2010">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Zou</surname><given-names>Chris B.</given-names></name>
+        <name><surname>Ffolliott</surname><given-names>Peter F.</given-names></name>
+        <name><surname>Wine</surname><given-names>Michael</given-names></name>
+      </person-group>
+      <article-title>Streamflow responses to vegetation manipulations along a gradient of precipitation in the Colorado River Basin</article-title>
+      <source>Forest Ecology and Management</source>
+      <year iso-8601-date="2010-03">2010</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-08">2024</year><month>10</month><day>08</day></date-in-citation>
+      <volume>259</volume>
+      <issue>7</issue>
+      <issn>03781127</issn>
+      <uri>https://linkinghub.elsevier.com/retrieve/pii/S0378112709005350</uri>
+      <pub-id pub-id-type="doi">10.1016/j.foreco.2009.08.005</pub-id>
+      <fpage>1268</fpage>
+      <lpage>1276</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-moore_physical_2005">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Moore</surname><given-names>R.</given-names></name>
+        <name><surname>Wondzell</surname><given-names>S. M.</given-names></name>
+      </person-group>
+      <article-title>Physical hydrology and the effects of forest harvesting in the pacific northwest: A review</article-title>
+      <source>Journal of the American Water Resources Association</source>
+      <year iso-8601-date="2005-08">2005</year><month>08</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-09">2024</year><month>10</month><day>09</day></date-in-citation>
+      <volume>41</volume>
+      <issue>4</issue>
+      <issn>1093-474X, 1752-1688</issn>
+      <uri>http://doi.wiley.com/10.1111/j.1752-1688.2005.tb04463.x</uri>
+      <pub-id pub-id-type="doi">10.1111/j.1752-1688.2005.tb04463.x</pub-id>
+      <fpage>763</fpage>
+      <lpage>784</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-brown_source_2005">
+    <element-citation publication-type="report">
+      <person-group person-group-type="author">
+        <name><surname>Brown</surname><given-names>Thomas C</given-names></name>
+        <name><surname>Hobbins</surname><given-names>Michael T</given-names></name>
+        <name><surname>Ramirez</surname><given-names>Jorge A</given-names></name>
+      </person-group>
+      <article-title>The Source of Water Supply in the United States</article-title>
+      <publisher-name>U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station</publisher-name>
+      <publisher-loc>Fort Collins, CO</publisher-loc>
+      <year iso-8601-date="2005">2005</year>
+      <uri>https://www.researchgate.net/profile/Jorge-Ramirez-14/publication/266272409_The_source_of_water_supply_in_the_United_States/links/54b5fcb50cf26833efd34687/The-source-of-water-supply-in-the-United-States.pdf</uri>
+      <fpage>57</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-berner_tree_2017">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Berner</surname><given-names>Logan T</given-names></name>
+        <name><surname>Law</surname><given-names>Beverly E</given-names></name>
+        <name><surname>Meddens</surname><given-names>Arjan J H</given-names></name>
+        <name><surname>Hicke</surname><given-names>Jeffrey A</given-names></name>
+      </person-group>
+      <article-title>Tree mortality from fires, bark beetles, and timber harvest during a hot and dry decade in the western United States (2003–2012)</article-title>
+      <source>Environmental Research Letters</source>
+      <year iso-8601-date="2017-06">2017</year><month>06</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-18">2024</year><month>10</month><day>18</day></date-in-citation>
+      <volume>12</volume>
+      <issue>6</issue>
+      <issn>1748-9326</issn>
+      <uri>https://iopscience.iop.org/article/10.1088/1748-9326/aa6f94</uri>
+      <pub-id pub-id-type="doi">10.1088/1748-9326/aa6f94</pub-id>
+      <fpage>065005</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-davis_wildfires_2019">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Davis</surname><given-names>Kimberley T.</given-names></name>
+        <name><surname>Dobrowski</surname><given-names>Solomon Z.</given-names></name>
+        <name><surname>Higuera</surname><given-names>Philip E.</given-names></name>
+        <name><surname>Holden</surname><given-names>Zachary A.</given-names></name>
+        <name><surname>Veblen</surname><given-names>Thomas T.</given-names></name>
+        <name><surname>Rother</surname><given-names>Monica T.</given-names></name>
+        <name><surname>Parks</surname><given-names>Sean A.</given-names></name>
+        <name><surname>Sala</surname><given-names>Anna</given-names></name>
+        <name><surname>Maneta</surname><given-names>Marco P.</given-names></name>
+      </person-group>
+      <article-title>Wildfires and climate change push low-elevation forests across a critical climate threshold for tree regeneration</article-title>
+      <source>Proceedings of the National Academy of Sciences</source>
+      <year iso-8601-date="2019-03">2019</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-18">2024</year><month>10</month><day>18</day></date-in-citation>
+      <volume>116</volume>
+      <issue>13</issue>
+      <issn>0027-8424, 1091-6490</issn>
+      <uri>https://pnas.org/doi/full/10.1073/pnas.1815107116</uri>
+      <pub-id pub-id-type="doi">10.1073/pnas.1815107116</pub-id>
+      <fpage>6193</fpage>
+      <lpage>6198</lpage>
     </element-citation>
   </ref>
 </ref-list>
 </back>
 
-<sub-article article-type="notebook" id="nb-6-nb-article">
-<front-stub>
-<title-group>
-<article-title>La Palma Earthquakes</article-title>
-</title-group>
-<contrib-group>
-<contrib contrib-type="author" corresp="yes">
-<contrib-id contrib-id-type="orcid">0000-0002-0760-5497</contrib-id>
-<name>
-<surname>Purves</surname>
-<given-names>Steve</given-names>
-</name>
-<string-name>Steve Purves</string-name>
-
-<email>steve@curvenote.com</email>
-<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
-<role vocab="https://credit.niso.org" vocab-term="project
-administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">Project
-administration</role>
-<role vocab="https://credit.niso.org" vocab-term="software" vocab-term-identifier="https://credit.niso.org/contributor-roles/software/">Software</role>
-<role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
-<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-<xref ref-type="corresp" rid="cor-1-nb-article">&#x002A;</xref>
-</contrib>
-<contrib contrib-type="author">
-<contrib-id contrib-id-type="orcid">0000-0002-7859-8394</contrib-id>
-<name>
-<surname>Cockett</surname>
-<given-names>Rowan</given-names>
-</name>
-<string-name>Rowan Cockett</string-name>
-
-<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-</contrib>
-</contrib-group>
-<aff id="aff-1-nb-article">
-<institution-wrap>
-<institution>Curvenote</institution>
-</institution-wrap>
-
-
-
-
-
-
-
-</aff>
-<author-notes>
-<corresp id="cor-1-nb-article">steve@curvenote.com</corresp>
-</author-notes>
-<abstract>
-<p>In September 2021, a significant jump in seismic activity on the
-island of La Palma (Canary Islands, Spain) signaled the start of a
-volcanic crisis that still continues at the time of writing. Earthquake
-data is continually collected and published by the Instituto Geográphico
-Nacional (IGN). …</p>
-</abstract>
-</front-stub>
-
-<body>
-<sec id="cell-1-nb-article" specific-use="notebook-content">
-<sec id="introduction-nb-article">
-  <title>1 Introduction</title>
-  </sec>
-  <sec id="cell-2-nb-article" specific-use="notebook-content">
-  <code language="python">import matplotlib.pyplot as plt
-import numpy as np
-eruptions = [1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021]</code>
-  </sec>
-  <sec id="cell-fig-timeline-nb-article" specific-use="notebook-content">
-  <code language="python">plt.figure(figsize=(6, 1))
-plt.eventplot(eruptions, lineoffsets=0, linelengths=0.1, color='black')
-plt.gca().axes.get_yaxis().set_visible(False)
-plt.ylabel('')
-plt.show()</code>
-  <boxed-text>
-    <fig id="fig-timeline-nb-article">
-      <caption><p>Figure 1: Timeline of recent earthquakes on La
-      Palma</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-timeline-output-1.png" />
-    </fig>
-  </boxed-text>
-  </sec>
-  <sec id="cell-4-nb-article" specific-use="notebook-content">
-  <code language="python">avg_years_between_eruptions = np.mean(np.diff(eruptions[:-1]))
-avg_years_between_eruptions</code>
-  <boxed-text>
-    <preformat>79.83333333333333</preformat>
-  </boxed-text>
-  </sec>
-  <sec id="cell-5-nb-article" specific-use="notebook-content">
-  <p>Based on data up to and including 1971, eruptions on La Palma
-  happen every 79.8 years on average.</p>
-  </sec>
-  <sec id="cell-6-nb-article" specific-use="notebook-content">
-  <p>Studies of the magma systems feeding the volcano, such as Marrero
-  et al.
-  (<xref alt="2019" rid="ref-marrero2019-nb-article" ref-type="bibr">2019</xref>),
-  have proposed that there are two main magma reservoirs feeding the
-  Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges
-  and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
-  </sec>
-  <sec id="cell-7-nb-article" specific-use="notebook-content">
-  <p>Eight eruptions have been recorded since the late 1400s
-  (<xref alt="Figure 1" rid="fig-timeline-nb-article">Figure 1</xref>).</p>
-  </sec>
-  <sec id="cell-8-nb-article" specific-use="notebook-content">
-  <p>Data and methods are discussed in
-  <xref alt="Section 2" rid="sec-data-methods-nb-article">Section 2</xref>.</p>
-  </sec>
-  <sec id="cell-9-nb-article" specific-use="notebook-content">
-  <p>Let <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  denote the number of eruptions in a year. Then,
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  can be modeled by a Poisson distribution</p>
-  <p><styled-content id="eq-poisson-nb-article"><disp-formula><alternatives>
-  <tex-math><![CDATA[
-  p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-   \qquad(1)]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mi>λ</mml:mi></mml:mrow></mml:msup><mml:msup><mml:mi>λ</mml:mi><mml:mi>x</mml:mi></mml:msup></mml:mrow><mml:mrow><mml:mi>x</mml:mi><mml:mi>!</mml:mi></mml:mrow></mml:mfrac><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>where <inline-formula><alternatives>
-  <tex-math><![CDATA[\lambda]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
-  is the rate of eruptions per year. Using
-  <xref alt="Equation 1" rid="eq-poisson-nb-article">Equation 1</xref>, the
-  probability of an eruption in the next <inline-formula><alternatives>
-  <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  years can be calculated.</p>
-  </sec>
-  <sec id="cell-10-nb-article" specific-use="notebook-content">
-  <fig id="tbl-history-nb-article">
-    <caption><p>Table 1: Recent historic eruptions on La
-    Palma</p></caption>
-    <table-wrap>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Current</td>
-            <td>2021</td>
-          </tr>
-          <tr>
-            <td>Teneguía</td>
-            <td>1971</td>
-          </tr>
-          <tr>
-            <td>Nambroque</td>
-            <td>1949</td>
-          </tr>
-          <tr>
-            <td>El Charco</td>
-            <td>1712</td>
-          </tr>
-          <tr>
-            <td>Volcán San Antonio</td>
-            <td>1677</td>
-          </tr>
-          <tr>
-            <td>Volcán San Martin</td>
-            <td>1646</td>
-          </tr>
-          <tr>
-            <td>Tajuya near El Paso</td>
-            <td>1585</td>
-          </tr>
-          <tr>
-            <td>Montaña Quemada</td>
-            <td>1492</td>
-          </tr>
-        </tbody>
-      </table>
-    </table-wrap>
-  </fig>
-  <p><xref alt="Table 1" rid="tbl-history-nb-article">Table 1</xref> summarises the
-  eruptions recorded since the colonization of the islands by Europeans
-  in the late 1400s.</p>
-  </sec>
-  <sec id="cell-11-nb-article" specific-use="notebook-content">
-  <fig id="fig-map-nb-article">
-    <caption><p>Figure 2: Map of La Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="images/la-palma-map.png" />
-  </fig>
-  <p>La Palma is one of the west most islands in the Volcanic
-  Archipelago of the Canary Islands
-  (<xref alt="Figure 2" rid="fig-map-nb-article">Figure 2</xref>).</p>
-  </sec>
-  <sec id="cell-12-nb-article" specific-use="notebook-content">
-  <sec id="cell-fig-spatial-plot-nb-article" specific-use="notebook-content">
-  <code language="python">from matplotlib import colormaps
-cmap = colormaps['viridis_r']
-ax = df.plot.scatter(x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, 
-                     s=40-df[&quot;Depth(km)&quot;], c=df[&quot;Magnitude&quot;], 
-                     figsize=(12,10), grid=&quot;on&quot;, cmap=cmap)
-colorbar = ax.collections[0].colorbar
-colorbar.set_label(&quot;Magnitude&quot;)
-
-plt.show()</code>
-  <boxed-text>
-    <fig id="fig-spatial-plot-nb-article">
-      <caption><p>Figure 3: Locations of earthquakes on La Palma since
-      2017.</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-data-screening-fig-spatial-plot-output-1.png" />
-    </fig>
-  </boxed-text>
-  </sec>
-  <p><xref alt="Figure 3" rid="fig-spatial-plot-nb-article">Figure 3</xref> shows
-  the location of recent Earthquakes on La Palma.</p>
-  </sec>
-  <sec id="cell-13-nb-article" specific-use="notebook-content">
-</sec>
-<sec id="sec-data-methods-nb-article">
-  <title>2 Data &amp; Methods</title>
-  </sec>
-  <sec id="cell-14-nb-article" specific-use="notebook-content">
-</sec>
-<sec id="conclusion-nb-article">
-  <title>3 Conclusion</title>
-  </sec>
-  <sec id="cell-15-nb-article" specific-use="notebook-content">
-</sec>
-<sec id="references-nb-article">
-  <title>References</title>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-<ref-list>
-  <title></title>
-  <ref id="ref-marrero2019-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Marrero</surname><given-names>José</given-names></name>
-        <name><surname>García</surname><given-names>Alicia</given-names></name>
-        <name><surname>Berrocoso</surname><given-names>Manuel</given-names></name>
-        <name><surname>Llinares</surname><given-names>Ángeles</given-names></name>
-        <name><surname>Rodríguez-Losada</surname><given-names>Antonio</given-names></name>
-        <name><surname>Ortiz</surname><given-names>R.</given-names></name>
-      </person-group>
-      <article-title>Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: The example of La Palma (Canary Islands)</article-title>
-      <source>Journal of Applied Volcanology</source>
-      <year iso-8601-date="2019-07">2019</year><month>07</month>
-      <volume>8</volume>
-      <pub-id pub-id-type="doi">10.1186/s13617-019-0085-5</pub-id>
-      <fpage></fpage>
-      <lpage></lpage>
-    </element-citation>
-  </ref>
-</ref-list>
-</back>
-
-
-</sub-article>
 <sub-article article-type="notebook" id="nb-3-nb-1">
 <front-stub>
 <title-group>
