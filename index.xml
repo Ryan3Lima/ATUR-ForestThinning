@@ -91,10 +91,10 @@ administration</role>
 <corresp id="cor-1">ryan.lima@nau.edu</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-18">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-21">
 <year>2024</year>
 <month>10</month>
-<day>18</day>
+<day>21</day>
 </pub-date>
 
 
@@ -172,13 +172,15 @@ increasing groundwater recharge.</p>
   experienced rapid population growth, increasing the demands on already
   strained water supplies. Reductions in streamflow have increased
   reliance on groundwater, while groundwater levels have declined for
-  decades (<bold>CITATION</bold>). The <italic>Arizona Tri-Univeristy
-  Recharge and Water Reliability Project</italic> (ATUR-WRP) has been
-  tasked with identifying ways to protect water supplies and enhance
-  recharge by identifying where landscape management practices can
-  reduce atmospheric losses. Average annual precipitation in the lower
-  Colorado River Basin is about 330mm, and only about 10mm of that
-  precipitation becomes streamflow while much of the rest is lost to
+  decades
+  (<xref alt="Tadych et al. 2024" rid="ref-tadych_historical_2024" ref-type="bibr">Tadych
+  et al. 2024</xref>). The <italic>Arizona Tri-Univeristy Recharge and
+  Water Reliability Project</italic> (ATUR-WRP) has been tasked with
+  identifying ways to protect water supplies and enhance recharge by
+  identifying where landscape management practices can reduce
+  atmospheric losses. Average annual precipitation in the lower Colorado
+  River Basin is about 330mm, and only about 10mm of that precipitation
+  becomes streamflow while much of the rest is lost to
   Evapotranspiration
   (<xref alt="Zou, Ffolliott, and Wine 2010" rid="ref-zou_streamflow_2010" ref-type="bibr">Zou,
   Ffolliott, and Wine 2010</xref>). Sublimation has been shown to remove
@@ -208,17 +210,43 @@ increasing groundwater recharge.</p>
   et al. 2019</xref>). This increased risk of wildfire and forest loss
   is driven by climate and overstocked conditions resulting from over a
   century of forest management practices since euro-american settlement
-  (<bold>Citation</bold>).</p>
+  (<xref alt="Covington and Moore 1994" rid="ref-covington_southwestern_1994" ref-type="bibr">Covington
+  and Moore 1994</xref>;
+  <xref alt="Allen et al. 2002" rid="ref-allen_ecological_2002" ref-type="bibr">Allen
+  et al. 2002</xref>).</p>
   <p>Landscape-scale forest restoration efforts have been planned or
-  implemented across much of Arizona (<bold>Citation</bold>). For
-  example, the Four Forest Restoration Initiative (4FRI) includes plans
-  for restoration across over 2.5 million acres of Arizona’s forests.
-  The primary goal of restoration efforts is to reduce wildfire risk.
-  However, numerous studies have linked forest treatments to increased
-  water yields and have emphasized the role of forest restoration in
-  improving hydrologic services and increasing water supplies
-  (<bold>Citations</bold>). Forest treatments such as thinning and
-  burning can significantly impact the hydrologic cycle of forests
+  implemented across much of Arizona. For example, the Four Forest
+  Restoration Initiative (4FRI) includes plans for restoration across
+  over 2.5 million acres of Arizona’s forests
+  (<xref alt="Schultz, Jedd, and Beam 2012" rid="ref-schultz_collaborative_2012" ref-type="bibr">Schultz,
+  Jedd, and Beam 2012</xref>). The primary goal of restoration efforts
+  is to reduce wildfire risk. However, numerous studies have linked
+  forest treatments to increased water yields in semi-arid forests and
+  have emphasized the role of forest restoration in improving hydrologic
+  services and increasing water availability
+  (<xref alt="Bosch and Hewlett 1982" rid="ref-bosch_review_1982" ref-type="bibr">Bosch
+  and Hewlett 1982</xref>;
+  <xref alt="Baker 1986" rid="ref-baker_effects_1986" ref-type="bibr">Baker
+  1986</xref>;
+  <xref alt="Gottfried 1991" rid="ref-gottfried_moderate_1991" ref-type="bibr">Gottfried
+  1991</xref>;
+  <xref alt="Smerdon, Redding, and Beckers 2009" rid="ref-smerdon_overview_2009" ref-type="bibr">Smerdon,
+  Redding, and Beckers 2009</xref>;
+  <xref alt="Zou, Ffolliott, and Wine 2010" rid="ref-zou_streamflow_2010" ref-type="bibr">Zou,
+  Ffolliott, and Wine 2010</xref>;
+  <xref alt="C. J. W. Wyatt 2013" rid="ref-wyatt_estimating_2013" ref-type="bibr">C.
+  J. W. Wyatt 2013</xref>;
+  <xref alt="Moreno et al. 2015" rid="ref-moreno_modeling_2015" ref-type="bibr">Moreno
+  et al. 2015</xref>;
+  <xref alt="Simonit et al. 2015" rid="ref-simonit_impact_2015" ref-type="bibr">Simonit
+  et al. 2015</xref>;
+  <xref alt="C. Wyatt, O’Donnell, and Abraham E. Springer 2015" rid="ref-wyatt_semiarid_2015" ref-type="bibr">C.
+  Wyatt, O’Donnell, and Abraham E. Springer 2015</xref>;
+  <xref alt="O’Donnell et al. 2018" rid="ref-odonnell_forest_2018" ref-type="bibr">O’Donnell
+  et al. 2018</xref>;
+  <xref alt="Schenk et al. 2020" rid="ref-schenk_impacts_2020" ref-type="bibr">Schenk
+  et al. 2020</xref>). Forest treatments such as thinning and burning
+  can significantly impact the hydrologic cycle of forests
   (<xref alt="Del Campo et al. 2022" rid="ref-del_campo_global_2022" ref-type="bibr">Del
   Campo et al. 2022</xref>). However, the response of forests to
   treatments is complex and non-linear and differs across forest types,
@@ -230,15 +258,57 @@ increasing groundwater recharge.</p>
   <xref alt="Zou, Ffolliott, and Wine 2010" rid="ref-zou_streamflow_2010" ref-type="bibr">Zou,
   Ffolliott, and Wine 2010</xref>;
   <xref alt="Moore and Wondzell 2005" rid="ref-moore_physical_2005" ref-type="bibr">Moore
-  and Wondzell 2005</xref>).</p>
+  and Wondzell 2005</xref>). This research aims to develop criteria for
+  areas suitable for thinning to enhance groundwater recharge. It
+  focuses primarily on regional studies that are likely the best
+  predictor of hydrologic response to treatment
+  (<xref alt="C. J. W. Wyatt 2013" rid="ref-wyatt_estimating_2013" ref-type="bibr">C.
+  J. W. Wyatt 2013</xref>).</p>
+  <sec id="regional-hydrologic-responses-to-treatment">
+    <title>1.1 Regional Hydrologic Responses to Treatment</title>
+    <sec id="water-yieldrunoff">
+      <title>1.1.1 Water Yield/Runoff</title>
+      <p>Several regional studies link forest treatment to increased
+      streamflow. However, there appears to be a threshold response,
+      with water yield increasing only in treated forests receiving over
+      500mm of annual precipitation or snow-dominated forests
+      (<xref alt="Biederman et al. 2022" rid="ref-biederman_streamflow_2022" ref-type="bibr">Biederman
+      et al. 2022</xref>;
+      <xref alt="Zou, Ffolliott, and Wine 2010" rid="ref-zou_streamflow_2010" ref-type="bibr">Zou,
+      Ffolliott, and Wine 2010</xref>). The treatment level or reduction
+      in basal area or canopy cover are important</p>
+    </sec>
+    <sec id="soil-moisture-and-drought-resilience">
+      <title>1.1.2 Soil Moisture and Drought Resilience</title>
+      <p>A synthesis of several treatment types across Northern Arizona,
+      including thinning at various levels and prescribed burning, found
+      that treated sites had significantly greater total ecosystem
+      moisture, making forests more resilient to
+      drought(<xref alt="Sankey et al. 2021" rid="ref-sankey_regionalscale_2021" ref-type="bibr">Sankey
+      et al. 2021</xref>;
+      <xref alt="Sankey and Tatum 2022" rid="ref-sankey_thinning_2022" ref-type="bibr">Sankey
+      and Tatum 2022</xref>). Treatments were shown to increase tree
+      growth, improving resilience to drought in Ponderosa Pine forests
+      (<bold>Rodman et al., 2024</bold>). Thinned Ponderosa Pine forests
+      have higher soil moisture for two to eight years post-thinning, a
+      result also found in semi-arid forests around the Mediterranean
+      (<xref alt="Belmonte et al. 2022" rid="ref-belmonte_soil_2022" ref-type="bibr">Belmonte
+      et al. 2022</xref>;
+      <xref alt="Del Campo et al. 2022" rid="ref-del_campo_global_2022" ref-type="bibr">Del
+      Campo et al. 2022</xref>,
+      <xref alt="2019" rid="ref-del_campo_effectiveness_2019" ref-type="bibr">2019</xref>;
+      <xref alt="O’Donnell et al. 2021" rid="ref-odonnell_vegetation_2021" ref-type="bibr">O’Donnell
+      et al. 2021</xref>).</p>
+    </sec>
+  </sec>
   <sec id="justification">
-    <title>1.1 Justification</title>
+    <title>1.2 Justification</title>
     <list list-type="bullet">
       <list-item>
         <p>regional studies are the best predictor of hydrologic
         response to thinning in Arizona forests
-        (<xref alt="Wyatt 2013" rid="ref-wyatt_estimating_2013" ref-type="bibr">Wyatt
-        2013</xref>)</p>
+        (<xref alt="C. J. W. Wyatt 2013" rid="ref-wyatt_estimating_2013" ref-type="bibr">C.
+        J. W. Wyatt 2013</xref>)</p>
       </list-item>
       <list-item>
         <p>A snythesis of all 4FRI treatments found that thinned and
@@ -296,7 +366,7 @@ increasing groundwater recharge.</p>
       </list-item>
     </list>
     <sec id="snow-retention">
-      <title>1.1.1 Snow retention</title>
+      <title>1.2.1 Snow retention</title>
       <list list-type="bullet">
         <list-item>
           <p>The effects of forest thinning and subsequent snowmelt are
@@ -345,7 +415,7 @@ increasing groundwater recharge.</p>
       </list>
     </sec>
     <sec id="thresholds-in-literature">
-      <title>1.1.2 Thresholds in literature</title>
+      <title>1.2.2 Thresholds in literature</title>
       <list list-type="bullet">
         <list-item>
           <p>A review of 94 catchment studies showed that significant
@@ -388,7 +458,7 @@ increasing groundwater recharge.</p>
     </sec>
   </sec>
   <sec id="thinning-decreases-et-in-some-circumstances">
-    <title>1.2 thinning decreases ET in some circumstances</title>
+    <title>1.3 thinning decreases ET in some circumstances</title>
     <list list-type="bullet">
       <list-item>
         <p>Reductions of canopy cover can increase ET of existing trees,
@@ -659,6 +729,23 @@ increasing groundwater recharge.</p>
 <back>
 <ref-list>
   <title>References</title>
+  <ref id="ref-gottfried_moderate_1991">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Gottfried</surname><given-names>Gerald J.</given-names></name>
+      </person-group>
+      <article-title>Moderate timber harvesting increases water yields from an Arizona Mixed Conifer Watershed</article-title>
+      <source>JAWRA Journal of the American Water Resources Association</source>
+      <year iso-8601-date="1991-06">1991</year><month>06</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-02-28">2024</year><month>02</month><day>28</day></date-in-citation>
+      <volume>27</volume>
+      <issue>3</issue>
+      <issn>1752-1688</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1752-1688.1991.tb01454.x</uri>
+      <fpage>537</fpage>
+      <lpage>546</lpage>
+    </element-citation>
+  </ref>
   <ref id="ref-bosch_review_1982">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -701,6 +788,19 @@ increasing groundwater recharge.</p>
       <pub-id pub-id-type="doi">10.1002/eco.233</pub-id>
       <fpage>145</fpage>
       <lpage>159</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-wyatt_semiarid_2015">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Wyatt</surname><given-names>Clint</given-names></name>
+        <name><surname>O’Donnell</surname><given-names>Francis C.</given-names></name>
+        <string-name>Abraham E. Springer</string-name>
+      </person-group>
+      <article-title>Semi‐Arid Aquifer Responses to Forest Restoration Treatments and Climate Change</article-title>
+      <source>Ground Water</source>
+      <year iso-8601-date="2015">2015</year>
+      <pub-id pub-id-type="doi">10.1111/gwat.12184</pub-id>
     </element-citation>
   </ref>
   <ref id="ref-schenk_impacts_2020">
@@ -786,6 +886,27 @@ increasing groundwater recharge.</p>
       <pub-id pub-id-type="doi">10.1029/2021WR030687</pub-id>
       <fpage>e2021WR030687</fpage>
       <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-odonnell_forest_2018">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>O’Donnell</surname><given-names>Frances C.</given-names></name>
+        <name><surname>Flatley</surname><given-names>William T.</given-names></name>
+        <name><surname>Springer</surname><given-names>Abraham E.</given-names></name>
+        <name><surname>Fulé</surname><given-names>Peter Z.</given-names></name>
+      </person-group>
+      <article-title>Forest restoration as a strategy to mitigate climate impacts on wildfire, vegetation, and water in semiarid forests</article-title>
+      <source>Ecological Applications</source>
+      <year iso-8601-date="2018-09">2018</year><month>09</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-03-28">2024</year><month>03</month><day>28</day></date-in-citation>
+      <volume>28</volume>
+      <issue>6</issue>
+      <issn>1051-0761, 1939-5582</issn>
+      <uri>https://esajournals.onlinelibrary.wiley.com/doi/10.1002/eap.1746</uri>
+      <pub-id pub-id-type="doi">10.1002/eap.1746</pub-id>
+      <fpage>1459</fpage>
+      <lpage>1472</lpage>
     </element-citation>
   </ref>
   <ref id="ref-bennett_concurrent_2021">
@@ -1114,6 +1235,24 @@ increasing groundwater recharge.</p>
       <lpage>234</lpage>
     </element-citation>
   </ref>
+  <ref id="ref-baker_effects_1986">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Baker</surname><given-names>Malchus B.</given-names></name>
+      </person-group>
+      <article-title>Effects of Ponderosa Pine Treatments on Water Yield in Arizona</article-title>
+      <source>Water Resources Research</source>
+      <year iso-8601-date="1986-01">1986</year><month>01</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-01">2024</year><month>10</month><day>01</day></date-in-citation>
+      <volume>22</volume>
+      <issue>1</issue>
+      <issn>0043-1397, 1944-7973</issn>
+      <uri>https://agupubs.onlinelibrary.wiley.com/doi/10.1029/WR022i001p00067</uri>
+      <pub-id pub-id-type="doi">10.1029/WR022i001p00067</pub-id>
+      <fpage>67</fpage>
+      <lpage>73</lpage>
+    </element-citation>
+  </ref>
   <ref id="ref-carroll_evaluating_2016">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -1135,6 +1274,21 @@ increasing groundwater recharge.</p>
       <pub-id pub-id-type="doi">10.1002/eco.1792</pub-id>
       <fpage>e1792</fpage>
       <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-moreno_modeling_2015">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Moreno</surname><given-names>H. A.</given-names></name>
+        <name><surname>Gupta</surname><given-names>H. V.</given-names></name>
+        <name><surname>White</surname><given-names>D. D.</given-names></name>
+        <name><surname>Sampson</surname><given-names>D. A.</given-names></name>
+      </person-group>
+      <article-title>Modeling the distributed effects of forest thinning on the long-term water balance and stream flow extremes for a semi-arid basin in the southwestern US</article-title>
+      <year iso-8601-date="2015-10">2015</year><month>10</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-01">2024</year><month>10</month><day>01</day></date-in-citation>
+      <uri>https://hess.copernicus.org/preprints/12/10827/2015/hessd-12-10827-2015.pdf</uri>
+      <pub-id pub-id-type="doi">10.5194/hessd-12-10827-2015</pub-id>
     </element-citation>
   </ref>
   <ref id="ref-smerdon_overview_2009">
@@ -1250,6 +1404,31 @@ increasing groundwater recharge.</p>
       <lpage>784</lpage>
     </element-citation>
   </ref>
+  <ref id="ref-simonit_impact_2015">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Simonit</surname><given-names>Silvio</given-names></name>
+        <name><surname>Connors</surname><given-names>John P.</given-names></name>
+        <name><surname>Yoo</surname><given-names>James</given-names></name>
+        <name><surname>Kinzig</surname><given-names>Ann</given-names></name>
+        <name><surname>Perrings</surname><given-names>Charles</given-names></name>
+      </person-group>
+      <article-title>The Impact of Forest Thinning on the Reliability of Water Supply in Central Arizona</article-title>
+      <source>PLOS ONE</source>
+      <person-group person-group-type="editor">
+        <name><surname>Silva</surname><given-names>Lucas C. R.</given-names></name>
+      </person-group>
+      <year iso-8601-date="2015-04">2015</year><month>04</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-18">2024</year><month>10</month><day>18</day></date-in-citation>
+      <volume>10</volume>
+      <issue>4</issue>
+      <issn>1932-6203</issn>
+      <uri>https://dx.plos.org/10.1371/journal.pone.0121596</uri>
+      <pub-id pub-id-type="doi">10.1371/journal.pone.0121596</pub-id>
+      <fpage>e0121596</fpage>
+      <lpage></lpage>
+    </element-citation>
+  </ref>
   <ref id="ref-brown_source_2005">
     <element-citation publication-type="report">
       <person-group person-group-type="author">
@@ -1311,6 +1490,87 @@ increasing groundwater recharge.</p>
       <pub-id pub-id-type="doi">10.1073/pnas.1815107116</pub-id>
       <fpage>6193</fpage>
       <lpage>6198</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-tadych_historical_2024">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Tadych</surname><given-names>Danielle E.</given-names></name>
+        <name><surname>Ford</surname><given-names>Matthew</given-names></name>
+        <name><surname>Colby</surname><given-names>Bonnie G.</given-names></name>
+        <name><surname>Condon</surname><given-names>Laura E.</given-names></name>
+      </person-group>
+      <article-title>Historical patterns of well drilling and groundwater depth in Arizona considering groundwater regulation and surface water access</article-title>
+      <source>JAWRA Journal of the American Water Resources Association</source>
+      <year iso-8601-date="2024-10">2024</year><month>10</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-21">2024</year><month>10</month><day>21</day></date-in-citation>
+      <issn>1093-474X, 1752-1688</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/10.1111/1752-1688.13234</uri>
+      <pub-id pub-id-type="doi">10.1111/1752-1688.13234</pub-id>
+      <fpage>1752</fpage>
+      <lpage>1688.13234</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-schultz_collaborative_2012">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Schultz</surname><given-names>Courtney A.</given-names></name>
+        <name><surname>Jedd</surname><given-names>Theresa</given-names></name>
+        <name><surname>Beam</surname><given-names>Ryan D.</given-names></name>
+      </person-group>
+      <article-title>The Collaborative Forest Landscape Restoration Program: A History and Overview of the First Projects</article-title>
+      <source>Journal of Forestry</source>
+      <year iso-8601-date="2012-10">2012</year><month>10</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-21">2024</year><month>10</month><day>21</day></date-in-citation>
+      <volume>110</volume>
+      <issue>7</issue>
+      <issn>00221201</issn>
+      <uri>https://academic.oup.com/jof/article/110/7/381-391/4599006</uri>
+      <pub-id pub-id-type="doi">10.5849/jof.11-082</pub-id>
+      <fpage>381</fpage>
+      <lpage>391</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-allen_ecological_2002">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Allen</surname><given-names>Craig D.</given-names></name>
+        <name><surname>Savage</surname><given-names>Melissa</given-names></name>
+        <name><surname>Falk</surname><given-names>Donald A.</given-names></name>
+        <name><surname>Suckling</surname><given-names>Kieran F.</given-names></name>
+        <name><surname>Swetnam</surname><given-names>Thomas W.</given-names></name>
+        <name><surname>Schulke</surname><given-names>Todd</given-names></name>
+        <name><surname>Stacey</surname><given-names>Peter B.</given-names></name>
+        <name><surname>Morgan</surname><given-names>Penelope</given-names></name>
+        <name><surname>Hoffman</surname><given-names>Martos</given-names></name>
+        <name><surname>Klingel</surname><given-names>Jon T.</given-names></name>
+      </person-group>
+      <article-title>Ecological restoration of southwestern ponderosa pine ecosystems: A broad perspective</article-title>
+      <source>Ecological Applications</source>
+      <year iso-8601-date="2002-10">2002</year><month>10</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-21">2024</year><month>10</month><day>21</day></date-in-citation>
+      <volume>12</volume>
+      <issue>5</issue>
+      <issn>1051-0761</issn>
+      <uri>http://doi.wiley.com/10.1890/1051-0761(2002)012[1418:EROSPP]2.0.CO;2</uri>
+      <pub-id pub-id-type="doi">10.1890/1051-0761(2002)012[1418:EROSPP]2.0.CO;2</pub-id>
+      <fpage>1418</fpage>
+      <lpage>1433</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-covington_southwestern_1994">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Covington</surname><given-names>W. W</given-names></name>
+        <name><surname>Moore</surname><given-names>Margaret M</given-names></name>
+      </person-group>
+      <article-title>Southwestern ponderosa pine forest structure: Changes since Euro-American settlement</article-title>
+      <source>Journal of forestry.</source>
+      <year iso-8601-date="1994">1994</year>
+      <volume>92</volume>
+      <issn>0022-1201</issn>
+      <fpage>39</fpage>
+      <lpage>47</lpage>
     </element-citation>
   </ref>
 </ref-list>
