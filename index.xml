@@ -91,10 +91,10 @@ administration</role>
 <corresp id="cor-1">ryan.lima@nau.edu</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-21">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-24">
 <year>2024</year>
 <month>10</month>
-<day>21</day>
+<day>24</day>
 </pub-date>
 
 
@@ -510,235 +510,118 @@ increasing groundwater recharge.</p>
         <p>“define the goal, supporting criteria, and evaluation metrics
         for the weighted suitability model”</p>
       </disp-quote>
+      <p><bold>The goal is to locate areas on the Mogollon Rim Ranger
+      District in the Coconino National Forest where thinning may
+      increase groundwater recharge based on modeling of criteria found
+      in the literature quantifying the impact of thinning on water
+      yield in Regional studies of Semi-arid forests.</bold></p>
       <sec id="criteria">
         <title>2.1.1.1 <bold>Criteria</bold></title>
         <p><bold>Aspect</bold></p>
+        <p>Aspect has a large impact on solar radiation.</p>
         <disp-quote>
-          <p>Closer to 0 or 360 is desired</p>
+          <p>Closer to 0 or 360 is desired, low suitability scores for
+          closeness</p>
         </disp-quote>
-        <p><bold>Elevation</bold></p>
+        <p><inline-graphic mimetype="image" mime-subtype="png" xlink:href="images/Aspect_suitability.PNG" />
+        <bold>Slope</bold></p>
+        <p>Higher slopes are less suitable because thinning is both more
+        expensive and more precipitation will end up as runoff.</p>
         <disp-quote>
-          <p>higher elevation is better; higher percentage of
-          precipitation is snow, higher precipitation</p>
+          <p>Lower slopes have higher suitability scores</p>
         </disp-quote>
-        <p><bold>Precipitation</bold></p>
+        <p><inline-graphic mimetype="image" mime-subtype="png" xlink:href="images/Slope_suitability.PNG" />
+        <bold>Precipitation</bold></p>
         <disp-quote>
-          <p>Max precipitation must be higher than 450, mean
-          precipitation should be higher than 400</p>
+          <p>Max precipitation must be higher than 400mm annually from
+          1990 - 2020. Areas with Max Annual Precipitation Less than
+          400m have a suitability score of 1 (lowest), and suitability
+          score increases with Max annual precipitation scaled
+          (1-10)</p>
         </disp-quote>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="images/Precipitation_suitability.PNG" />
         <p><bold>Vegetation Characteristics</bold></p>
+        <p>higher vegetation density, when thinned will yield more
+        water, focus on areas of high vegetation density and high
+        departure from historic conditions.</p>
         <disp-quote>
-          <p>higher vegetation density, when thinned will yield more
-          water, focus on areas of high vegetation density or high
-          departure from historic conditions.</p>
+          <p><bold>NLCD 2021 Total Canopy Cover (% Cover)</bold></p>
         </disp-quote>
+        <disp-quote>
+          <p>Canopy cover % below 30 were considered low suitability (1)
+          while increases in canopy cover about 30% increase in
+          suitability.</p>
+        </disp-quote>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="images/CanopyCover_suitability.PNG" />
+        <disp-quote>
+          <p><bold>Landfire 2022 Vegetation Condition Class</bold> 3rd
+          update to the 2016 remap.</p>
+        </disp-quote>
+        <p>Variation from modeled historic conditions. Forests which
+        have deviated significantly from their modeled historic
+        conditions are more suitable for thinning than forests which
+        have not deviated from their historic condition.</p>
+        <disp-quote>
+          <p>Vegetation Condition Class (VCC) represents a simple
+          categorization of the associated Vegetation Departure (VDep)
+          and is a derivative of the VDep layer. It indicates the
+          general level to which current vegetation is different from
+          the estimated modeled vegetation based on past reference
+          conditions. VDep and VCC are based upon methods originally
+          described in the Interagency Fire Regime Condition Class
+          Guidebook, but are not identical to those methods and should
+          not be considered as a replacement data set. Full descriptions
+          of the methods used can be found in the VDep product
+          description. Note that the LANDFIRE (LF) team feels it is very
+          important for users to review the VDep methods before
+          comparing VDep or VCC values across LF versions.
+          <ext-link ext-link-type="uri" xlink:href="https://www.landfire.gov/vegetation/vcc">info</ext-link>
+          <ext-link ext-link-type="uri" xlink:href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.landfire.gov/sites/default/files/DataDictionary/LF2022/LF22_VCCADD_230.pdf">PDF</ext-link></p>
+        </disp-quote>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="images/VCC_suitability.PNG" />
+        <p><bold>Soil Hydrologic Conditions</bold></p>
+        <p>Soil types A,B,C,D are mapped for the USA, There are no A
+        soil types in the study area, so they were given the following
+        suitability values</p>
+        <p>B = 10 out of 10 C = 8 out of 10 D = 3 out of 10</p>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="images/SoilHydrologicGroup_suitability.PNG" />
       </sec>
-    </sec>
-    <sec id="derive">
-      <title>2.1.2 2.2.2 Derive</title>
-      <disp-quote>
-        <p>“Derive data that represents the model variables that are
-        defined by the criteria. In this example, the criterion Far
-        distances from streets defines distance from streets as a model
-        variable. A raster that represents distance from streets is
-        derived from street centerlines by using a geoprocessing
-        tool.”</p>
-      </disp-quote>
-    </sec>
-    <sec id="transform">
-      <title>2.1.3 2.2.3 Transform</title>
-      <disp-quote>
-        <p>“Transform the values in each derived dataset into a common
-        suitability scale by assigning each cell in the surface a
-        suitability score (value on the suitability scale). For each
-        dataset, assign the highest suitability scores to the variable
-        values that are most preferred according to the associated
-        criterion. In this example, the distance-from-streets raster is
-        transformed into a 1-to-5 suitability scale. To represent the
-        criterion Far distances from streets, the locations closest to
-        streets are assigned a value of 1 (lowest preference) and the
-        locations farthest from streets are assigned a value of 5
-        (highest preference).”</p>
-      </disp-quote>
-    </sec>
-    <sec id="weight-and-combine">
-      <title>2.1.4 2.2.4 Weight and combine</title>
-      <disp-quote>
-        <p>“Weight and combine the transformed data, which represents
-        the model criteria, into a single suitability surface that meets
-        the model goal. In this example, three transformed rasters are
-        combined to create the suitability surface.”</p>
-      </disp-quote>
-    </sec>
-    <sec id="locate">
-      <title>2.1.5 2.2.5 Locate</title>
-      <disp-quote>
-        <p>“Locate the phenomenon by using the suitability surface. In
-        this example, a region that has the highest average suitability
-        is identified.”</p>
-      </disp-quote>
-    </sec>
-    <sec id="analyze">
-      <title>2.1.6 2.2.6 Analyze</title>
-      <disp-quote>
-        <p>“Analyze the result by visually evaluating the suitability
-        surface and regions to ensure that the model goal has been met.
-        Optionally, perform sensitivity and error analysis.”</p>
-      </disp-quote>
-    </sec>
-  </sec>
-  <sec id="environments">
-    <title>2.2 Environments:</title>
-    <list list-type="bullet">
-      <list-item>
-        <p>ArcGIS Pro 3.3</p>
-      </list-item>
-    </list>
-    <sec id="unsuitable">
-      <title>2.2.1 <bold>Unsuitable</bold></title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Max Precipitation &lt; 450mm</p>
-        </list-item>
-        <list-item>
-          <p>Mean Precipitation &lt; 450mm with low IAV interannual
-          variability in precipitation</p>
-        </list-item>
-        <list-item>
-          <p>Forest Cover Trees per Acre &lt; 30</p>
-        </list-item>
-        <list-item>
-          <p>Elevation &lt; 900m</p>
-        </list-item>
-        <list-item>
-          <p>EVC - Excisting vegetation cover Landfire 2023: exclude
-          values:</p>
-        </list-item>
-      </list>
-      <disp-quote>
-        <p>-9999: No data</p>
-      </disp-quote>
-      <disp-quote>
-        <p>11-100: Open Water, Snow/Ice, Developed all, Barren,
-        Cultivated, Sparse vegetation</p>
-      </disp-quote>
-      <disp-quote>
-        <p>310 + (herb cover)</p>
-      </disp-quote>
-      <disp-quote>
-        <p>Existing vegetation cover Tree Cover &lt; 30% 110 - 129</p>
-      </disp-quote>
-      <disp-quote>
-        <p>Existing Vegetation Cover Shrub Cover &lt; 30% 210 - 230</p>
-      </disp-quote>
-      <list list-type="bullet">
-        <list-item>
-          <p>VCC - Vegetation Condition Class from Land Fire 2022</p>
-        </list-item>
-      </list>
-      <p>Vegetation Condition Class (VCC) represents a simple
-      categorization of the associated Vegetation Departure (VDep) and
-      is a derivative of the VDep layer. It indicates the general level
-      to which current vegetation is different from the estimated
-      modeled vegetation based on past reference conditions. VDep and
-      VCC are based upon methods originally described in the Interagency
-      Fire Regime Condition Class Guidebook, but are not identical to
-      those methods and should not be considered as a replacement data
-      set. Full descriptions of the methods used can be found in the
-      VDep product description. Note that the LANDFIRE (LF) team feels
-      it is very important for users to review the VDep methods before
-      comparing VDep or VCC values across LF versions.
-      <ext-link ext-link-type="uri" xlink:href="https://www.landfire.gov/vegetation/vcc">info</ext-link>
-      <ext-link ext-link-type="uri" xlink:href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.landfire.gov/sites/default/files/DataDictionary/LF2022/LF22_VCCADD_230.pdf">PDF</ext-link></p>
-      <p><bold>Reclass_LF23_VCC_1_6</bold></p>
-      <table-wrap>
-        <table>
-          <thead>
-            <tr>
-              <th>VCC Value 2022</th>
-              <th>New Class</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Fill-NoData</td>
-              <td>NODATA</td>
-            </tr>
-            <tr>
-              <td>Fill-Not Mapped</td>
-              <td>NODATA</td>
-            </tr>
-            <tr>
-              <td>Veg Condition Class I, A</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>Vegetation Condition Class I, B</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>Vegetation Condition Class II, A</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>Vegetation Condition Class II, B</td>
-              <td>4</td>
-            </tr>
-            <tr>
-              <td>Vegetation Condition Class III, A</td>
-              <td>5</td>
-            </tr>
-            <tr>
-              <td>Vegetation Condition Class III, B</td>
-              <td>6</td>
-            </tr>
-            <tr>
-              <td>Water</td>
-              <td>NODATA</td>
-            </tr>
-            <tr>
-              <td>Developed</td>
-              <td>NODATA</td>
-            </tr>
-            <tr>
-              <td>Barren or Sparse</td>
-              <td>NODATA</td>
-            </tr>
-            <tr>
-              <td>Agriculture</td>
-              <td>NODATA</td>
-            </tr>
-            <tr>
-              <td>NODATA</td>
-              <td>NODATA</td>
-            </tr>
-          </tbody>
-        </table>
-      </table-wrap>
-      <p>Higher numbers indicate departure from historical conditions,
-      and indicate a need for forest restoration (CITATION NEEDED)</p>
-    </sec>
-    <sec id="suitability-criteria">
-      <title>2.2.2 <bold>Suitability Criteria</bold></title>
-      <p><bold>Aspect</bold></p>
-      <disp-quote>
-        <p>Closer to 0 or 360 is desired</p>
-      </disp-quote>
-      <p><bold>Elevation</bold></p>
-      <disp-quote>
-        <p>higher elevation is better</p>
-      </disp-quote>
-      <p><bold>Vegetation Characteristics</bold></p>
-      <p>Landfire 2022 VCC Higher is better 67-100 preferred Class II
-      &amp; III; A &amp; B</p>
-      <p>Landfire EVC tree cover higher is better</p>
-      <p>Precipitation Higher is better</p>
-      <p>Wildfire Hazard POtential V2023 Higher is better</p>
     </sec>
   </sec>
 </sec>
+<sec id="preliminary-results">
+  <title>3 Preliminary Results</title>
+  <sec id="weighting">
+    <title>3.1 Weighting</title>
+    <p>Tree Canopy Cover = 20% Vegetation Condition Class = 20% Slope =
+    20% Aspect = 20% Max Precipitation = 15% Soil Hydrologic Group =
+    5%</p>
+  </sec>
+  <sec id="overall-suitability">
+    <title>3.2 Overall Suitability</title>
+    <graphic mimetype="image" mime-subtype="png" xlink:href="images/PreliminarySuitabilityMap.PNG" />
+  </sec>
+</sec>
+<sec id="questions-for-the-team">
+  <title>4 Questions for the team</title>
+  <sec id="can-modeling-using-snowpalm-the-national-water-model-or-swat-either-validate-this-or-be-used-to-improve-the-suitability-transformations-and-weighting">
+    <title>4.1 1. Can modeling using Snowpalm, the National Water Model,
+    or SWAT either validate this, or be used to improve the suitability
+    transformations and weighting?</title>
+    <sec id="what-lulc-variables-do-the-various-models-take-in-is-canopy-cover-or-vcc-represented-in-those-models-if-so-could-we-adjust-them-to-simulate-thinning-and-re-run-the-models-to-see-what-happens">
+      <title>4.1.1 1.1 What LULC variables do the various models take
+      in? Is Canopy Cover or VCC represented in those models? If so,
+      could we adjust them to simulate thinning and re-run the models to
+      see what happens?</title>
+    </sec>
+  </sec>
+  <sec id="am-i-using-the-right-data-is-there-better-datasets-available">
+    <title>4.2 2. Am I using the right data? Is there better datasets
+    available?</title>
+  </sec>
+</sec>
 <sec id="conclusion">
-  <title>3 Conclusion</title>
+  <title>5 Conclusion</title>
 </sec>
 </body>
 

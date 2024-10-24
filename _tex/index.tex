@@ -484,137 +484,70 @@ Workflow}\label{weighted-suitability-workflow}
 weighted suitability model''
 \end{quote}
 
+\textbf{The goal is to locate areas on the Mogollon Rim Ranger District
+in the Coconino National Forest where thinning may increase groundwater
+recharge based on modeling of criteria found in the literature
+quantifying the impact of thinning on water yield in Regional studies of
+Semi-arid forests.}
+
 \paragraph{\texorpdfstring{\textbf{Criteria}}{Criteria}}\label{criteria}
 
 \textbf{Aspect}
 
-\begin{quote}
-Closer to 0 or 360 is desired
-\end{quote}
-
-\textbf{Elevation}
+Aspect has a large impact on solar radiation.
 
 \begin{quote}
-higher elevation is better; higher percentage of precipitation is snow,
-higher precipitation
+Closer to 0 or 360 is desired, low suitability scores for closeness
 \end{quote}
 
-\textbf{Precipitation}
+\includegraphics{images/Aspect_suitability.PNG} \textbf{Slope}
+
+Higher slopes are less suitable because thinning is both more expensive
+and more precipitation will end up as runoff.
 
 \begin{quote}
-Max precipitation must be higher than 450, mean precipitation should be
-higher than 400
+Lower slopes have higher suitability scores
 \end{quote}
+
+\includegraphics{images/Slope_suitability.PNG} \textbf{Precipitation}
+
+\begin{quote}
+Max precipitation must be higher than 400mm annually from 1990 - 2020.
+Areas with Max Annual Precipitation Less than 400m have a suitability
+score of 1 (lowest), and suitability score increases with Max annual
+precipitation scaled (1-10)
+\end{quote}
+
+\includegraphics{images/Precipitation_suitability.PNG}
 
 \textbf{Vegetation Characteristics}
 
-\begin{quote}
 higher vegetation density, when thinned will yield more water, focus on
-areas of high vegetation density or high departure from historic
+areas of high vegetation density and high departure from historic
 conditions.
-\end{quote}
-
-\subsubsection{2.2.2 Derive}\label{derive}
 
 \begin{quote}
-``Derive data that represents the model variables that are defined by
-the criteria. In this example, the criterion Far distances from streets
-defines distance from streets as a model variable. A raster that
-represents distance from streets is derived from street centerlines by
-using a geoprocessing tool.''
-\end{quote}
-
-\subsubsection{2.2.3 Transform}\label{transform}
-
-\begin{quote}
-``Transform the values in each derived dataset into a common suitability
-scale by assigning each cell in the surface a suitability score (value
-on the suitability scale). For each dataset, assign the highest
-suitability scores to the variable values that are most preferred
-according to the associated criterion. In this example, the
-distance-from-streets raster is transformed into a 1-to-5 suitability
-scale. To represent the criterion Far distances from streets, the
-locations closest to streets are assigned a value of 1 (lowest
-preference) and the locations farthest from streets are assigned a value
-of 5 (highest preference).''
-\end{quote}
-
-\subsubsection{2.2.4 Weight and combine}\label{weight-and-combine}
-
-\begin{quote}
-``Weight and combine the transformed data, which represents the model
-criteria, into a single suitability surface that meets the model goal.
-In this example, three transformed rasters are combined to create the
-suitability surface.''
-\end{quote}
-
-\subsubsection{2.2.5 Locate}\label{locate}
-
-\begin{quote}
-``Locate the phenomenon by using the suitability surface. In this
-example, a region that has the highest average suitability is
-identified.''
-\end{quote}
-
-\subsubsection{2.2.6 Analyze}\label{analyze}
-
-\begin{quote}
-``Analyze the result by visually evaluating the suitability surface and
-regions to ensure that the model goal has been met. Optionally, perform
-sensitivity and error analysis.''
-\end{quote}
-
-\subsection{Environments:}\label{environments}
-
-\begin{itemize}
-\tightlist
-\item
-  ArcGIS Pro 3.3
-\end{itemize}
-
-\subsubsection{\texorpdfstring{\textbf{Unsuitable}}{Unsuitable}}\label{unsuitable}
-
-\begin{itemize}
-\item
-  Max Precipitation \textless{} 450mm
-\item
-  Mean Precipitation \textless{} 450mm with low IAV interannual
-  variability in precipitation
-\item
-  Forest Cover Trees per Acre \textless{} 30
-\item
-  Elevation \textless{} 900m
-\item
-  EVC - Excisting vegetation cover Landfire 2023: exclude values:
-\end{itemize}
-
-\begin{quote}
--9999: No data
+\textbf{NLCD 2021 Total Canopy Cover (\% Cover)}
 \end{quote}
 
 \begin{quote}
-11-100: Open Water, Snow/Ice, Developed all, Barren, Cultivated, Sparse
-vegetation
+Canopy cover \% below 30 were considered low suitability (1) while
+increases in canopy cover about 30\% increase in suitability.
 \end{quote}
+
+\includegraphics{images/CanopyCover_suitability.PNG}
 
 \begin{quote}
-310 + (herb cover)
+\textbf{Landfire 2022 Vegetation Condition Class} 3rd update to the 2016
+remap.
 \end{quote}
+
+Variation from modeled historic conditions. Forests which have deviated
+significantly from their modeled historic conditions are more suitable
+for thinning than forests which have not deviated from their historic
+condition.
 
 \begin{quote}
-Existing vegetation cover Tree Cover \textless{} 30\% 110 - 129
-\end{quote}
-
-\begin{quote}
-Existing Vegetation Cover Shrub Cover \textless{} 30\% 210 - 230
-\end{quote}
-
-\begin{itemize}
-\tightlist
-\item
-  VCC - Vegetation Condition Class from Land Fire 2022
-\end{itemize}
-
 Vegetation Condition Class (VCC) represents a simple categorization of
 the associated Vegetation Departure (VDep) and is a derivative of the
 VDep layer. It indicates the general level to which current vegetation
@@ -628,59 +561,52 @@ it is very important for users to review the VDep methods before
 comparing VDep or VCC values across LF versions.
 \href{https://www.landfire.gov/vegetation/vcc}{info}
 \href{chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.landfire.gov/sites/default/files/DataDictionary/LF2022/LF22_VCCADD_230.pdf}{PDF}
-
-\textbf{Reclass\_LF23\_VCC\_1\_6}
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule\noalign{}
-VCC Value 2022 & New Class \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Fill-NoData & NODATA \\
-Fill-Not Mapped & NODATA \\
-Veg Condition Class I, A & 1 \\
-Vegetation Condition Class I, B & 2 \\
-Vegetation Condition Class II, A & 3 \\
-Vegetation Condition Class II, B & 4 \\
-Vegetation Condition Class III, A & 5 \\
-Vegetation Condition Class III, B & 6 \\
-Water & NODATA \\
-Developed & NODATA \\
-Barren or Sparse & NODATA \\
-Agriculture & NODATA \\
-NODATA & NODATA \\
-\end{longtable}
-
-Higher numbers indicate departure from historical conditions, and
-indicate a need for forest restoration (CITATION NEEDED)
-
-\subsubsection{\texorpdfstring{\textbf{Suitability
-Criteria}}{Suitability Criteria}}\label{suitability-criteria}
-
-\textbf{Aspect}
-
-\begin{quote}
-Closer to 0 or 360 is desired
 \end{quote}
 
-\textbf{Elevation}
+\includegraphics{images/VCC_suitability.PNG}
 
-\begin{quote}
-higher elevation is better
-\end{quote}
+\textbf{Soil Hydrologic Conditions}
 
-\textbf{Vegetation Characteristics}
+Soil types A,B,C,D are mapped for the USA, There are no A soil types in
+the study area, so they were given the following suitability values
 
-Landfire 2022 VCC Higher is better 67-100 preferred Class II \& III; A
-\& B
+B = 10 out of 10 C = 8 out of 10 D = 3 out of 10
 
-Landfire EVC tree cover higher is better
+\includegraphics{images/SoilHydrologicGroup_suitability.PNG}
 
-Precipitation Higher is better
+\textsubscript{Source:
+\href{https://Ryan3Lima.github.io/ATUR-ForestThinning/index.ipynb.html}{Article
+Notebook}}
 
-Wildfire Hazard POtential V2023 Higher is better
+\section{Preliminary Results}\label{preliminary-results}
+
+\subsection{Weighting}\label{weighting}
+
+Tree Canopy Cover = 20\% Vegetation Condition Class = 20\% Slope = 20\%
+Aspect = 20\% Max Precipitation = 15\% Soil Hydrologic Group = 5\%
+
+\subsection{Overall Suitability}\label{overall-suitability}
+
+\includegraphics{images/PreliminarySuitabilityMap.PNG}
+
+\textsubscript{Source:
+\href{https://Ryan3Lima.github.io/ATUR-ForestThinning/index.ipynb.html}{Article
+Notebook}}
+
+\section{Questions for the team}\label{questions-for-the-team}
+
+\subsection{1. Can modeling using Snowpalm, the National Water Model, or
+SWAT either validate this, or be used to improve the suitability
+transformations and
+weighting?}\label{can-modeling-using-snowpalm-the-national-water-model-or-swat-either-validate-this-or-be-used-to-improve-the-suitability-transformations-and-weighting}
+
+\subsubsection{1.1 What LULC variables do the various models take in? Is
+Canopy Cover or VCC represented in those models? If so, could we adjust
+them to simulate thinning and re-run the models to see what
+happens?}\label{what-lulc-variables-do-the-various-models-take-in-is-canopy-cover-or-vcc-represented-in-those-models-if-so-could-we-adjust-them-to-simulate-thinning-and-re-run-the-models-to-see-what-happens}
+
+\subsection{2. Am I using the right data? Is there better datasets
+available?}\label{am-i-using-the-right-data-is-there-better-datasets-available}
 
 \textsubscript{Source:
 \href{https://Ryan3Lima.github.io/ATUR-ForestThinning/index.ipynb.html}{Article

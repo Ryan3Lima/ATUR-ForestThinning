@@ -9,7 +9,7 @@
 <meta name="author" content="Ryan E Lima">
 <meta name="author" content="Temuulen Tsagaan Sankey">
 <meta name="author" content="Abraham E Springer">
-<meta name="dcterms.date" content="2024-10-21">
+<meta name="dcterms.date" content="2024-10-24">
 <meta name="keywords" content="suitability mapping, forest thinning, water yield, groundwater recharge">
 
 <title>Mapping suitability for thinning to reduce atmospheric losses and enhance groundwater recharge in Arizona</title>
@@ -58,6 +58,9 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -73,10 +76,10 @@ div.csl-indent {
 <meta name="citation_author" content="Ryan E Lima">
 <meta name="citation_author" content="Temuulen Tsagaan Sankey">
 <meta name="citation_author" content="Abraham E Springer">
-<meta name="citation_publication_date" content="2024-10-21">
-<meta name="citation_cover_date" content="2024-10-21">
+<meta name="citation_publication_date" content="2024-10-24">
+<meta name="citation_cover_date" content="2024-10-24">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-10-21">
+<meta name="citation_online_date" content="2024-10-24">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="Water Resources Research">
 <meta name="citation_reference" content="citation_title=Moderate timber harvesting increases water yields from an Arizona Mixed Conifer Watershed;,citation_author=Gerald J. Gottfried;,citation_publication_date=1991-06;,citation_cover_date=1991-06;,citation_year=1991;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1752-1688.1991.tb01454.x;,citation_issue=3;,citation_issn=1752-1688;,citation_volume=27;,citation_journal_title=JAWRA Journal of the American Water Resources Association;">
@@ -169,7 +172,7 @@ div.csl-indent {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">October 21, 2024</p>
+              <p class="date">October 24, 2024</p>
             </div>
           </div>
           
@@ -211,9 +214,18 @@ div.csl-indent {
   <li><a href="#sec-data-methods" id="toc-sec-data-methods" class="nav-link" data-scroll-target="#sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</a>
   <ul class="collapse">
   <li><a href="#weighted-suitability-workflow" id="toc-weighted-suitability-workflow" class="nav-link" data-scroll-target="#weighted-suitability-workflow"><span class="header-section-number">2.1</span> 2.2 Weighted Suitability Workflow</a></li>
-  <li><a href="#environments" id="toc-environments" class="nav-link" data-scroll-target="#environments"><span class="header-section-number">2.2</span> Environments:</a></li>
   </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">3</span> Conclusion</a></li>
+  <li><a href="#preliminary-results" id="toc-preliminary-results" class="nav-link" data-scroll-target="#preliminary-results"><span class="header-section-number">3</span> Preliminary Results</a>
+  <ul class="collapse">
+  <li><a href="#weighting" id="toc-weighting" class="nav-link" data-scroll-target="#weighting"><span class="header-section-number">3.1</span> Weighting</a></li>
+  <li><a href="#overall-suitability" id="toc-overall-suitability" class="nav-link" data-scroll-target="#overall-suitability"><span class="header-section-number">3.2</span> Overall Suitability</a></li>
+  </ul></li>
+  <li><a href="#questions-for-the-team" id="toc-questions-for-the-team" class="nav-link" data-scroll-target="#questions-for-the-team"><span class="header-section-number">4</span> Questions for the team</a>
+  <ul class="collapse">
+  <li><a href="#can-modeling-using-snowpalm-the-national-water-model-or-swat-either-validate-this-or-be-used-to-improve-the-suitability-transformations-and-weighting" id="toc-can-modeling-using-snowpalm-the-national-water-model-or-swat-either-validate-this-or-be-used-to-improve-the-suitability-transformations-and-weighting" class="nav-link" data-scroll-target="#can-modeling-using-snowpalm-the-national-water-model-or-swat-either-validate-this-or-be-used-to-improve-the-suitability-transformations-and-weighting"><span class="header-section-number">4.1</span> 1. Can modeling using Snowpalm, the National Water Model, or SWAT either validate this, or be used to improve the suitability transformations and weighting?</a></li>
+  <li><a href="#am-i-using-the-right-data-is-there-better-datasets-available" id="toc-am-i-using-the-right-data-is-there-better-datasets-available" class="nav-link" data-scroll-target="#am-i-using-the-right-data-is-there-better-datasets-available"><span class="header-section-number">4.2</span> 2. Am I using the right data? Is there better datasets available?</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">5</span> Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/data-screening-preview.html"><i class="bi bi-journal-code"></i>Data Screening</a></li></ul></div></nav>
@@ -297,175 +309,74 @@ div.csl-indent {
 <blockquote class="blockquote">
 <p>“define the goal, supporting criteria, and evaluation metrics for the weighted suitability model”</p>
 </blockquote>
+<p><strong>The goal is to locate areas on the Mogollon Rim Ranger District in the Coconino National Forest where thinning may increase groundwater recharge based on modeling of criteria found in the literature quantifying the impact of thinning on water yield in Regional studies of Semi-arid forests.</strong></p>
 <section id="criteria" class="level5" data-number="2.1.1.1">
 <h5 data-number="2.1.1.1" class="anchored" data-anchor-id="criteria"><span class="header-section-number">2.1.1.1</span> <strong>Criteria</strong></h5>
 <p><strong>Aspect</strong></p>
+<p>Aspect has a large impact on solar radiation.</p>
 <blockquote class="blockquote">
-<p>Closer to 0 or 360 is desired</p>
+<p>Closer to 0 or 360 is desired, low suitability scores for closeness</p>
 </blockquote>
-<p><strong>Elevation</strong></p>
+<p><img src="images/Aspect_suitability.PNG" class="img-fluid"> <strong>Slope</strong></p>
+<p>Higher slopes are less suitable because thinning is both more expensive and more precipitation will end up as runoff.</p>
 <blockquote class="blockquote">
-<p>higher elevation is better; higher percentage of precipitation is snow, higher precipitation</p>
+<p>Lower slopes have higher suitability scores</p>
 </blockquote>
-<p><strong>Precipitation</strong></p>
+<p><img src="images/Slope_suitability.PNG" class="img-fluid"> <strong>Precipitation</strong></p>
 <blockquote class="blockquote">
-<p>Max precipitation must be higher than 450, mean precipitation should be higher than 400</p>
+<p>Max precipitation must be higher than 400mm annually from 1990 - 2020. Areas with Max Annual Precipitation Less than 400m have a suitability score of 1 (lowest), and suitability score increases with Max annual precipitation scaled (1-10)</p>
 </blockquote>
+<p><a href="images/Precipitation_suitability.PNG" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/Precipitation_suitability.PNG" class="img-fluid"></a></p>
 <p><strong>Vegetation Characteristics</strong></p>
+<p>higher vegetation density, when thinned will yield more water, focus on areas of high vegetation density and high departure from historic conditions.</p>
 <blockquote class="blockquote">
-<p>higher vegetation density, when thinned will yield more water, focus on areas of high vegetation density or high departure from historic conditions.</p>
-</blockquote>
-</section>
-</section>
-<section id="derive" class="level4" data-number="2.1.2">
-<h4 data-number="2.1.2" class="anchored" data-anchor-id="derive"><span class="header-section-number">2.1.2</span> 2.2.2 Derive</h4>
-<blockquote class="blockquote">
-<p>“Derive data that represents the model variables that are defined by the criteria. In this example, the criterion Far distances from streets defines distance from streets as a model variable. A raster that represents distance from streets is derived from street centerlines by using a geoprocessing tool.”</p>
-</blockquote>
-</section>
-<section id="transform" class="level4" data-number="2.1.3">
-<h4 data-number="2.1.3" class="anchored" data-anchor-id="transform"><span class="header-section-number">2.1.3</span> 2.2.3 Transform</h4>
-<blockquote class="blockquote">
-<p>“Transform the values in each derived dataset into a common suitability scale by assigning each cell in the surface a suitability score (value on the suitability scale). For each dataset, assign the highest suitability scores to the variable values that are most preferred according to the associated criterion. In this example, the distance-from-streets raster is transformed into a 1-to-5 suitability scale. To represent the criterion Far distances from streets, the locations closest to streets are assigned a value of 1 (lowest preference) and the locations farthest from streets are assigned a value of 5 (highest preference).”</p>
-</blockquote>
-</section>
-<section id="weight-and-combine" class="level4" data-number="2.1.4">
-<h4 data-number="2.1.4" class="anchored" data-anchor-id="weight-and-combine"><span class="header-section-number">2.1.4</span> 2.2.4 Weight and combine</h4>
-<blockquote class="blockquote">
-<p>“Weight and combine the transformed data, which represents the model criteria, into a single suitability surface that meets the model goal. In this example, three transformed rasters are combined to create the suitability surface.”</p>
-</blockquote>
-</section>
-<section id="locate" class="level4" data-number="2.1.5">
-<h4 data-number="2.1.5" class="anchored" data-anchor-id="locate"><span class="header-section-number">2.1.5</span> 2.2.5 Locate</h4>
-<blockquote class="blockquote">
-<p>“Locate the phenomenon by using the suitability surface. In this example, a region that has the highest average suitability is identified.”</p>
-</blockquote>
-</section>
-<section id="analyze" class="level4" data-number="2.1.6">
-<h4 data-number="2.1.6" class="anchored" data-anchor-id="analyze"><span class="header-section-number">2.1.6</span> 2.2.6 Analyze</h4>
-<blockquote class="blockquote">
-<p>“Analyze the result by visually evaluating the suitability surface and regions to ensure that the model goal has been met. Optionally, perform sensitivity and error analysis.”</p>
-</blockquote>
-</section>
-</section>
-<section id="environments" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="environments"><span class="header-section-number">2.2</span> Environments:</h3>
-<ul>
-<li>ArcGIS Pro 3.3</li>
-</ul>
-<section id="unsuitable" class="level4" data-number="2.2.1">
-<h4 data-number="2.2.1" class="anchored" data-anchor-id="unsuitable"><span class="header-section-number">2.2.1</span> <strong>Unsuitable</strong></h4>
-<ul>
-<li><p>Max Precipitation &lt; 450mm</p></li>
-<li><p>Mean Precipitation &lt; 450mm with low IAV interannual variability in precipitation</p></li>
-<li><p>Forest Cover Trees per Acre &lt; 30</p></li>
-<li><p>Elevation &lt; 900m</p></li>
-<li><p>EVC - Excisting vegetation cover Landfire 2023: exclude values:</p></li>
-</ul>
-<blockquote class="blockquote">
-<p>-9999: No data</p>
+<p><strong>NLCD 2021 Total Canopy Cover (% Cover)</strong></p>
 </blockquote>
 <blockquote class="blockquote">
-<p>11-100: Open Water, Snow/Ice, Developed all, Barren, Cultivated, Sparse vegetation</p>
+<p>Canopy cover % below 30 were considered low suitability (1) while increases in canopy cover about 30% increase in suitability.</p>
 </blockquote>
+<p><a href="images/CanopyCover_suitability.PNG" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/CanopyCover_suitability.PNG" class="img-fluid"></a></p>
 <blockquote class="blockquote">
-<p>310 + (herb cover)</p>
+<p><strong>Landfire 2022 Vegetation Condition Class</strong> 3rd update to the 2016 remap.</p>
 </blockquote>
+<p>Variation from modeled historic conditions. Forests which have deviated significantly from their modeled historic conditions are more suitable for thinning than forests which have not deviated from their historic condition.</p>
 <blockquote class="blockquote">
-<p>Existing vegetation cover Tree Cover &lt; 30% 110 - 129</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Existing Vegetation Cover Shrub Cover &lt; 30% 210 - 230</p>
-</blockquote>
-<ul>
-<li>VCC - Vegetation Condition Class from Land Fire 2022</li>
-</ul>
 <p>Vegetation Condition Class (VCC) represents a simple categorization of the associated Vegetation Departure (VDep) and is a derivative of the VDep layer. It indicates the general level to which current vegetation is different from the estimated modeled vegetation based on past reference conditions. VDep and VCC are based upon methods originally described in the Interagency Fire Regime Condition Class Guidebook, but are not identical to those methods and should not be considered as a replacement data set. Full descriptions of the methods used can be found in the VDep product description. Note that the LANDFIRE (LF) team feels it is very important for users to review the VDep methods before comparing VDep or VCC values across LF versions. <a href="https://www.landfire.gov/vegetation/vcc">info</a> <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.landfire.gov/sites/default/files/DataDictionary/LF2022/LF22_VCCADD_230.pdf">PDF</a></p>
-<p><strong>Reclass_LF23_VCC_1_6</strong></p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>VCC Value 2022</th>
-<th>New Class</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Fill-NoData</td>
-<td>NODATA</td>
-</tr>
-<tr class="even">
-<td>Fill-Not Mapped</td>
-<td>NODATA</td>
-</tr>
-<tr class="odd">
-<td>Veg Condition Class I, A</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>Vegetation Condition Class I, B</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>Vegetation Condition Class II, A</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td>Vegetation Condition Class II, B</td>
-<td>4</td>
-</tr>
-<tr class="odd">
-<td>Vegetation Condition Class III, A</td>
-<td>5</td>
-</tr>
-<tr class="even">
-<td>Vegetation Condition Class III, B</td>
-<td>6</td>
-</tr>
-<tr class="odd">
-<td>Water</td>
-<td>NODATA</td>
-</tr>
-<tr class="even">
-<td>Developed</td>
-<td>NODATA</td>
-</tr>
-<tr class="odd">
-<td>Barren or Sparse</td>
-<td>NODATA</td>
-</tr>
-<tr class="even">
-<td>Agriculture</td>
-<td>NODATA</td>
-</tr>
-<tr class="odd">
-<td>NODATA</td>
-<td>NODATA</td>
-</tr>
-</tbody>
-</table>
-<p>Higher numbers indicate departure from historical conditions, and indicate a need for forest restoration (CITATION NEEDED)</p>
-</section>
-<section id="suitability-criteria" class="level4" data-number="2.2.2">
-<h4 data-number="2.2.2" class="anchored" data-anchor-id="suitability-criteria"><span class="header-section-number">2.2.2</span> <strong>Suitability Criteria</strong></h4>
-<p><strong>Aspect</strong></p>
-<blockquote class="blockquote">
-<p>Closer to 0 or 360 is desired</p>
 </blockquote>
-<p><strong>Elevation</strong></p>
-<blockquote class="blockquote">
-<p>higher elevation is better</p>
-</blockquote>
-<p><strong>Vegetation Characteristics</strong></p>
-<p>Landfire 2022 VCC Higher is better 67-100 preferred Class II &amp; III; A &amp; B</p>
-<p>Landfire EVC tree cover higher is better</p>
-<p>Precipitation Higher is better</p>
-<p>Wildfire Hazard POtential V2023 Higher is better</p>
+<p><a href="images/VCC_suitability.PNG" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/VCC_suitability.PNG" class="img-fluid"></a></p>
+<p><strong>Soil Hydrologic Conditions</strong></p>
+<p>Soil types A,B,C,D are mapped for the USA, There are no A soil types in the study area, so they were given the following suitability values</p>
+<p>B = 10 out of 10 C = 8 out of 10 D = 3 out of 10</p>
+<p><a href="images/SoilHydrologicGroup_suitability.PNG" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/SoilHydrologicGroup_suitability.PNG" class="img-fluid"></a></p>
 </section>
 </section>
 </section>
-<section id="conclusion" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">3</span> Conclusion</h2>
+</section>
+<section id="preliminary-results" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="preliminary-results"><span class="header-section-number">3</span> Preliminary Results</h2>
+<section id="weighting" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="weighting"><span class="header-section-number">3.1</span> Weighting</h3>
+<p>Tree Canopy Cover = 20% Vegetation Condition Class = 20% Slope = 20% Aspect = 20% Max Precipitation = 15% Soil Hydrologic Group = 5%</p>
+</section>
+<section id="overall-suitability" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="overall-suitability"><span class="header-section-number">3.2</span> Overall Suitability</h3>
+<p><a href="images/PreliminarySuitabilityMap.PNG" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/PreliminarySuitabilityMap.PNG" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="questions-for-the-team" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="questions-for-the-team"><span class="header-section-number">4</span> Questions for the team</h2>
+<section id="can-modeling-using-snowpalm-the-national-water-model-or-swat-either-validate-this-or-be-used-to-improve-the-suitability-transformations-and-weighting" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="can-modeling-using-snowpalm-the-national-water-model-or-swat-either-validate-this-or-be-used-to-improve-the-suitability-transformations-and-weighting"><span class="header-section-number">4.1</span> 1. Can modeling using Snowpalm, the National Water Model, or SWAT either validate this, or be used to improve the suitability transformations and weighting?</h3>
+<section id="what-lulc-variables-do-the-various-models-take-in-is-canopy-cover-or-vcc-represented-in-those-models-if-so-could-we-adjust-them-to-simulate-thinning-and-re-run-the-models-to-see-what-happens" class="level4" data-number="4.1.1">
+<h4 data-number="4.1.1" class="anchored" data-anchor-id="what-lulc-variables-do-the-various-models-take-in-is-canopy-cover-or-vcc-represented-in-those-models-if-so-could-we-adjust-them-to-simulate-thinning-and-re-run-the-models-to-see-what-happens"><span class="header-section-number">4.1.1</span> 1.1 What LULC variables do the various models take in? Is Canopy Cover or VCC represented in those models? If so, could we adjust them to simulate thinning and re-run the models to see what happens?</h4>
+</section>
+</section>
+<section id="am-i-using-the-right-data-is-there-better-datasets-available" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="am-i-using-the-right-data-is-there-better-datasets-available"><span class="header-section-number">4.2</span> 2. Am I using the right data? Is there better datasets available?</h3>
+</section>
+</section>
+<section id="conclusion" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">5</span> Conclusion</h2>
 </section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
@@ -601,7 +512,7 @@ Zou, Chris B., Peter F. Ffolliott, and Michael Wine. 2010. <span>“Streamflow R
     Abraham},
   title = {Mapping Suitability for Thinning to Reduce Atmospheric Losses
     and Enhance Groundwater Recharge in {Arizona}},
-  date = {2024-10-21},
+  date = {2024-10-24},
   langid = {en},
   abstract = {In semi-arid forests such as Arizona, over 90\% of annual
     precipitation may be lost to evapotranspiration. Forest structure
@@ -630,7 +541,7 @@ Zou, Chris B., Peter F. Ffolliott, and Michael Wine. 2010. <span>“Streamflow R
 E Lima, Ryan, Temuulen Tsagaan Sankey, and Abraham E Springer. 2024.
 <span>“Mapping Suitability for Thinning to Reduce Atmospheric Losses and
 Enhance Groundwater Recharge in Arizona.”</span> Water Resources
-Research. October 21, 2024.
+Research. October 24, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1054,6 +965,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false,"selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
