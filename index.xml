@@ -23,8 +23,9 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 
 <title-group>
-<article-title>Mapping suitability for thinning to reduce atmospheric
-losses and enhance groundwater recharge in Arizona</article-title>
+<article-title>Mapping landscape suitability for forest thinning to
+reduce evapotranspiration and enhance groundwater recharge in
+Arizona</article-title>
 </title-group>
 
 <contrib-group>
@@ -91,10 +92,10 @@ administration</role>
 <corresp id="cor-1">ryan.lima@nau.edu</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-24">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-28">
 <year>2024</year>
 <month>10</month>
-<day>24</day>
+<day>28</day>
 </pub-date>
 
 
@@ -107,27 +108,16 @@ administration</role>
 
 
 <abstract>
-<p>In semi-arid forests such as Arizona, over 90% of annual
-precipitation may be lost to evapotranspiration. Forest structure has
-changed significantly post-Euro-American settlement due to various
-factors, including grazing, logging, and wildfire exclusion. As a
-result, many forests in Arizona are overstocked relative to
-pre-settlement conditions, increasing the risk of catastrophic wildfire.
-In recent years, the growing frequency and severity of drought and
-wildfires have resulted from warming associated with anthropogenic
-climate change. Landscape-scale efforts to restore forests to near
-historic densities are underway throughout Arizona. Mechanical thinning
-has increased water yield for several years following treatment in some
-forests. However, the response of forests to treatments is complex,
-site-specific, and varies with elevation, aspect, treatment level, and
-climatic conditions. As Arizona grapples with increasing water
-insecurity due to historic drought, demographic changes, and increased
-hydroclimatic variability, policymakers are searching for ways to
-bolster water supplies statewide, particularly groundwater, which has
-been declining across much of the state. Here, we review the literature
-on the effects of forest thinning on water yield throughout Arizona and
-map areas where mechanical treatment has the highest potential for
-increasing groundwater recharge.</p>
+Here, we review the literature on the effects of forest thinning on
+water yield throughout Arizona and map areas where mechanical treatment
+has the highest potential for increasing groundwater recharge. This
+research synthesizes the myriad studies examining the effects of forest
+treatment on water ield in semi-arid forests and compiles a list of
+relevant variables. Our approach combines thematic maps of average
+precipitation, elevation, slope, aspect, forest type, forest density,
+depth to bedrock, and soil type into a GIS suitability model to
+highlight areas where forest treatment will most likely enhance recharge
+statewide.
 </abstract>
 <kwd-group kwd-group-type="author">
 <kwd>suitability mapping</kwd>
@@ -146,13 +136,6 @@ increasing groundwater recharge.</p>
 <body>
 <sec id="introduction">
   <title>1 Introduction</title>
-  <p>This research synthesizes the myriad studies examining the effects
-  of forest treatment on water yield in semi-arid forests and compiles a
-  list of relevant variables. Our approach combines thematic maps of
-  average precipitation, elevation, slope, aspect, forest type, forest
-  density, depth to bedrock, and soil type into a GIS suitability model
-  to highlight areas where forest treatment will most likely enhance
-  recharge statewide.</p>
   <p>Since 2000, the Colorado River Basin has been in the midst of a
   historic drought
   (<xref alt="Meko, Woodhouse, and Winitsky 2022" rid="ref-meko_treering_2022" ref-type="bibr">Meko,
@@ -174,13 +157,9 @@ increasing groundwater recharge.</p>
   reliance on groundwater, while groundwater levels have declined for
   decades
   (<xref alt="Tadych et al. 2024" rid="ref-tadych_historical_2024" ref-type="bibr">Tadych
-  et al. 2024</xref>). The <italic>Arizona Tri-Univeristy Recharge and
-  Water Reliability Project</italic> (ATUR-WRP) has been tasked with
-  identifying ways to protect water supplies and enhance recharge by
-  identifying where landscape management practices can reduce
-  atmospheric losses. Average annual precipitation in the lower Colorado
-  River Basin is about 330mm, and only about 10mm of that precipitation
-  becomes streamflow while much of the rest is lost to
+  et al. 2024</xref>). Average annual precipitation in the lower
+  Colorado River Basin is about 330mm, and only about 10mm of that
+  precipitation becomes streamflow while much of the rest is lost to
   Evapotranspiration
   (<xref alt="Zou, Ffolliott, and Wine 2010" rid="ref-zou_streamflow_2010" ref-type="bibr">Zou,
   Ffolliott, and Wine 2010</xref>). Sublimation has been shown to remove
@@ -189,16 +168,31 @@ increasing groundwater recharge.</p>
   (<xref alt="Lundquist et al. 2024" rid="ref-lundquist_sublimation_2024" ref-type="bibr">Lundquist
   et al. 2024</xref>). Therefore, small reductions in evaporative losses
   could have outsized impacts on available water supplies.</p>
-  <p>Around 65% of surface water in the western states originates from
-  forested lands, which cover just 29% of the land area
+  <p>Over 90% of annual precipitation in semi-arid forests can be lost
+  to evapotranspiration
+  (<xref alt="Dore et al. 2012" rid="ref-dore_recovery_2012" ref-type="bibr">Dore
+  et al. 2012</xref>;
+  <xref alt="Ha et al. 2015" rid="ref-ha_evapotranspiration_2015" ref-type="bibr">Ha
+  et al. 2015</xref>;
+  <xref alt="Yaseef et al. 2010" rid="ref-yaseef_ecohydrology_2010" ref-type="bibr">Yaseef
+  et al. 2010</xref>). Around 65% of surface water in the western states
+  originates from forested lands, which cover just 29% of the land area
   (<xref alt="Brown, Hobbins, and Ramirez 2005" rid="ref-brown_source_2005" ref-type="bibr">Brown,
   Hobbins, and Ramirez 2005</xref>). However, western forests are
   increasingly at risk from catastrophic wildfires, an emerging driver
   of runoff change that will increase the impact on the water supply
   (<xref alt="Williams, Cook, and Smerdon 2022" rid="ref-williams_rapid_2022" ref-type="bibr">Williams,
-  Cook, and Smerdon 2022</xref>). Increasing temperatures and related
-  droughts have contributed to extensive tree mortality from wildfire,
-  disease, and insect infestation
+  Cook, and Smerdon 2022</xref>). Forest structure has changed
+  significantly post-Euro-American settlement due to grazing, logging,
+  wildfire exclusion and other factors
+  (<xref alt="Covington and Moore 1994" rid="ref-covington_southwestern_1994" ref-type="bibr">Covington
+  and Moore 1994</xref>). As a result, many forests in Arizona are
+  overstocked relative to pre-settlement conditions, increasing the risk
+  of catastrophic wildfire
+  (<xref alt="Allen et al. 2002" rid="ref-allen_ecological_2002" ref-type="bibr">Allen
+  et al. 2002</xref>). Increasing temperatures and related droughts have
+  contributed to extensive tree mortality from wildfire, disease, and
+  insect infestation
   (<xref alt="Berner et al. 2017" rid="ref-berner_tree_2017" ref-type="bibr">Berner
   et al. 2017</xref>). Warming temperatures have tripled the frequency
   and quadrupled the size of wildfires in recent decades
@@ -207,22 +201,18 @@ increasing groundwater recharge.</p>
   low-elevation conifer forests past climate thresholds, creating
   conditions less suitable for tree regeneration
   (<xref alt="Davis et al. 2019" rid="ref-davis_wildfires_2019" ref-type="bibr">Davis
-  et al. 2019</xref>). This increased risk of wildfire and forest loss
-  is driven by climate and overstocked conditions resulting from over a
-  century of forest management practices since euro-american settlement
-  (<xref alt="Covington and Moore 1994" rid="ref-covington_southwestern_1994" ref-type="bibr">Covington
-  and Moore 1994</xref>;
-  <xref alt="Allen et al. 2002" rid="ref-allen_ecological_2002" ref-type="bibr">Allen
-  et al. 2002</xref>).</p>
+  et al. 2019</xref>).</p>
   <p>Landscape-scale forest restoration efforts have been planned or
   implemented across much of Arizona. For example, the Four Forest
   Restoration Initiative (4FRI) includes plans for restoration across
   over 2.5 million acres of Arizona’s forests
   (<xref alt="Schultz, Jedd, and Beam 2012" rid="ref-schultz_collaborative_2012" ref-type="bibr">Schultz,
   Jedd, and Beam 2012</xref>). The primary goal of restoration efforts
-  is to reduce wildfire risk. However, numerous studies have linked
-  forest treatments to increased water yields in semi-arid forests and
-  have emphasized the role of forest restoration in improving hydrologic
+  is to reduce wildfire risk
+  (<xref alt="Allen et al. 2002" rid="ref-allen_ecological_2002" ref-type="bibr">Allen
+  et al. 2002</xref>). However, numerous studies have linked forest
+  treatments to increased water yields in semi-arid forests and have
+  emphasized the role of forest restoration in improving hydrologic
   services and increasing water availability
   (<xref alt="Bosch and Hewlett 1982" rid="ref-bosch_review_1982" ref-type="bibr">Bosch
   and Hewlett 1982</xref>;
@@ -248,9 +238,22 @@ increasing groundwater recharge.</p>
   et al. 2020</xref>). Forest treatments such as thinning and burning
   can significantly impact the hydrologic cycle of forests
   (<xref alt="Del Campo et al. 2022" rid="ref-del_campo_global_2022" ref-type="bibr">Del
-  Campo et al. 2022</xref>). However, the response of forests to
-  treatments is complex and non-linear and differs across forest types,
-  with treatment level, and along aspect and elevational gradients
+  Campo et al. 2022</xref>). For example, forest thinning in Arizona has
+  been associated with increased snow cover days
+  (<xref alt="Sankey et al. 2015" rid="ref-sankey_multi-scale_2015" ref-type="bibr">Sankey
+  et al. 2015</xref>;
+  <xref alt="Belmonte et al. 2021" rid="ref-belmonte_uav-based_2021" ref-type="bibr">Belmonte
+  et al. 2021</xref>;
+  <xref alt="Donager et al. 2021" rid="ref-donager_integrating_2021" ref-type="bibr">Donager
+  et al. 2021</xref>), greater soil moisture
+  (<xref alt="Belmonte et al. 2022" rid="ref-belmonte_soil_2022" ref-type="bibr">Belmonte
+  et al. 2022</xref>;
+  <xref alt="Sankey and Tatum 2022" rid="ref-sankey_thinning_2022" ref-type="bibr">Sankey
+  and Tatum 2022</xref>), and greater forest canopy moisture
+  (<xref alt="Sankey et al. 2021" rid="ref-sankey_regionalscale_2021" ref-type="bibr">Sankey
+  et al. 2021</xref>). However, the response of forests to treatments is
+  complex and non-linear and differs across forest types, with treatment
+  level, and along aspect and elevational gradients
   (<xref alt="Del Campo et al. 2022" rid="ref-del_campo_global_2022" ref-type="bibr">Del
   Campo et al. 2022</xref>;
   <xref alt="Biederman et al. 2022" rid="ref-biederman_streamflow_2022" ref-type="bibr">Biederman
@@ -470,6 +473,13 @@ increasing groundwater recharge.</p>
           precipitation is evaporated regardless of forest condition
           (Hibbert, 1979)[@]</p>
         </list-item>
+        <list-item>
+          <p>(<xref alt="Zhang, Dawes, and Walker 2001" rid="ref-zhang_response_2001" ref-type="bibr">Zhang,
+          Dawes, and Walker 2001</xref>) found evaluated 250 world-wide
+          catchment studies and found that the differences in ET between
+          forested and non-forested catchments diminishes in areas with
+          annual rainfall less than 500 mm</p>
+        </list-item>
       </list>
     </sec>
   </sec>
@@ -533,11 +543,9 @@ increasing groundwater recharge.</p>
         <p><inline-graphic mimetype="image" mime-subtype="png" xlink:href="images/Slope_suitability.PNG" />
         <bold>Precipitation</bold></p>
         <disp-quote>
-          <p>Max precipitation must be higher than 400mm annually from
-          1990 - 2020. Areas with Max Annual Precipitation Less than
-          400m have a suitability score of 1 (lowest), and suitability
-          score increases with Max annual precipitation scaled
-          (1-10)</p>
+          <p>Mean annual precipitation must be higher than 500mm 1990 -
+          2020 Max precipitation must be higher than 500mm annually from
+          1990 - 2020</p>
         </disp-quote>
         <graphic mimetype="image" mime-subtype="png" xlink:href="images/Precipitation_suitability.PNG" />
         <p><bold>Vegetation Characteristics</bold></p>
@@ -977,6 +985,29 @@ increasing groundwater recharge.</p>
       <pub-id pub-id-type="doi">10.3390/rs13051036</pub-id>
       <fpage>1036</fpage>
       <lpage></lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-sankey_multi-scale_2015">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Sankey</surname><given-names>Temuulen</given-names></name>
+        <name><surname>Donald</surname><given-names>Jonathon</given-names></name>
+        <name><surname>McVay</surname><given-names>Jason</given-names></name>
+        <name><surname>Ashley</surname><given-names>Mariah</given-names></name>
+        <name><surname>O’Donnell</surname><given-names>Frances</given-names></name>
+        <name><surname>Lopez</surname><given-names>Sharon Masek</given-names></name>
+        <name><surname>Springer</surname><given-names>Abraham</given-names></name>
+      </person-group>
+      <article-title>Multi-scale analysis of snow dynamics at the southern margin of the North American continental snow distribution</article-title>
+      <source>Remote Sensing of Environment</source>
+      <year iso-8601-date="2015-11">2015</year><month>11</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-08-15">2024</year><month>08</month><day>15</day></date-in-citation>
+      <volume>169</volume>
+      <issn>00344257</issn>
+      <uri>https://linkinghub.elsevier.com/retrieve/pii/S0034425715301140</uri>
+      <pub-id pub-id-type="doi">10.1016/j.rse.2015.08.028</pub-id>
+      <fpage>307</fpage>
+      <lpage>319</lpage>
     </element-citation>
   </ref>
   <ref id="ref-dwivedi_how_2024">
@@ -1470,6 +1501,98 @@ increasing groundwater recharge.</p>
       <issn>0022-1201</issn>
       <fpage>39</fpage>
       <lpage>47</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-zhang_response_2001">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Zhang</surname><given-names>L.</given-names></name>
+        <name><surname>Dawes</surname><given-names>W. R.</given-names></name>
+        <name><surname>Walker</surname><given-names>G. R.</given-names></name>
+      </person-group>
+      <article-title>Response of mean annual evapotranspiration to vegetation changes at catchment scale</article-title>
+      <source>Water Resources Research</source>
+      <year iso-8601-date="2001-03">2001</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-28">2024</year><month>10</month><day>28</day></date-in-citation>
+      <volume>37</volume>
+      <issue>3</issue>
+      <issn>0043-1397, 1944-7973</issn>
+      <uri>https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2000WR900325</uri>
+      <pub-id pub-id-type="doi">10.1029/2000WR900325</pub-id>
+      <fpage>701</fpage>
+      <lpage>708</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-yaseef_ecohydrology_2010">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Yaseef</surname><given-names>Naama Raz</given-names></name>
+        <name><surname>Yakir</surname><given-names>Dan</given-names></name>
+        <name><surname>Rotenberg</surname><given-names>Eyal</given-names></name>
+        <name><surname>Schiller</surname><given-names>Gabriel</given-names></name>
+        <name><surname>Cohen</surname><given-names>Shabtai</given-names></name>
+      </person-group>
+      <article-title>Ecohydrology of a semi‐arid forest: Partitioning among water balance components and its implications for predicted precipitation changes</article-title>
+      <source>Ecohydrology</source>
+      <year iso-8601-date="2010-06">2010</year><month>06</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-28">2024</year><month>10</month><day>28</day></date-in-citation>
+      <volume>3</volume>
+      <issue>2</issue>
+      <issn>1936-0584, 1936-0592</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/10.1002/eco.65</uri>
+      <pub-id pub-id-type="doi">10.1002/eco.65</pub-id>
+      <fpage>143</fpage>
+      <lpage>154</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-ha_evapotranspiration_2015">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Ha</surname><given-names>Wonsook</given-names></name>
+        <name><surname>Kolb</surname><given-names>Thomas E.</given-names></name>
+        <name><surname>Springer</surname><given-names>Abraham E.</given-names></name>
+        <name><surname>Dore</surname><given-names>Sabina</given-names></name>
+        <name><surname>O’Donnell</surname><given-names>Frances C.</given-names></name>
+        <name><surname>Martinez Morales</surname><given-names>Rodolfo</given-names></name>
+        <name><surname>Masek Lopez</surname><given-names>Sharon</given-names></name>
+        <name><surname>Koch</surname><given-names>George W.</given-names></name>
+      </person-group>
+      <article-title>Evapotranspiration comparisons between eddy covariance measurements and meteorological and remote‐sensing‐based models in disturbed ponderosa pine forests</article-title>
+      <source>Ecohydrology</source>
+      <year iso-8601-date="2015-10">2015</year><month>10</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-28">2024</year><month>10</month><day>28</day></date-in-citation>
+      <volume>8</volume>
+      <issue>7</issue>
+      <issn>1936-0584, 1936-0592</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/10.1002/eco.1586</uri>
+      <pub-id pub-id-type="doi">10.1002/eco.1586</pub-id>
+      <fpage>1335</fpage>
+      <lpage>1350</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-dore_recovery_2012">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Dore</surname><given-names>Sabina</given-names></name>
+        <name><surname>Montes‐Helu</surname><given-names>Mario</given-names></name>
+        <name><surname>Hart</surname><given-names>Stephen C.</given-names></name>
+        <name><surname>Hungate</surname><given-names>Bruce A.</given-names></name>
+        <name><surname>Koch</surname><given-names>George W.</given-names></name>
+        <name><surname>Moon</surname><given-names>John B.</given-names></name>
+        <name><surname>Finkral</surname><given-names>Alex J.</given-names></name>
+        <name><surname>Kolb</surname><given-names>Thomas E.</given-names></name>
+      </person-group>
+      <article-title>Recovery of ponderosa pine ecosystem carbon and water fluxes from thinning and stand‐replacing fire</article-title>
+      <source>Global Change Biology</source>
+      <year iso-8601-date="2012-10">2012</year><month>10</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2024-10-28">2024</year><month>10</month><day>28</day></date-in-citation>
+      <volume>18</volume>
+      <issue>10</issue>
+      <issn>1354-1013, 1365-2486</issn>
+      <uri>https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2486.2012.02775.x</uri>
+      <pub-id pub-id-type="doi">10.1111/j.1365-2486.2012.02775.x</pub-id>
+      <fpage>3171</fpage>
+      <lpage>3185</lpage>
     </element-citation>
   </ref>
 </ref-list>

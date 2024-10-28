@@ -178,7 +178,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Mapping suitability for thinning to reduce atmospheric losses and enhance groundwater recharge in Arizona},
+  pdftitle={Mapping landscape suitability for forest thinning to reduce evapotranspiration and enhance groundwater recharge in Arizona},
   pdfauthor={Ryan E Lima; Temuulen Tsagaan Sankey; Abraham E Springer},
   pdfkeywords={suitability mapping, forest thinning, water
 yield, groundwater recharge},
@@ -195,8 +195,8 @@ yield, groundwater recharge},
 \draftfalse
 
 \begin{document}
-\title{Mapping suitability for thinning to reduce atmospheric losses and
-enhance groundwater recharge in Arizona}
+\title{Mapping landscape suitability for forest thinning to reduce
+evapotranspiration and enhance groundwater recharge in Arizona}
 
 \authors{Ryan E Lima\affil{1}, Temuulen Tsagaan Sankey\affil{1}, Abraham
 E Springer\affil{1}}
@@ -205,43 +205,23 @@ E Springer\affil{1}}
 
 
 \begin{abstract}
-In semi-arid forests such as Arizona, over 90\% of annual precipitation
-may be lost to evapotranspiration. Forest structure has changed
-significantly post-Euro-American settlement due to various factors,
-including grazing, logging, and wildfire exclusion. As a result, many
-forests in Arizona are overstocked relative to pre-settlement
-conditions, increasing the risk of catastrophic wildfire. In recent
-years, the growing frequency and severity of drought and wildfires have
-resulted from warming associated with anthropogenic climate change.
-Landscape-scale efforts to restore forests to near historic densities
-are underway throughout Arizona. Mechanical thinning has increased water
-yield for several years following treatment in some forests. However,
-the response of forests to treatments is complex, site-specific, and
-varies with elevation, aspect, treatment level, and climatic conditions.
-As Arizona grapples with increasing water insecurity due to historic
-drought, demographic changes, and increased hydroclimatic variability,
-policymakers are searching for ways to bolster water supplies statewide,
-particularly groundwater, which has been declining across much of the
-state. Here, we review the literature on the effects of forest thinning
-on water yield throughout Arizona and map areas where mechanical
-treatment has the highest potential for increasing groundwater recharge.
+Here, we review the literature on the effects of forest thinning on
+water yield throughout Arizona and map areas where mechanical treatment
+has the highest potential for increasing groundwater recharge. This
+research synthesizes the myriad studies examining the effects of forest
+treatment on water ield in semi-arid forests and compiles a list of
+relevant variables. Our approach combines thematic maps of average
+precipitation, elevation, slope, aspect, forest type, forest density,
+depth to bedrock, and soil type into a GIS suitability model to
+highlight areas where forest treatment will most likely enhance recharge
+statewide.
 \end{abstract}
 
-\section*{Plain Language Summary}
-text to add
 
 
 
 
 \section{Introduction}\label{introduction}
-
-This research synthesizes the myriad studies examining the effects of
-forest treatment on water yield in semi-arid forests and compiles a list
-of relevant variables. Our approach combines thematic maps of average
-precipitation, elevation, slope, aspect, forest type, forest density,
-depth to bedrock, and soil type into a GIS suitability model to
-highlight areas where forest treatment will most likely enhance recharge
-statewide.
 
 Since 2000, the Colorado River Basin has been in the midst of a historic
 drought (Meko et al., 2022; Williams et al., 2022). Average temperatures
@@ -253,56 +233,60 @@ frequency since 2010 (Bennett et al., 2021). Simultaneously, Arizona has
 experienced rapid population growth, increasing the demands on already
 strained water supplies. Reductions in streamflow have increased
 reliance on groundwater, while groundwater levels have declined for
-decades (Tadych et al., 2024). The \emph{Arizona Tri-Univeristy Recharge
-and Water Reliability Project} (ATUR-WRP) has been tasked with
-identifying ways to protect water supplies and enhance recharge by
-identifying where landscape management practices can reduce atmospheric
-losses. Average annual precipitation in the lower Colorado River Basin
-is about 330mm, and only about 10mm of that precipitation becomes
-streamflow while much of the rest is lost to Evapotranspiration (Zou et
-al., 2010). Sublimation has been shown to remove 10 - 90\% of snowfall
-in the basin; the remaining snowmelt provides over 80\% of streamflow to
-the Colorado River (Lundquist et al., 2024). Therefore, small reductions
-in evaporative losses could have outsized impacts on available water
-supplies.
+decades (Tadych et al., 2024). Average annual precipitation in the lower
+Colorado River Basin is about 330mm, and only about 10mm of that
+precipitation becomes streamflow while much of the rest is lost to
+Evapotranspiration (Zou et al., 2010). Sublimation has been shown to
+remove 10 - 90\% of snowfall in the basin; the remaining snowmelt
+provides over 80\% of streamflow to the Colorado River (Lundquist et
+al., 2024). Therefore, small reductions in evaporative losses could have
+outsized impacts on available water supplies.
 
-Around 65\% of surface water in the western states originates from
-forested lands, which cover just 29\% of the land area (Brown et al.,
-2005). However, western forests are increasingly at risk from
+Over 90\% of annual precipitation in semi-arid forests can be lost to
+evapotranspiration (Dore et al., 2012; Ha et al., 2015; Yaseef et al.,
+2010). Around 65\% of surface water in the western states originates
+from forested lands, which cover just 29\% of the land area (Brown et
+al., 2005). However, western forests are increasingly at risk from
 catastrophic wildfires, an emerging driver of runoff change that will
-increase the impact on the water supply (Williams et al., 2022).
-Increasing temperatures and related droughts have contributed to
-extensive tree mortality from wildfire, disease, and insect infestation
-(Berner et al., 2017). Warming temperatures have tripled the frequency
-and quadrupled the size of wildfires in recent decades (Williams et al.,
-2022). Increasing heat has pushed many low-elevation conifer forests
-past climate thresholds, creating conditions less suitable for tree
-regeneration (Davis et al., 2019). This increased risk of wildfire and
-forest loss is driven by climate and overstocked conditions resulting
-from over a century of forest management practices since euro-american
-settlement (Allen et al., 2002; Covington \& Moore, 1994).
+increase the impact on the water supply (Williams et al., 2022). Forest
+structure has changed significantly post-Euro-American settlement due to
+grazing, logging, wildfire exclusion and other factors (Covington \&
+Moore, 1994). As a result, many forests in Arizona are overstocked
+relative to pre-settlement conditions, increasing the risk of
+catastrophic wildfire (Allen et al., 2002). Increasing temperatures and
+related droughts have contributed to extensive tree mortality from
+wildfire, disease, and insect infestation (Berner et al., 2017). Warming
+temperatures have tripled the frequency and quadrupled the size of
+wildfires in recent decades (Williams et al., 2022). Increasing heat has
+pushed many low-elevation conifer forests past climate thresholds,
+creating conditions less suitable for tree regeneration (Davis et al.,
+2019).
 
 Landscape-scale forest restoration efforts have been planned or
 implemented across much of Arizona. For example, the Four Forest
 Restoration Initiative (4FRI) includes plans for restoration across over
 2.5 million acres of Arizona's forests (Schultz et al., 2012). The
-primary goal of restoration efforts is to reduce wildfire risk. However,
-numerous studies have linked forest treatments to increased water yields
-in semi-arid forests and have emphasized the role of forest restoration
-in improving hydrologic services and increasing water availability
-(Baker, 1986; Bosch \& Hewlett, 1982; Gottfried, 1991; Moreno et al.,
-2015; O'Donnell et al., 2018; Schenk et al., 2020; Simonit et al., 2015;
-Smerdon et al., 2009; C. Wyatt et al., 2015; C. J. W. Wyatt, 2013; Zou
-et al., 2010). Forest treatments such as thinning and burning can
-significantly impact the hydrologic cycle of forests (Del Campo et al.,
-2022). However, the response of forests to treatments is complex and
-non-linear and differs across forest types, with treatment level, and
-along aspect and elevational gradients (Biederman et al., 2022; Del
-Campo et al., 2022; Moore \& Wondzell, 2005; Zou et al., 2010). This
-research aims to develop criteria for areas suitable for thinning to
-enhance groundwater recharge. It focuses primarily on regional studies
-that are likely the best predictor of hydrologic response to treatment
-(C. J. W. Wyatt, 2013).
+primary goal of restoration efforts is to reduce wildfire risk (Allen et
+al., 2002). However, numerous studies have linked forest treatments to
+increased water yields in semi-arid forests and have emphasized the role
+of forest restoration in improving hydrologic services and increasing
+water availability (Baker, 1986; Bosch \& Hewlett, 1982; Gottfried,
+1991; Moreno et al., 2015; O'Donnell et al., 2018; Schenk et al., 2020;
+Simonit et al., 2015; Smerdon et al., 2009; C. Wyatt et al., 2015; C. J.
+W. Wyatt, 2013; Zou et al., 2010). Forest treatments such as thinning
+and burning can significantly impact the hydrologic cycle of forests
+(Del Campo et al., 2022). For example, forest thinning in Arizona has
+been associated with increased snow cover days (Belmonte et al., 2021;
+Donager et al., 2021; Sankey et al., 2015), greater soil moisture
+(Belmonte et al., 2022; Sankey \& Tatum, 2022), and greater forest
+canopy moisture (Sankey et al., 2021). However, the response of forests
+to treatments is complex and non-linear and differs across forest types,
+with treatment level, and along aspect and elevational gradients
+(Biederman et al., 2022; Del Campo et al., 2022; Moore \& Wondzell,
+2005; Zou et al., 2010). This research aims to develop criteria for
+areas suitable for thinning to enhance groundwater recharge. It focuses
+primarily on regional studies that are likely the best predictor of
+hydrologic response to treatment (C. J. W. Wyatt, 2013).
 
 \textsubscript{Source:
 \href{https://Ryan3Lima.github.io/ATUR-ForestThinning/index.ipynb.html}{Article
@@ -445,6 +429,10 @@ Notebook}}
   \textasciitilde500mm. ``Presumably because below 500 mm, most
   precipitation is evaporated regardless of forest condition (Hibbert,
   1979){[}@{]}
+\item
+  (Zhang et al., 2001) found evaluated 250 world-wide catchment studies
+  and found that the differences in ET between forested and non-forested
+  catchments diminishes in areas with annual rainfall less than 500 mm
 \end{itemize}
 
 \subsection{thinning decreases ET in some
@@ -512,10 +500,8 @@ Lower slopes have higher suitability scores
 \includegraphics{images/Slope_suitability.PNG} \textbf{Precipitation}
 
 \begin{quote}
-Max precipitation must be higher than 400mm annually from 1990 - 2020.
-Areas with Max Annual Precipitation Less than 400m have a suitability
-score of 1 (lowest), and suitability score increases with Max annual
-precipitation scaled (1-10)
+Mean annual precipitation must be higher than 500mm 1990 - 2020 Max
+precipitation must be higher than 500mm annually from 1990 - 2020
 \end{quote}
 
 \includegraphics{images/Precipitation_suitability.PNG}
@@ -750,6 +736,13 @@ Springer, A. (2021). Integrating airborne and mobile lidar data with
 and cover. \emph{Science of Remote Sensing}, \emph{4}, 100029.
 \url{https://doi.org/10.1016/j.srs.2021.100029}
 
+\bibitem[\citeproctext]{ref-dore_recovery_2012}
+Dore, S., Montes‐Helu, M., Hart, S. C., Hungate, B. A., Koch, G. W.,
+Moon, J. B., et al. (2012). Recovery of ponderosa pine ecosystem carbon
+and water fluxes from thinning and stand‐replacing fire. \emph{Global
+Change Biology}, \emph{18}(10), 3171--3185.
+\url{https://doi.org/10.1111/j.1365-2486.2012.02775.x}
+
 \bibitem[\citeproctext]{ref-dwivedi_how_2024}
 Dwivedi, R., Biederman, J. A., Broxton, P. D., Pearl, J. K., Lee, K.,
 Svoma, B. M., et al. (2024). How three-dimensional forest structure
@@ -770,6 +763,14 @@ yields from an {Arizona} {Mixed} {Conifer} {Watershed}. \emph{JAWRA
 Journal of the American Water Resources Association}, \emph{27}(3),
 537--546. Retrieved from
 \url{https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1752-1688.1991.tb01454.x}
+
+\bibitem[\citeproctext]{ref-ha_evapotranspiration_2015}
+Ha, W., Kolb, T. E., Springer, A. E., Dore, S., O'Donnell, F. C.,
+Martinez Morales, R., et al. (2015). Evapotranspiration comparisons
+between eddy covariance measurements and meteorological and
+remote‐sensing‐based models in disturbed ponderosa pine forests.
+\emph{Ecohydrology}, \emph{8}(7), 1335--1350.
+\url{https://doi.org/10.1002/eco.1586}
 
 \bibitem[\citeproctext]{ref-hogan_recent_2024}
 Hogan, D., \& Lundquist, J. D. (2024). Recent {Upper} {Colorado} {River}
@@ -827,6 +828,13 @@ restored ponderosa pine forests. \emph{Hydrological Processes},
 Sankey, T., \& Tatum, J. (2022). Thinning increases forest resiliency
 during unprecedented drought. \emph{Scientific Reports}, \emph{12}(1),
 9041. \url{https://doi.org/10.1038/s41598-022-12982-z}
+
+\bibitem[\citeproctext]{ref-sankey_multi-scale_2015}
+Sankey, T., Donald, J., McVay, J., Ashley, M., O'Donnell, F., Lopez, S.
+M., \& Springer, A. (2015). Multi-scale analysis of snow dynamics at the
+southern margin of the {North} {American} continental snow distribution.
+\emph{Remote Sensing of Environment}, \emph{169}, 307--319.
+\url{https://doi.org/10.1016/j.rse.2015.08.028}
 
 \bibitem[\citeproctext]{ref-sankey_regionalscale_2021}
 Sankey, T., Belmonte, A., Massey, R., \& Leonard, J. (2021).
@@ -889,6 +897,19 @@ Wyatt, C. J. W. (2013). \emph{Estimating groundwater yield following
 forest restoration along the {Mogollon} {Rim}} (Master's thesis).
 Northern Arizona University, Flagstaff, AZ. Retrieved from
 \url{https://cdm17192.contentdm.oclc.org/digital/collection/p17192coll1/id/476/rec/3}
+
+\bibitem[\citeproctext]{ref-yaseef_ecohydrology_2010}
+Yaseef, N. R., Yakir, D., Rotenberg, E., Schiller, G., \& Cohen, S.
+(2010). Ecohydrology of a semi‐arid forest: Partitioning among water
+balance components and its implications for predicted precipitation
+changes. \emph{Ecohydrology}, \emph{3}(2), 143--154.
+\url{https://doi.org/10.1002/eco.65}
+
+\bibitem[\citeproctext]{ref-zhang_response_2001}
+Zhang, L., Dawes, W. R., \& Walker, G. R. (2001). Response of mean
+annual evapotranspiration to vegetation changes at catchment scale.
+\emph{Water Resources Research}, \emph{37}(3), 701--708.
+\url{https://doi.org/10.1029/2000WR900325}
 
 \bibitem[\citeproctext]{ref-zou_streamflow_2010}
 Zou, C. B., Ffolliott, P. F., \& Wine, M. (2010). Streamflow responses
