@@ -9,7 +9,7 @@
 <meta name="author" content="Ryan E Lima">
 <meta name="author" content="Temuulen Tsagaan Sankey">
 <meta name="author" content="Abraham E Springer">
-<meta name="dcterms.date" content="2024-10-28">
+<meta name="dcterms.date" content="2024-11-21">
 <meta name="keywords" content="suitability mapping, forest thinning, water yield, groundwater recharge">
 
 <title>Mapping landscape suitability for forest thinning to reduce evapotranspiration and enhance groundwater recharge in Arizona</title>
@@ -75,10 +75,10 @@ div.csl-indent {
 <meta name="citation_author" content="Ryan E Lima">
 <meta name="citation_author" content="Temuulen Tsagaan Sankey">
 <meta name="citation_author" content="Abraham E Springer">
-<meta name="citation_publication_date" content="2024-10-28">
-<meta name="citation_cover_date" content="2024-10-28">
+<meta name="citation_publication_date" content="2024-11-21">
+<meta name="citation_cover_date" content="2024-11-21">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-10-28">
+<meta name="citation_online_date" content="2024-11-21">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="Water Resources Research">
 <meta name="citation_reference" content="citation_title=Moderate timber harvesting increases water yields from an Arizona Mixed Conifer Watershed;,citation_author=Gerald J. Gottfried;,citation_publication_date=1991-06;,citation_cover_date=1991-06;,citation_year=1991;,citation_fulltext_html_url=https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1752-1688.1991.tb01454.x;,citation_issue=3;,citation_issn=1752-1688;,citation_volume=27;,citation_journal_title=JAWRA Journal of the American Water Resources Association;">
@@ -176,7 +176,7 @@ div.csl-indent {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">October 28, 2024</p>
+              <p class="date">November 21, 2024</p>
             </div>
           </div>
           
@@ -232,7 +232,7 @@ div.csl-indent {
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">5</span> Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/data-screening-preview.html"><i class="bi bi-journal-code"></i>Data Screening</a></li></ul></div></nav>
+<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/DownloadDEMTiles-preview.html"><i class="bi bi-journal-code"></i>Downloading 1m Elevation data using API</a></li></ul></div></nav>
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
@@ -250,7 +250,7 @@ div.csl-indent {
 <p>Landscape-scale forest restoration efforts have been planned or implemented across much of Arizona. For example, the Four Forest Restoration Initiative (4FRI) includes plans for restoration across over 2.5 million acres of Arizona’s forests <span class="citation" data-cites="schultz_collaborative_2012">(<a href="#ref-schultz_collaborative_2012" role="doc-biblioref">Schultz, Jedd, and Beam 2012</a>)</span>. The primary goal of restoration efforts is to reduce wildfire risk <span class="citation" data-cites="allen_ecological_2002">(<a href="#ref-allen_ecological_2002" role="doc-biblioref">Allen et al. 2002</a>)</span>. However, numerous studies have linked forest treatments to increased water yields in semi-arid forests and have emphasized the role of forest restoration in improving hydrologic services and increasing water availability <span class="citation" data-cites="bosch_review_1982 baker_effects_1986 gottfried_moderate_1991 smerdon_overview_2009 zou_streamflow_2010 wyatt_estimating_2013 moreno_modeling_2015 simonit_impact_2015 wyatt_semiarid_2015 odonnell_forest_2018 schenk_impacts_2020">(<a href="#ref-bosch_review_1982" role="doc-biblioref">Bosch and Hewlett 1982</a>; <a href="#ref-baker_effects_1986" role="doc-biblioref">Baker 1986</a>; <a href="#ref-gottfried_moderate_1991" role="doc-biblioref">Gottfried 1991</a>; <a href="#ref-smerdon_overview_2009" role="doc-biblioref">Smerdon, Redding, and Beckers 2009</a>; <a href="#ref-zou_streamflow_2010" role="doc-biblioref">Zou, Ffolliott, and Wine 2010</a>; <a href="#ref-wyatt_estimating_2013" role="doc-biblioref">C. J. W. Wyatt 2013</a>; <a href="#ref-moreno_modeling_2015" role="doc-biblioref">Moreno et al. 2015</a>; <a href="#ref-simonit_impact_2015" role="doc-biblioref">Simonit et al. 2015</a>; <a href="#ref-wyatt_semiarid_2015" role="doc-biblioref">C. Wyatt, O’Donnell, and Abraham E. Springer 2015</a>; <a href="#ref-odonnell_forest_2018" role="doc-biblioref">O’Donnell et al. 2018</a>; <a href="#ref-schenk_impacts_2020" role="doc-biblioref">Schenk et al. 2020</a>)</span>. Forest treatments such as thinning and burning can significantly impact the hydrologic cycle of forests <span class="citation" data-cites="del_campo_global_2022">(<a href="#ref-del_campo_global_2022" role="doc-biblioref">Del Campo et al. 2022</a>)</span>. For example, forest thinning in Arizona has been associated with increased snow cover days <span class="citation" data-cites="sankey_multi-scale_2015 belmonte_uav-based_2021 donager_integrating_2021">(<a href="#ref-sankey_multi-scale_2015" role="doc-biblioref">Sankey et al. 2015</a>; <a href="#ref-belmonte_uav-based_2021" role="doc-biblioref">Belmonte et al. 2021</a>; <a href="#ref-donager_integrating_2021" role="doc-biblioref">Donager et al. 2021</a>)</span>, greater soil moisture <span class="citation" data-cites="belmonte_soil_2022 sankey_thinning_2022">(<a href="#ref-belmonte_soil_2022" role="doc-biblioref">Belmonte et al. 2022</a>; <a href="#ref-sankey_thinning_2022" role="doc-biblioref">Sankey and Tatum 2022</a>)</span>, and greater forest canopy moisture <span class="citation" data-cites="sankey_regionalscale_2021">(<a href="#ref-sankey_regionalscale_2021" role="doc-biblioref">Sankey et al. 2021</a>)</span>. However, the response of forests to treatments is complex and non-linear and differs across forest types, with treatment level, and along aspect and elevational gradients <span class="citation" data-cites="del_campo_global_2022 biederman_streamflow_2022 zou_streamflow_2010 moore_physical_2005">(<a href="#ref-del_campo_global_2022" role="doc-biblioref">Del Campo et al. 2022</a>; <a href="#ref-biederman_streamflow_2022" role="doc-biblioref">Biederman et al. 2022</a>; <a href="#ref-zou_streamflow_2010" role="doc-biblioref">Zou, Ffolliott, and Wine 2010</a>; <a href="#ref-moore_physical_2005" role="doc-biblioref">Moore and Wondzell 2005</a>)</span>. This research aims to develop criteria for areas suitable for thinning to enhance groundwater recharge. It focuses primarily on regional studies that are likely the best predictor of hydrologic response to treatment <span class="citation" data-cites="wyatt_estimating_2013">(<a href="#ref-wyatt_estimating_2013" role="doc-biblioref">C. J. W. Wyatt 2013</a>)</span>.</p>
 <section id="regional-hydrologic-responses-to-treatment" class="level3" data-number="1.1">
 <h3 data-number="1.1" class="anchored" data-anchor-id="regional-hydrologic-responses-to-treatment"><span class="header-section-number">1.1</span> Regional Hydrologic Responses to Treatment</h3>
-<p>Several regional studies link forest treatment to changes in stand-level ecohydrology including increased tree growth in Ponderosa Pines (<strong>Rodman et al., 2024</strong>) greater soil moisture and total ecosystem moisture [], increased drought resilience [], Increased snow retention, greater streamflow [], water table rise and increased spring flow []</p>
+<p>Several regional studies link forest treatment to changes in stand-level ecohydrology including increased tree growth in Ponderosa Pines (<strong>Rodman et al., 2024</strong>), greater soil moisture and total ecosystem moisture [], increased drought resilience [], Increased snow retention, greater streamflow [], water table rise and increased spring flow []</p>
 <section id="water-yieldrunoff" class="level4" data-number="1.1.1">
 <h4 data-number="1.1.1" class="anchored" data-anchor-id="water-yieldrunoff"><span class="header-section-number">1.1.1</span> Water Yield/Runoff</h4>
 <p>Several regional studies link forest treatment to increased streamflow <span class="citation" data-cites="dwivedi_how_2024 biederman_streamflow_2022 broxton_subseasonal_2023">(<a href="#ref-dwivedi_how_2024" role="doc-biblioref">Dwivedi et al. 2024</a>; <a href="#ref-biederman_streamflow_2022" role="doc-biblioref">Biederman et al. 2022</a>; <a href="#ref-broxton_subseasonal_2023" role="doc-biblioref">Broxton et al. 2023</a>)</span>. However, there appears to be a threshold response, with water yield increasing only in treated forests receiving over 500mm of annual precipitation or snow-dominated forests <span class="citation" data-cites="biederman_streamflow_2022 carroll_evaluating_2016 adams_ecohydrological_2012 zou_streamflow_2010">(<a href="#ref-biederman_streamflow_2022" role="doc-biblioref">Biederman et al. 2022</a>; <a href="#ref-carroll_evaluating_2016" role="doc-biblioref">Carroll et al. 2016</a>; <a href="#ref-adams_ecohydrological_2012" role="doc-biblioref">Adams et al. 2012</a>; <a href="#ref-zou_streamflow_2010" role="doc-biblioref">Zou, Ffolliott, and Wine 2010</a>)</span>.</p>
@@ -531,7 +531,7 @@ Zou, Chris B., Peter F. Ffolliott, and Michael Wine. 2010. <span>“Streamflow R
     Abraham},
   title = {Mapping Landscape Suitability for Forest Thinning to Reduce
     Evapotranspiration and Enhance Groundwater Recharge in {Arizona}},
-  date = {2024-10-28},
+  date = {2024-11-21},
   langid = {en},
   abstract = {Here, we review the literature on the effects of forest
     thinning on water yield throughout Arizona and map areas where
@@ -548,7 +548,7 @@ Zou, Chris B., Peter F. Ffolliott, and Michael Wine. 2010. <span>“Streamflow R
 E Lima, Ryan, Temuulen Tsagaan Sankey, and Abraham E Springer. 2024.
 <span>“Mapping Landscape Suitability for Forest Thinning to Reduce
 Evapotranspiration and Enhance Groundwater Recharge in Arizona.”</span>
-Water Resources Research. October 28, 2024.
+Water Resources Research. November 21, 2024.
 </div></div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -972,7 +972,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

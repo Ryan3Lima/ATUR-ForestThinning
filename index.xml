@@ -92,10 +92,10 @@ administration</role>
 <corresp id="cor-1">ryan.lima@nau.edu</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-10-28">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-11-21">
 <year>2024</year>
-<month>10</month>
-<day>28</day>
+<month>11</month>
+<day>21</day>
 </pub-date>
 
 
@@ -271,7 +271,7 @@ statewide.
     <title>1.1 Regional Hydrologic Responses to Treatment</title>
     <p>Several regional studies link forest treatment to changes in
     stand-level ecohydrology including increased tree growth in
-    Ponderosa Pines (<bold>Rodman et al., 2024</bold>) greater soil
+    Ponderosa Pines (<bold>Rodman et al., 2024</bold>), greater soil
     moisture and total ecosystem moisture [], increased drought
     resilience [], Increased snow retention, greater streamflow [],
     water table rise and increased spring flow []</p>
@@ -1601,422 +1601,240 @@ statewide.
 <sub-article article-type="notebook" id="nb-3-nb-1">
 <front-stub>
 <title-group>
-<article-title>Data Screening</article-title>
+<article-title>Downloading 1m Elevation data using API</article-title>
 </title-group>
 <contrib-group>
 <contrib contrib-type="author">
-<contrib-id contrib-id-type="orcid">0000-0002-0760-5497</contrib-id>
+<contrib-id contrib-id-type="orcid">0000-0002-5352-7215</contrib-id>
 <name>
-<surname>Purves</surname>
-<given-names>Steve</given-names>
+<surname>Lima</surname>
+<given-names>Ryan E</given-names>
 </name>
-<string-name>Steve Purves</string-name>
+<string-name>Ryan E Lima</string-name>
 
 </contrib>
 </contrib-group>
 </front-stub>
 
 <body>
-<sec id="cell-96cd123b-e010-4778-9afa-9ca125ef50cc-nb-1" specific-use="notebook-content">
-<p>Load and review the data, check that dates are loaded properly and
-filter data down to the events in La Palma only. The dataset itself
-contains all recent IGN earthquake data for Spanish territory.</p>
-</sec>
-<sec id="cell-0e75ded9-f2dc-40ca-884b-d124d0e37ee4-nb-1" specific-use="notebook-content">
-<code language="python">import pandas as pd
-import matplotlib.pyplot as plt</code>
-</sec>
-<sec id="ba38c3c1-51d7-48d9-8056-c23a0bbfcd18-nb-1" specific-use="notebook-content">
-<code language="python">df = pd.read_csv('../data/catalogoComunSV_1663233588717.csv', sep=';')
-df.columns = ['Event', 'Date', 'Time', 'Latitude', 'Longitude', 'Depth(km)', 'Intensity','Magnitude', 'Type Mag', 'Location']
-df['Time'] = df['Time'].str.strip()
-df['Date'] = df['Date'].str.strip()
-df['DateTime'] = (df['Date'] + ' ' + df['Time']).apply(pd.to_datetime, format='%d/%m/%Y %H:%M:%S')
-df['Timestamp'] = pd.to_numeric(pd.to_datetime(df['DateTime']))
-df['Date'] = pd.to_datetime(df['Date'], format=&quot;%d/%m/%Y&quot;)
-df = df.sort_values(by=['DateTime'], ascending=True)
-df.head()</code>
+<sec id="c5fde79b-c6bb-43c6-911f-403cc03f5652-nb-1" specific-use="notebook-content">
+<code language="python">#!pip install pandas requests</code>
 <boxed-text>
-  <table-wrap>
-    <table border="1">
-      <thead>
-        <tr style="text-align: right;">
-          <th></th>
-          <th>Event</th>
-          <th>Date</th>
-          <th>Time</th>
-          <th>Latitude</th>
-          <th>Longitude</th>
-          <th>Depth(km)</th>
-          <th>Intensity</th>
-          <th>Magnitude</th>
-          <th>Type Mag</th>
-          <th>Location</th>
-          <th>DateTime</th>
-          <th>Timestamp</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>0</td>
-          <td>es2017aaaga</td>
-          <td>2017-01-01</td>
-          <td>00:48:55</td>
-          <td>36.6765</td>
-          <td>-11.2736</td>
-          <td>0.0</td>
-          <td></td>
-          <td>2.8</td>
-          <td>6</td>
-          <td>SW CABO DE SAN VICENTE</td>
-          <td>2017-01-01 00:48:55</td>
-          <td>1483231735000000000</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>es2017aaakn</td>
-          <td>2017-01-01</td>
-          <td>01:28:17</td>
-          <td>28.1119</td>
-          <td>-16.2225</td>
-          <td>21.0</td>
-          <td></td>
-          <td>0.9</td>
-          <td>4</td>
-          <td>ATLÁNTICO-CANARIAS</td>
-          <td>2017-01-01 01:28:17</td>
-          <td>1483234097000000000</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>es2017aaang</td>
-          <td>2017-01-01</td>
-          <td>01:49:08</td>
-          <td>42.0648</td>
-          <td>-7.8471</td>
-          <td>22.0</td>
-          <td></td>
-          <td>2.0</td>
-          <td>4</td>
-          <td>SW RAIRIZ DE VEIGA.OU</td>
-          <td>2017-01-01 01:49:08</td>
-          <td>1483235348000000000</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>es2017aabdd</td>
-          <td>2017-01-01</td>
-          <td>02:36:20</td>
-          <td>38.3826</td>
-          <td>-9.3767</td>
-          <td>11.0</td>
-          <td></td>
-          <td>2.2</td>
-          <td>4</td>
-          <td>ATLÁNTICO-PORTUGAL</td>
-          <td>2017-01-01 02:36:20</td>
-          <td>1483238180000000000</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>es2017aabkh</td>
-          <td>2017-01-01</td>
-          <td>03:35:03</td>
-          <td>36.2492</td>
-          <td>-7.8227</td>
-          <td>13.0</td>
-          <td></td>
-          <td>1.9</td>
-          <td>4</td>
-          <td>GOLFO DE CÁDIZ</td>
-          <td>2017-01-01 03:35:03</td>
-          <td>1483241703000000000</td>
-        </tr>
-      </tbody>
-    </table>
-  </table-wrap>
+  <preformat>Requirement already satisfied: pandas in c:\users\rl587\appdata\local\anaconda3\envs\atur-karst\lib\site-packages (2.2.3)
+Requirement already satisfied: requests in c:\users\rl587\appdata\local\anaconda3\envs\atur-karst\lib\site-packages (2.32.3)
+Requirement already satisfied: numpy&gt;=1.22.4 in c:\users\rl587\appdata\local\anaconda3\envs\atur-karst\lib\site-packages (from pandas) (2.0.2)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in c:\users\rl587\appdata\local\anaconda3\envs\atur-karst\lib\site-packages (from pandas) (2.9.0)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\rl587\appdata\local\anaconda3\envs\atur-karst\lib\site-packages (from pandas) (2024.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in c:\users\rl587\appdata\local\anaconda3\envs\atur-karst\lib\site-packages (from pandas) (2024.2)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in c:\users\rl587\appdata\local\anaconda3\envs\atur-karst\lib\site-packages (from requests) (3.4.0)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\users\rl587\appdata\local\anaconda3\envs\atur-karst\lib\site-packages (from requests) (3.10)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in c:\users\rl587\appdata\local\anaconda3\envs\atur-karst\lib\site-packages (from requests) (2.2.3)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\users\rl587\appdata\local\anaconda3\envs\atur-karst\lib\site-packages (from requests) (2024.8.30)
+Requirement already satisfied: six&gt;=1.5 in c:\users\rl587\appdata\local\anaconda3\envs\atur-karst\lib\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.16.0)</preformat>
 </boxed-text>
 </sec>
-<sec id="d81abbcf-d7f2-43e8-ae0c-5f6ce44e6046-nb-1" specific-use="notebook-content">
-<code language="python">df.describe()</code>
+<sec id="cell-5bec3f0a-9bd1-40ac-81a2-cf897afe610b-nb-1" specific-use="notebook-content">
+<code language="python">import os
+import requests
+import pandas as pd</code>
+</sec>
+<sec id="cell-68bbac69-be5a-46b2-aa06-64f04799737f-nb-1" specific-use="notebook-content">
+<code language="python"># File paths and download directory
+csv_file = 'Files/NED_DEM_1m_tiles_list.csv'  # Adjust this if needed
+download_dir = r'G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m'
+
+# Ensure the download directory exists
+os.makedirs(download_dir, exist_ok=True)
+
+# Load the CSV file
+tile_data = pd.read_csv(csv_file)
+
+# Extract the column containing the download URLs
+url_column = 'https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x44y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif'
+
+# Check if the column exists
+if url_column not in tile_data.columns:
+    print(f&quot;Column '{url_column}' not found in the CSV file.&quot;)
+else:
+    # Download each file
+    for index, url in tile_data[url_column].dropna().items():  # Use .items() instead of .iteritems()
+        file_name = os.path.basename(url)  # Get the file name from the URL
+        file_path = os.path.join(download_dir, file_name)
+        
+        # Download the file
+        try:
+            print(f&quot;Downloading {url}...&quot;)
+            response = requests.get(url, stream=True)
+            response.raise_for_status()  # Raise an exception for HTTP errors
+            
+            # Save the file
+            with open(file_path, 'wb') as file:
+                for chunk in response.iter_content(chunk_size=8192):
+                    file.write(chunk)
+            print(f&quot;Downloaded: {file_path}&quot;)
+        except requests.RequestException as e:
+            print(f&quot;Failed to download {url}: {e}&quot;)
+</code>
 <boxed-text>
-  <table-wrap>
-    <table border="1">
-      <thead>
-        <tr style="text-align: right;">
-          <th></th>
-          <th>Latitude</th>
-          <th>Longitude</th>
-          <th>Depth(km)</th>
-          <th>Magnitude</th>
-          <th>Type Mag</th>
-          <th>Timestamp</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>count</td>
-          <td>58036.000000</td>
-          <td>58036.000000</td>
-          <td>58036.000000</td>
-          <td>58036.000000</td>
-          <td>58036.000000</td>
-          <td>5.803600e+04</td>
-        </tr>
-        <tr>
-          <td>mean</td>
-          <td>34.806854</td>
-          <td>-8.356855</td>
-          <td>11.450831</td>
-          <td>1.881846</td>
-          <td>4.031153</td>
-          <td>1.596182e+18</td>
-        </tr>
-        <tr>
-          <td>std</td>
-          <td>5.263327</td>
-          <td>7.119341</td>
-          <td>11.111965</td>
-          <td>0.763577</td>
-          <td>0.291332</td>
-          <td>4.954865e+16</td>
-        </tr>
-        <tr>
-          <td>min</td>
-          <td>26.349300</td>
-          <td>-19.930400</td>
-          <td>0.000000</td>
-          <td>-0.500000</td>
-          <td>3.000000</td>
-          <td>1.483232e+18</td>
-        </tr>
-        <tr>
-          <td>25%</td>
-          <td>28.563800</td>
-          <td>-16.672325</td>
-          <td>3.000000</td>
-          <td>1.400000</td>
-          <td>4.000000</td>
-          <td>1.559327e+18</td>
-        </tr>
-        <tr>
-          <td>50%</td>
-          <td>35.989200</td>
-          <td>-4.785250</td>
-          <td>10.000000</td>
-          <td>1.800000</td>
-          <td>4.000000</td>
-          <td>1.612319e+18</td>
-        </tr>
-        <tr>
-          <td>75%</td>
-          <td>37.890700</td>
-          <td>-3.234500</td>
-          <td>14.300000</td>
-          <td>2.400000</td>
-          <td>4.000000</td>
-          <td>1.635568e+18</td>
-        </tr>
-        <tr>
-          <td>max</td>
-          <td>44.985000</td>
-          <td>5.996600</td>
-          <td>115.000000</td>
-          <td>6.000000</td>
-          <td>6.000000</td>
-          <td>1.663232e+18</td>
-        </tr>
-      </tbody>
-    </table>
-  </table-wrap>
+  <preformat>Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y382_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y382_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x44y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y382_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y383_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y383_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y384_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y384_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y385_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y385_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y386_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y386_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y387_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y387_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x45y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x45y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y381_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x45y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y382_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y382_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x45y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y382_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x45y382_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y382_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y383_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y383_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x45y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y383_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y384_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y384_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x45y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y384_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y385_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y385_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y386_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y386_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y387_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y387_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x46y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x46y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y381_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x46y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x46y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y382_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x46y382_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y382_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x46y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y383_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x46y384_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y384_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x46y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y384_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x46y385_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y385_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x46y385_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y385_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x46y386_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y386_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x46y387_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y387_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x47y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x47y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y381_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x47y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x47y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y382_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x47y382_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y382_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x47y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y383_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x47y384_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y384_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x47y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y384_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x47y385_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y385_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x47y385_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y385_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x47y386_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y386_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x47y386_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y386_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x47y387_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y387_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y380_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y380_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x48y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y381_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x48y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y382_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y383_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y384_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y385_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y385_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y386_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y386_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y380_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y380_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x49y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y381_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x49y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y382_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y383_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y384_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y385_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y385_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y386_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y386_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x50y380_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y380_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x50y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x50y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y381_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x50y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x50y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y382_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x50y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y383_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x50y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y384_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x50y385_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y385_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x51y380_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x51y380_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x51y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x51y381_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x51y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x51y382_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x51y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x51y383_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x51y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x51y384_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_VerdeKaibab_B1_2018/TIFF/USGS_one_meter_x44y386_AZ_VerdeKaibab_B1_2018.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_one_meter_x44y386_AZ_VerdeKaibab_B1_2018.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_VerdeKaibab_B1_2018/TIFF/USGS_one_meter_x44y387_AZ_VerdeKaibab_B1_2018.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_one_meter_x44y387_AZ_VerdeKaibab_B1_2018.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_VerdeKaibab_B1_2018/TIFF/USGS_one_meter_x45y387_AZ_VerdeKaibab_B1_2018.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_one_meter_x45y387_AZ_VerdeKaibab_B1_2018.tif</preformat>
 </boxed-text>
-</sec>
-<sec id="cell-8f6c52f4-b28d-4c22-88c7-e1b17298cae7-nb-1" specific-use="notebook-content">
-<code language="python">df.plot.scatter(x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, figsize=(12,12), grid=&quot;on&quot;);</code>
-<boxed-text>
-  <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-5-output-1.png" />
-</boxed-text>
-</sec>
-<sec id="af76febd-11cd-4927-8476-5d8258ede326-nb-1" specific-use="notebook-content">
-<sec id="filter-down-to-la-palma-events-only-nb-1">
-  <title>Filter down to La Palma events only</title>
-  <p>Also some rows seem to be missing depth measurements, (see
-  differences in the <bold>count</bold> for columns above) - take only
-  rows with valid depths</p>
-  </sec>
-  <sec id="c34e47c1-c9cb-4207-978c-292333863e9b-nb-1" specific-use="notebook-content">
-  <code language="python">df = df[(df['Latitude'] &lt; 28.7) &amp; (df['Latitude'] &gt; 28.3) &amp; (df['Longitude'] &lt; -17.7) &amp; (df['Longitude'] &gt; -18)]
-df = df[df['Depth(km)'].notna()]
-df.describe()</code>
-  <boxed-text>
-    <table-wrap>
-      <table border="1">
-        <thead>
-          <tr style="text-align: right;">
-            <th></th>
-            <th>Latitude</th>
-            <th>Longitude</th>
-            <th>Depth(km)</th>
-            <th>Magnitude</th>
-            <th>Type Mag</th>
-            <th>Timestamp</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>count</td>
-            <td>11347.000000</td>
-            <td>11347.000000</td>
-            <td>11347.000000</td>
-            <td>11347.000000</td>
-            <td>11347.0</td>
-            <td>1.134700e+04</td>
-          </tr>
-          <tr>
-            <td>mean</td>
-            <td>28.568893</td>
-            <td>-17.844062</td>
-            <td>14.089345</td>
-            <td>2.432423</td>
-            <td>4.0</td>
-            <td>1.633359e+18</td>
-          </tr>
-          <tr>
-            <td>std</td>
-            <td>0.021899</td>
-            <td>0.027345</td>
-            <td>8.624787</td>
-            <td>0.705282</td>
-            <td>0.0</td>
-            <td>2.007970e+16</td>
-          </tr>
-          <tr>
-            <td>min</td>
-            <td>28.310200</td>
-            <td>-17.995800</td>
-            <td>0.000000</td>
-            <td>0.200000</td>
-            <td>4.0</td>
-            <td>1.489103e+18</td>
-          </tr>
-          <tr>
-            <td>25%</td>
-            <td>28.558000</td>
-            <td>-17.854100</td>
-            <td>10.100000</td>
-            <td>1.900000</td>
-            <td>4.0</td>
-            <td>1.633777e+18</td>
-          </tr>
-          <tr>
-            <td>50%</td>
-            <td>28.564000</td>
-            <td>-17.838700</td>
-            <td>11.300000</td>
-            <td>2.600000</td>
-            <td>4.0</td>
-            <td>1.635671e+18</td>
-          </tr>
-          <tr>
-            <td>75%</td>
-            <td>28.574300</td>
-            <td>-17.829700</td>
-            <td>13.900000</td>
-            <td>2.900000</td>
-            <td>4.0</td>
-            <td>1.638294e+18</td>
-          </tr>
-          <tr>
-            <td>max</td>
-            <td>28.697800</td>
-            <td>-17.705700</td>
-            <td>46.900000</td>
-            <td>5.100000</td>
-            <td>4.0</td>
-            <td>1.663128e+18</td>
-          </tr>
-        </tbody>
-      </table>
-    </table-wrap>
-  </boxed-text>
-  </sec>
-  <sec id="cell-306ba432-daa7-4126-9b5a-689e1ad41e3a-nb-1" specific-use="notebook-content">
-  <code language="python">plt.figure(figsize=(20,6))
-plt.subplot(1,3,1)
-df[&quot;Latitude&quot;].plot.hist(bins=20, density=True)
-df[&quot;Latitude&quot;].plot.kde()
-plt.subplot(1,3,2)
-df[&quot;Longitude&quot;].plot.hist(bins=20, density=True)
-df[&quot;Longitude&quot;].plot.kde()
-plt.subplot(1,3,3)
-df[&quot;Depth(km)&quot;].plot.hist(bins=50, density=True)
-_=df[&quot;Depth(km)&quot;].plot.kde()</code>
-  <boxed-text>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-7-output-1.png" />
-  </boxed-text>
-  </sec>
-  <sec id="cell-1bf2e599-12d6-40e9-bd99-db68ae6e72f5-nb-1" specific-use="notebook-content">
-</sec>
-<sec id="spatial-plot-nb-1">
-  <title>Spatial Plot</title>
-  <p>Scatter plot the spatial locations of events</p>
-  </sec>
-  <sec id="cell-fig-spatial-plot-nb-1" specific-use="notebook-content">
-  <code language="python">from matplotlib import colormaps
-cmap = colormaps['viridis_r']
-ax = df.plot.scatter(x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, 
-                     s=40-df[&quot;Depth(km)&quot;], c=df[&quot;Magnitude&quot;], 
-                     figsize=(12,10), grid=&quot;on&quot;, cmap=cmap)
-colorbar = ax.collections[0].colorbar
-colorbar.set_label(&quot;Magnitude&quot;)
-
-plt.show()</code>
-  <boxed-text>
-    <fig id="fig-spatial-plot-nb-1">
-      <caption><p>Figure 1: Locations of earthquakes on La Palma since
-      2017.</p></caption>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/fig-spatial-plot-output-1.png" />
-    </fig>
-  </boxed-text>
-  </sec>
-  <sec id="c55cd6b8-7e01-4c2d-aa71-1649ca8aee01-nb-1" specific-use="notebook-content">
-  <sec id="timeline-plot-nb-1">
-    <title>Timeline Plot</title>
-    <p>Scatter plot the event time series and look for any quantization
-    issues. Have times &amp; dates been loaded correctly?</p>
-    </sec>
-    <sec id="cell-58a022c7-f34c-499d-a749-aa01f0e1b5db-nb-1" specific-use="notebook-content">
-    <code language="python">ax = df.plot.scatter(x='DateTime', y='Depth(km)', figsize=(20,8))
-ax.set_ylim(50,0);</code>
-    <boxed-text>
-      <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-9-output-1.png" />
-    </boxed-text>
-    </sec>
-    <sec id="f0a0d350-ed14-4128-9efe-cfcf2d05a66b-nb-1" specific-use="notebook-content">
-    <code language="python">df['Swarm'] = 0
-df.loc[(df['Date'] &gt;= '2017-10-01') &amp; (df['Date'] &lt;= '2017-10-31'), 'Swarm'] = 1
-df.loc[(df['Date'] &gt;= '2019-02-01') &amp; (df['Date'] &lt;= '2019-02-28'), 'Swarm'] = 2
-df.loc[(df['Date'] &gt;= '2020-07-21') &amp; (df['Date'] &lt;= '2020-08-05'), 'Swarm'] = 3
-df.loc[(df['Date'] &gt;= '2020-10-04') &amp; (df['Date'] &lt;= '2020-10-10'), 'Swarm'] = 4
-df.loc[(df['Date'] &gt;= '2020-10-11') &amp; (df['Date'] &lt;= '2020-10-22'), 'Swarm'] = 5
-df.loc[(df['Date'] &gt;= '2020-11-15') &amp; (df['Date'] &lt;= '2020-11-29'), 'Swarm'] = 6
-df.loc[(df['Date'] &gt;= '2020-12-10') &amp; (df['Date'] &lt;= '2020-12-29'), 'Swarm'] = 7
-df.loc[(df['Date'] &gt;= '2020-12-10') &amp; (df['Date'] &lt;= '2020-12-31'), 'Swarm'] = 8
-df.loc[(df['Date'] &gt;= '2021-01-15') &amp; (df['Date'] &lt;= '2021-02-07'), 'Swarm'] = 9
-df.loc[(df['Date'] &gt;= '2021-06-01') &amp; (df['Date'] &lt;= '2021-06-30'), 'Swarm'] = 10
-df.loc[(df['Date'] &gt;= '2021-07-01'), 'Swarm'] = None
-
-
-df['Phase'] = 0;
-df.loc[(df['Date'] &gt;= '2021-09-11') &amp; (df['Date'] &lt;= '2021-09-30'), 'Phase'] = 1
-df.loc[(df['Date'] &gt;= '2021-10-01') &amp; (df['Date'] &lt;= '2021-11-30'), 'Phase'] = 2
-df.loc[(df['Date'] &gt;= '2021-12-01') &amp; (df['Date'] &lt;= '2021-12-31'), 'Phase'] = 3
-df.loc[(df['Date'] &gt;= '2021-12-31'), 'Phase'] = 4</code>
-    </sec>
-    <sec id="abd100da-cf39-47e4-8287-de4e9f5e3f6d-nb-1" specific-use="notebook-content">
-    <code language="python">df.to_csv(&quot;../data/lapalma_ign.csv&quot;, index=False)</code>
-    </sec>
-  </sec>
 </sec>
 </body>
 
