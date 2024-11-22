@@ -92,10 +92,10 @@ administration</role>
 <corresp id="cor-1">ryan.lima@nau.edu</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-11-21">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-11-22">
 <year>2024</year>
 <month>11</month>
-<day>21</day>
+<day>22</day>
 </pub-date>
 
 
@@ -1638,9 +1638,549 @@ Requirement already satisfied: six&gt;=1.5 in c:\users\rl587\appdata\local\anaco
 import requests
 import pandas as pd</code>
 </sec>
+<sec id="cell-62d534a4-4b97-43a1-bb1d-8f76357abfce-nb-1" specific-use="notebook-content">
+<code language="python"># File paths and download directory
+csv_file = 'Files/files.csv'  # Adjust this if needed
+download_dir = r'G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m'
+
+# Ensure the download directory exists
+os.makedirs(download_dir, exist_ok=True)
+
+# Load the CSV file
+tile_data = pd.read_csv(csv_file)</code>
+</sec>
+<sec id="ddd6125d-340c-4e21-815f-cb8cc883af3e-nb-1" specific-use="notebook-content">
+<code language="python">tile_data</code>
+<boxed-text>
+  <table-wrap>
+    <table border="1">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>60679a8ed34edc0435c0b183</th>
+          <th>National Elevation Dataset (NED)</th>
+          <th>USGS 1 Meter 12 x44y386 AZ_Coconino_2019_B19</th>
+          <th>This is a tile of the standard one-meter resolution
+          digital elevation model (DEM) produced through the 3D
+          Elevation Program (3DEP) . The elevations in this DEM
+          represent the topographic bare-earth surface. USGS standard
+          one-meter DEMs are produced exclusively from high resolution
+          light detection and ranging (lidar) source data of one-meter
+          or higher resolution. One-meter DEM surfaces are seamless
+          within collection projects</th>
+          <th>but</th>
+          <th>not necessarily seamless across projects. The spatial
+          reference used for tiles of the one-meter DEM within the
+          conterminous United States (CONUS) is Universal Transverse
+          Mercator (UTM) in units of meters</th>
+          <th>and in conformance with the North American Datum of 1983
+          (NAD83). All bare earth elevation values are in [...]</th>
+          <th>60679a8ed34edc0435c0b183.1</th>
+          <th>ScienceBase</th>
+          <th>Unnamed: 9</th>
+          <th>...</th>
+          <th>0</th>
+          <th>This is a tile of the standard one-meter resolution
+          digital elevation model (DEM) produced through the 3D
+          Elevation Program (3DEP) . The elevations in this DEM
+          represent the topographic bare-earth surface. USGS standard
+          one-meter DEMs are produced exclusively from high resolution
+          light detection and ranging (lidar) source data of one-meter
+          or higher resolution. One-meter DEM surfaces are seamless
+          within collection projects</th>
+          <th>but.1</th>
+          <th>not necessarily seamless across projects. The spatial
+          reference used for tiles of the one-meter DEM within the
+          conterminous United States (CONUS) is Universal Transverse
+          Mercator (UTM) in units of meters</th>
+          <th>and in conformance with the North American Datum of 1983
+          (NAD83). All bare earth elevation values are in meters and are
+          referenced to the North American Vertical Datum of 1988
+          (NAVD88). Each tile is distributed in the UTM Zone in which it
+          lies. If a tile crosses two UTM zones</th>
+          <th>it is delivered in both zones. The one-meter DEM is the
+          highest resolution standard DEM offered in the 3DEP product
+          suite. Other 3DEP products are nationally seamless DEMs in
+          resolutions of 1/3</th>
+          <th>1</th>
+          <th>and 2 arc seconds. These seamless DEMs were referred to as
+          the National Elevation Dataset (NED) from about 2000 through
+          2015 at which time they became the seamless DEM layers under
+          the 3DEP program and lost the NED branding. Other 3DEP
+          products include five-meter DEMs in Alaska as well as various
+          source datasets including the lidar point cloud and
+          interferometric synthetic aperture radar (Ifsar) digital
+          surface models and intensity images. All 3DEP products are
+          public domain.</th>
+          <th>processingUrl</th>
+          <th>2021-04-02</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>60679a8ad34edc0435c0b17e</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x44y387 AZ_Coconino_2019_B19</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60679a8ad34edc0435c0b17e</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-04-02</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>611c9436d34e40dd9c000449</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x45y384 AZ_USFS_3DEP_Processin...</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>611c9436d34e40dd9c000449</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-08-18</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>60679a59d34edc0435c0b14b</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x45y387 AZ_Coconino_2019_B19</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60679a59d34edc0435c0b14b</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-04-02</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>60679a5dd34edc0435c0b150</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x45y386 AZ_Coconino_2019_B19</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60679a5dd34edc0435c0b150</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-04-02</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>60679a62d34edc0435c0b152</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x45y385 AZ_Coconino_2019_B19</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60679a62d34edc0435c0b152</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-04-02</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>60679a31d34edc0435c0b121</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x46y386 AZ_Coconino_2019_B19</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60679a31d34edc0435c0b121</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-04-02</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>60679a2dd34edc0435c0b11c</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x46y387 AZ_Coconino_2019_B19</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60679a2dd34edc0435c0b11c</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-04-02</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>60d170d5d34e86b938ac13a6</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x44y381 CA_AZ_FEMA_R9_Lidar_20...</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60d170d5d34e86b938ac13a6</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-06-22</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>60d170d1d34e86b938ac138a</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x45y380 CA_AZ_FEMA_R9_Lidar_20...</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60d170d1d34e86b938ac138a</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-06-22</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>611c9438d34e40dd9c00044f</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x45y381 AZ_USFS_3DEP_Processin...</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>611c9438d34e40dd9c00044f</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-08-18</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>60d170d0d34e86b938ac1386</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x45y381 CA_AZ_FEMA_R9_Lidar_20...</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60d170d0d34e86b938ac1386</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-06-22</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>60679a70d34edc0435c0b161</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x45y382 AZ_Coconino_2019_B19</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60679a70d34edc0435c0b161</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-04-02</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>611c9437d34e40dd9c00044d</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x45y382 AZ_USFS_3DEP_Processin...</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>611c9437d34e40dd9c00044d</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-08-18</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>60d170cfd34e86b938ac1383</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x45y382 CA_AZ_FEMA_R9_Lidar_20...</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60d170cfd34e86b938ac1383</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-06-22</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>60679a67d34edc0435c0b157</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x45y384 AZ_Coconino_2019_B19</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60679a67d34edc0435c0b157</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-04-02</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>60679a3ad34edc0435c0b12b</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x46y384 AZ_Coconino_2019_B19</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60679a3ad34edc0435c0b12b</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-04-02</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>60679a0ed34edc0435c0b0fc</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x47y385 AZ_Coconino_2019_B19</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60679a0ed34edc0435c0b0fc</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-04-02</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>60679a0ad34edc0435c0b0f7</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x47y386 AZ_Coconino_2019_B19</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60679a0ad34edc0435c0b0f7</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-04-02</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>60679a05d34edc0435c0b0f2</td>
+          <td>National Elevation Dataset (NED)</td>
+          <td>USGS 1 Meter 12 x47y387 AZ_Coconino_2019_B19</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. The...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>60679a05d34edc0435c0b0f2</td>
+          <td>ScienceBase</td>
+          <td>NaN</td>
+          <td>...</td>
+          <td>0</td>
+          <td>This is a tile of the standard one-meter resol...</td>
+          <td>but</td>
+          <td>not necessarily seamless across projects. Th...</td>
+          <td>and in conformance with the North American Da...</td>
+          <td>it is delivered in both zones. The one-meter...</td>
+          <td>1</td>
+          <td>and 2 arc seconds. These seamless DEMs were ...</td>
+          <td>processingUrl</td>
+          <td>2021-04-02</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+</boxed-text>
+</sec>
 <sec id="cell-68bbac69-be5a-46b2-aa06-64f04799737f-nb-1" specific-use="notebook-content">
 <code language="python"># File paths and download directory
-csv_file = 'Files/NED_DEM_1m_tiles_list.csv'  # Adjust this if needed
+csv_file = 'Files/files.csv'  # Adjust this if needed
 download_dir = r'G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m'
 
 # Ensure the download directory exists
@@ -1650,7 +2190,7 @@ os.makedirs(download_dir, exist_ok=True)
 tile_data = pd.read_csv(csv_file)
 
 # Extract the column containing the download URLs
-url_column = 'https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x44y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif'
+url_column = 'https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y386_AZ_Coconino_2019_B19.tif'
 
 # Check if the column exists
 if url_column not in tile_data.columns:
@@ -1676,20 +2216,22 @@ else:
             print(f&quot;Failed to download {url}: {e}&quot;)
 </code>
 <boxed-text>
-  <preformat>Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y382_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y382_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x44y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y382_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y383_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y383_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y384_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y384_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y385_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y385_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y386_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y386_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y387_AZ_Coconino_2019_B19.tif...
+  <preformat>Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x44y387_AZ_Coconino_2019_B19.tif...
 Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y387_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x45y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y384_AZ_USFS_3DEP_Processing_2019_D20.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y387_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y387_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y386_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y386_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y385_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y385_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x46y386_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y386_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x46y387_AZ_Coconino_2019_B19.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y387_AZ_Coconino_2019_B19.tif
+Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x44y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x44y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
 Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x45y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
 Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
 Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x45y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
@@ -1702,138 +2244,16 @@ Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Project
 Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y382_AZ_USFS_3DEP_Processing_2019_D20.tif
 Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x45y382_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
 Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y382_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y383_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y383_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x45y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y383_AZ_USFS_3DEP_Processing_2019_D20.tif
 Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y384_AZ_Coconino_2019_B19.tif...
 Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y384_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x45y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y384_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y385_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y385_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y386_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y386_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x45y387_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x45y387_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x46y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x46y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y381_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x46y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x46y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y382_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x46y382_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y382_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x46y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y383_AZ_USFS_3DEP_Processing_2019_D20.tif
 Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x46y384_AZ_Coconino_2019_B19.tif...
 Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y384_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x46y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y384_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x46y385_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y385_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x46y385_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y385_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x46y386_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y386_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x46y387_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x46y387_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x47y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x47y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y381_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x47y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x47y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y382_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x47y382_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y382_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x47y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y383_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x47y384_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y384_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x47y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y384_AZ_USFS_3DEP_Processing_2019_D20.tif
 Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x47y385_AZ_Coconino_2019_B19.tif...
 Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y385_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x47y385_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y385_AZ_USFS_3DEP_Processing_2019_D20.tif
 Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x47y386_AZ_Coconino_2019_B19.tif...
 Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y386_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x47y386_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y386_AZ_USFS_3DEP_Processing_2019_D20.tif
 Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_Coconino_2019_B19/TIFF/USGS_1M_12_x47y387_AZ_Coconino_2019_B19.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y387_AZ_Coconino_2019_B19.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y380_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y380_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x48y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y381_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x48y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y382_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y383_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y384_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y385_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y385_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x48y386_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x48y386_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y380_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y380_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x49y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y381_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x49y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y382_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y383_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y384_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y385_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y385_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x49y386_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x49y386_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x50y380_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y380_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x50y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y380_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x50y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y381_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/CA_AZ_FEMA_R9_Lidar_2017_D18/TIFF/USGS_1M_12_x50y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y381_CA_AZ_FEMA_R9_Lidar_2017_D18.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x50y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y382_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x50y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y383_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x50y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y384_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x50y385_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x50y385_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x51y380_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x51y380_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x51y381_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x51y381_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x51y382_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x51y382_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x51y383_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x51y383_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_USFS_3DEP_Processing_2019_D20/TIFF/USGS_1M_12_x51y384_AZ_USFS_3DEP_Processing_2019_D20.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x51y384_AZ_USFS_3DEP_Processing_2019_D20.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_VerdeKaibab_B1_2018/TIFF/USGS_one_meter_x44y386_AZ_VerdeKaibab_B1_2018.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_one_meter_x44y386_AZ_VerdeKaibab_B1_2018.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_VerdeKaibab_B1_2018/TIFF/USGS_one_meter_x44y387_AZ_VerdeKaibab_B1_2018.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_one_meter_x44y387_AZ_VerdeKaibab_B1_2018.tif
-Downloading https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/AZ_VerdeKaibab_B1_2018/TIFF/USGS_one_meter_x45y387_AZ_VerdeKaibab_B1_2018.tif...
-Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_one_meter_x45y387_AZ_VerdeKaibab_B1_2018.tif</preformat>
+Downloaded: G:\Data\CoconinoNF\MogollonRimRangerDistrict\NED1m\USGS_1M_12_x47y387_AZ_Coconino_2019_B19.tif</preformat>
 </boxed-text>
 </sec>
 </body>
